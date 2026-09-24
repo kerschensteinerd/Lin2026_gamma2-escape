@@ -1,0 +1,760 @@
+layout_id	family	retained_fraction	contrast_pct	response	valid	reason	equivalent_control_contrast	horizontal_multiplier
+f20_uniform	uniform	0.2	0.0	0.0	False	zero_contrast		
+f20_uniform	uniform	0.2	5.0	4224.527702849665	True	valid	19.670696396493337	3.9341392792986674
+f20_uniform	uniform	0.2	10.0	24301.997469135695	True	valid	39.178220668822796	3.9178220668822794
+f20_uniform	uniform	0.2	15.0	71014.84900505548	True	valid	60.157495678718526	4.010499711914568
+f20_uniform	uniform	0.2	20.0	114095.26656625122	False	outside_control_response_range		
+f20_uniform	uniform	0.2	25.0	134537.55939754192	False	outside_control_response_range		
+f20_uniform	uniform	0.2	30.0	142106.71526158493	False	outside_control_response_range		
+f20_uniform	uniform	0.2	40.0	145919.42811656735	False	outside_control_response_range		
+f20_uniform	uniform	0.2	50.0	146540.8253701565	False	outside_control_response_range		
+f20_uniform	uniform	0.2	60.0	146671.4107910489	False	outside_control_response_range		
+f20_uniform	uniform	0.2	70.0	146705.4216923592	False	outside_control_response_range		
+f20_random00	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random00	random	0.2	5.0	4816.941880470372	True	valid	20.87934324452617	4.175868648905234
+f20_random00	random	0.2	10.0	28970.40780308649	True	valid	41.80692398345183	4.180692398345183
+f20_random00	random	0.2	15.0	78186.15687167528	True	valid	63.337759975401354	4.222517331693424
+f20_random00	random	0.2	20.0	117059.44058995781	False	outside_control_response_range		
+f20_random00	random	0.2	25.0	135153.88335930684	False	outside_control_response_range		
+f20_random00	random	0.2	30.0	142173.24758619524	False	outside_control_response_range		
+f20_random00	random	0.2	40.0	145893.12031174876	False	outside_control_response_range		
+f20_random00	random	0.2	50.0	146529.17625686468	False	outside_control_response_range		
+f20_random00	random	0.2	60.0	146666.9324515634	False	outside_control_response_range		
+f20_random00	random	0.2	70.0	146703.6031230125	False	outside_control_response_range		
+f20_random01	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random01	random	0.2	5.0	5330.920599462255	True	valid	21.84384497840424	4.368768995680847
+f20_random01	random	0.2	10.0	32934.55356653728	True	valid	43.81324303696481	4.3813243036964815
+f20_random01	random	0.2	15.0	86585.60631123834	True	valid	67.18067959090567	4.478711972727044
+f20_random01	random	0.2	20.0	123435.70063937729	False	outside_control_response_range		
+f20_random01	random	0.2	25.0	138080.47028761127	False	outside_control_response_range		
+f20_random01	random	0.2	30.0	143299.36509142158	False	outside_control_response_range		
+f20_random01	random	0.2	40.0	146053.10965229545	False	outside_control_response_range		
+f20_random01	random	0.2	50.0	146554.34357301513	False	outside_control_response_range		
+f20_random01	random	0.2	60.0	146670.8894733739	False	outside_control_response_range		
+f20_random01	random	0.2	70.0	146703.95813069315	False	outside_control_response_range		
+f20_random02	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random02	random	0.2	5.0	4394.1341364201435	True	valid	20.028672402745894	4.005734480549179
+f20_random02	random	0.2	10.0	25613.485881722267	True	valid	39.94659307556102	3.994659307556102
+f20_random02	random	0.2	15.0	74150.50546912308	True	valid	61.536181501072065	4.102412100071471
+f20_random02	random	0.2	20.0	116700.3582751851	False	outside_control_response_range		
+f20_random02	random	0.2	25.0	135938.48633578813	False	outside_control_response_range		
+f20_random02	random	0.2	30.0	142791.15034862596	False	outside_control_response_range		
+f20_random02	random	0.2	40.0	146079.97081920135	False	outside_control_response_range		
+f20_random02	random	0.2	50.0	146582.87716516913	False	outside_control_response_range		
+f20_random02	random	0.2	60.0	146684.12802222755	False	outside_control_response_range		
+f20_random02	random	0.2	70.0	146709.78589706993	False	outside_control_response_range		
+f20_random03	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random03	random	0.2	5.0	4936.256525105121	True	valid	21.10981809058922	4.221963618117844
+f20_random03	random	0.2	10.0	29609.487150992074	True	valid	42.14295697484326	4.214295697484326
+f20_random03	random	0.2	15.0	74507.32707755957	True	valid	61.69425297229732	4.112950198153155
+f20_random03	random	0.2	20.0	112431.26197124293	False	outside_control_response_range		
+f20_random03	random	0.2	25.0	132541.9523649947	False	outside_control_response_range		
+f20_random03	random	0.2	30.0	140911.29923604228	False	outside_control_response_range		
+f20_random03	random	0.2	40.0	145594.2259367978	False	outside_control_response_range		
+f20_random03	random	0.2	50.0	146447.97257738808	False	outside_control_response_range		
+f20_random03	random	0.2	60.0	146641.2343457696	False	outside_control_response_range		
+f20_random03	random	0.2	70.0	146694.31214014304	False	outside_control_response_range		
+f20_random04	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random04	random	0.2	5.0	4247.41380490294	True	valid	19.719711544898495	3.943942308979699
+f20_random04	random	0.2	10.0	24448.043395224653	True	valid	39.264691283071194	3.9264691283071196
+f20_random04	random	0.2	15.0	71946.78443253055	True	valid	60.56528214289135	4.037685476192757
+f20_random04	random	0.2	20.0	115404.25782260225	False	outside_control_response_range		
+f20_random04	random	0.2	25.0	135433.30890639825	False	outside_control_response_range		
+f20_random04	random	0.2	30.0	142611.3881967387	False	outside_control_response_range		
+f20_random04	random	0.2	40.0	146058.46959788064	False	outside_control_response_range		
+f20_random04	random	0.2	50.0	146581.07770168275	False	outside_control_response_range		
+f20_random04	random	0.2	60.0	146684.63409679674	False	outside_control_response_range		
+f20_random04	random	0.2	70.0	146710.33072061875	False	outside_control_response_range		
+f20_random05	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random05	random	0.2	5.0	4694.141047999396	True	valid	20.63781095291433	4.127562190582866
+f20_random05	random	0.2	10.0	28014.327731325237	True	valid	41.293968315741395	4.129396831574139
+f20_random05	random	0.2	15.0	76806.47899162899	True	valid	62.718471246275584	4.181231416418372
+f20_random05	random	0.2	20.0	116725.2740045839	False	outside_control_response_range		
+f20_random05	random	0.2	25.0	135370.29283074397	False	outside_control_response_range		
+f20_random05	random	0.2	30.0	142411.82909441934	False	outside_control_response_range		
+f20_random05	random	0.2	40.0	145982.1041882081	False	outside_control_response_range		
+f20_random05	random	0.2	50.0	146557.4296403992	False	outside_control_response_range		
+f20_random05	random	0.2	60.0	146676.64694454684	False	outside_control_response_range		
+f20_random05	random	0.2	70.0	146707.30976555857	False	outside_control_response_range		
+f20_random06	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random06	random	0.2	5.0	4919.953862620494	True	valid	21.078567723558695	4.215713544711739
+f20_random06	random	0.2	10.0	29680.384115386176	True	valid	42.179910671006155	4.217991067100615
+f20_random06	random	0.2	15.0	79730.9203896413	True	valid	64.03524038010856	4.269016025340571
+f20_random06	random	0.2	20.0	118887.3727693033	False	outside_control_response_range		
+f20_random06	random	0.2	25.0	136389.9331870853	False	outside_control_response_range		
+f20_random06	random	0.2	30.0	142837.63989379487	False	outside_control_response_range		
+f20_random06	random	0.2	40.0	146057.28772780183	False	outside_control_response_range		
+f20_random06	random	0.2	50.0	146572.553961908	False	outside_control_response_range		
+f20_random06	random	0.2	60.0	146680.00298016594	False	outside_control_response_range		
+f20_random06	random	0.2	70.0	146708.04069981223	False	outside_control_response_range		
+f20_random07	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random07	random	0.2	5.0	4756.09033306681	True	valid	20.76021094286657	4.152042188573314
+f20_random07	random	0.2	10.0	28503.103375007177	True	valid	41.55778051176917	4.155778051176917
+f20_random07	random	0.2	15.0	78885.4259868557	True	valid	63.652957194688476	4.243530479645899
+f20_random07	random	0.2	20.0	118538.89758004568	False	outside_control_response_range		
+f20_random07	random	0.2	25.0	135651.1649291557	False	outside_control_response_range		
+f20_random07	random	0.2	30.0	141953.21725347018	False	outside_control_response_range		
+f20_random07	random	0.2	40.0	145556.79268133247	False	outside_control_response_range		
+f20_random07	random	0.2	50.0	146369.19115065492	False	outside_control_response_range		
+f20_random07	random	0.2	60.0	146598.167175009	False	outside_control_response_range		
+f20_random07	random	0.2	70.0	146673.06837143423	False	outside_control_response_range		
+f20_random08	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random08	random	0.2	5.0	4935.649982280037	True	valid	21.108656771037865	4.221731354207573
+f20_random08	random	0.2	10.0	29752.34382656258	True	valid	42.217353328700284	4.221735332870028
+f20_random08	random	0.2	15.0	77669.2380591939	True	valid	63.10532680383135	4.20702178692209
+f20_random08	random	0.2	20.0	115939.0596187795	False	outside_control_response_range		
+f20_random08	random	0.2	25.0	134507.56378350756	False	outside_control_response_range		
+f20_random08	random	0.2	30.0	141856.86293625517	False	outside_control_response_range		
+f20_random08	random	0.2	40.0	145814.82371869992	False	outside_control_response_range		
+f20_random08	random	0.2	50.0	146507.43427216372	False	outside_control_response_range		
+f20_random08	random	0.2	60.0	146659.99234852442	False	outside_control_response_range		
+f20_random08	random	0.2	70.0	146701.09196291433	False	outside_control_response_range		
+f20_random09	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random09	random	0.2	5.0	5338.627388314523	True	valid	21.85776023009415	4.37155204601883
+f20_random09	random	0.2	10.0	32583.263997343667	True	valid	43.64235755484248	4.3642357554842475
+f20_random09	random	0.2	15.0	82227.23554830057	True	valid	65.17133034344835	4.34475535622989
+f20_random09	random	0.2	20.0	119312.06280009302	False	outside_control_response_range		
+f20_random09	random	0.2	25.0	135899.87458408956	False	outside_control_response_range		
+f20_random09	random	0.2	30.0	142177.74143096898	False	outside_control_response_range		
+f20_random09	random	0.2	40.0	145710.52701473256	False	outside_control_response_range		
+f20_random09	random	0.2	50.0	146439.48157358737	False	outside_control_response_range		
+f20_random09	random	0.2	60.0	146628.32064639163	False	outside_control_response_range		
+f20_random09	random	0.2	70.0	146686.5012850694	False	outside_control_response_range		
+f20_random10	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random10	random	0.2	5.0	4220.786810413544	True	valid	19.662662844551047	3.9325325689102093
+f20_random10	random	0.2	10.0	24251.703693464504	True	valid	39.14838529818657	3.914838529818657
+f20_random10	random	0.2	15.0	70796.11136928518	True	valid	60.062026350359275	4.004135090023952
+f20_random10	random	0.2	20.0	113898.9030447164	False	outside_control_response_range		
+f20_random10	random	0.2	25.0	134647.395845626	False	outside_control_response_range		
+f20_random10	random	0.2	30.0	142305.93457848448	False	outside_control_response_range		
+f20_random10	random	0.2	40.0	146015.5200620951	False	outside_control_response_range		
+f20_random10	random	0.2	50.0	146574.28829766295	False	outside_control_response_range		
+f20_random10	random	0.2	60.0	146683.51812059848	False	outside_control_response_range		
+f20_random10	random	0.2	70.0	146710.19260197895	False	outside_control_response_range		
+f20_random11	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random11	random	0.2	5.0	5094.086071863903	True	valid	21.408488198255185	4.281697639651037
+f20_random11	random	0.2	10.0	31037.8012422507	True	valid	42.87558576846163	4.2875585768461635
+f20_random11	random	0.2	15.0	81750.05459423935	True	valid	64.95331534322366	4.330221022881577
+f20_random11	random	0.2	20.0	119601.54322004813	False	outside_control_response_range		
+f20_random11	random	0.2	25.0	136136.4370046024	False	outside_control_response_range		
+f20_random11	random	0.2	30.0	142303.08236735233	False	outside_control_response_range		
+f20_random11	random	0.2	40.0	145744.58891538822	False	outside_control_response_range		
+f20_random11	random	0.2	50.0	146450.0312762308	False	outside_control_response_range		
+f20_random11	random	0.2	60.0	146632.0448905969	False	outside_control_response_range		
+f20_random11	random	0.2	70.0	146687.9792243145	False	outside_control_response_range		
+f20_random12	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random12	random	0.2	5.0	4740.342608365253	True	valid	20.729203922888747	4.145840784577749
+f20_random12	random	0.2	10.0	28173.439364942114	True	valid	41.38021568740902	4.138021568740902
+f20_random12	random	0.2	15.0	75748.78907302379	True	valid	62.24607634399227	4.149738422932818
+f20_random12	random	0.2	20.0	115801.11140823188	False	outside_control_response_range		
+f20_random12	random	0.2	25.0	135062.3950087196	False	outside_control_response_range		
+f20_random12	random	0.2	30.0	142372.4371641942	False	outside_control_response_range		
+f20_random12	random	0.2	40.0	146008.9796933138	False	outside_control_response_range		
+f20_random12	random	0.2	50.0	146570.7851741454	False	outside_control_response_range		
+f20_random12	random	0.2	60.0	146682.2667839686	False	outside_control_response_range		
+f20_random12	random	0.2	70.0	146709.74296295113	False	outside_control_response_range		
+f20_random13	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random13	random	0.2	5.0	4687.83256421397	True	valid	20.625282772127548	4.12505655442551
+f20_random13	random	0.2	10.0	27969.964798801546	True	valid	41.269856974568846	4.126985697456885
+f20_random13	random	0.2	15.0	77358.63696012345	True	valid	62.96589852836344	4.197726568557562
+f20_random13	random	0.2	20.0	117378.36169458888	False	outside_control_response_range		
+f20_random13	random	0.2	25.0	135386.1062775154	False	outside_control_response_range		
+f20_random13	random	0.2	30.0	142130.572749786	False	outside_control_response_range		
+f20_random13	random	0.2	40.0	145782.74291823903	False	outside_control_response_range		
+f20_random13	random	0.2	50.0	146474.08193395988	False	outside_control_response_range		
+f20_random13	random	0.2	60.0	146641.9525213886	False	outside_control_response_range		
+f20_random13	random	0.2	70.0	146691.83484039496	False	outside_control_response_range		
+f20_random14	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random14	random	0.2	5.0	5086.366469726238	True	valid	21.3940414285289	4.2788082857057805
+f20_random14	random	0.2	10.0	31087.301170893425	True	valid	42.90054527266473	4.290054527266473
+f20_random14	random	0.2	15.0	81292.52040338673	True	valid	64.74465042454626	4.316310028303084
+f20_random14	random	0.2	20.0	118317.53945762942	False	outside_control_response_range		
+f20_random14	random	0.2	25.0	135262.79463120637	False	outside_control_response_range		
+f20_random14	random	0.2	30.0	142036.73520375695	False	outside_control_response_range		
+f20_random14	random	0.2	40.0	145813.87211552463	False	outside_control_response_range		
+f20_random14	random	0.2	50.0	146500.97384704885	False	outside_control_response_range		
+f20_random14	random	0.2	60.0	146656.5490009016	False	outside_control_response_range		
+f20_random14	random	0.2	70.0	146699.43371980742	False	outside_control_response_range		
+f20_random15	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random15	random	0.2	5.0	4822.549848825748	True	valid	20.890267892423623	4.178053578484724
+f20_random15	random	0.2	10.0	28968.53803763762	True	valid	41.80593298271055	4.180593298271055
+f20_random15	random	0.2	15.0	80411.02172509626	True	valid	64.3436687052978	4.28957791368652
+f20_random15	random	0.2	20.0	120262.30559227496	False	outside_control_response_range		
+f20_random15	random	0.2	25.0	136884.2892636852	False	outside_control_response_range		
+f20_random15	random	0.2	30.0	142799.40951580473	False	outside_control_response_range		
+f20_random15	random	0.2	40.0	145926.33191165526	False	outside_control_response_range		
+f20_random15	random	0.2	50.0	146514.7240927671	False	outside_control_response_range		
+f20_random15	random	0.2	60.0	146656.67467111678	False	outside_control_response_range		
+f20_random15	random	0.2	70.0	146698.22955292297	False	outside_control_response_range		
+f20_random16	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random16	random	0.2	5.0	4692.400836706695	True	valid	20.634356205173514	4.126871241034703
+f20_random16	random	0.2	10.0	27952.720435461983	True	valid	41.260477040235386	4.126047704023539
+f20_random16	random	0.2	15.0	78421.2931755713	True	valid	63.44364965504892	4.229576643669928
+f20_random16	random	0.2	20.0	119243.17200876625	False	outside_control_response_range		
+f20_random16	random	0.2	25.0	136727.7118776161	False	outside_control_response_range		
+f20_random16	random	0.2	30.0	142917.79664053576	False	outside_control_response_range		
+f20_random16	random	0.2	40.0	146024.8547511907	False	outside_control_response_range		
+f20_random16	random	0.2	50.0	146552.45849043073	False	outside_control_response_range		
+f20_random16	random	0.2	60.0	146670.5683113516	False	outside_control_response_range		
+f20_random16	random	0.2	70.0	146703.6012968908	False	outside_control_response_range		
+f20_random17	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random17	random	0.2	5.0	4862.199943159831	True	valid	20.967248523342576	4.193449704668515
+f20_random17	random	0.2	10.0	29325.8074564598	True	valid	41.994451645006556	4.199445164500656
+f20_random17	random	0.2	15.0	79000.49305595792	True	valid	63.70490842106234	4.246993894737489
+f20_random17	random	0.2	20.0	117511.64044553755	False	outside_control_response_range		
+f20_random17	random	0.2	25.0	135323.53244643184	False	outside_control_response_range		
+f20_random17	random	0.2	30.0	142256.516560423	False	outside_control_response_range		
+f20_random17	random	0.2	40.0	145913.8510627328	False	outside_control_response_range		
+f20_random17	random	0.2	50.0	146533.3756364132	False	outside_control_response_range		
+f20_random17	random	0.2	60.0	146667.41151071247	False	outside_control_response_range		
+f20_random17	random	0.2	70.0	146703.34635054634	False	outside_control_response_range		
+f20_random18	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random18	random	0.2	5.0	4885.21559204269	True	valid	21.01172526511967	4.202345053023934
+f20_random18	random	0.2	10.0	29443.04581966877	True	valid	42.05595094194031	4.205595094194031
+f20_random18	random	0.2	15.0	77846.47989095535	True	valid	63.18496911175313	4.212331274116875
+f20_random18	random	0.2	20.0	116753.1144939628	False	outside_control_response_range		
+f20_random18	random	0.2	25.0	135421.2323256574	False	outside_control_response_range		
+f20_random18	random	0.2	30.0	142511.5638357388	False	outside_control_response_range		
+f20_random18	random	0.2	40.0	146031.54469589354	False	outside_control_response_range		
+f20_random18	random	0.2	50.0	146575.1316954785	False	outside_control_response_range		
+f20_random18	random	0.2	60.0	146683.25434028025	False	outside_control_response_range		
+f20_random18	random	0.2	70.0	146709.99620409755	False	outside_control_response_range		
+f20_random19	random	0.2	0.0	0.0	False	zero_contrast		
+f20_random19	random	0.2	5.0	4936.405357722739	True	valid	21.110103037551877	4.222020607510375
+f20_random19	random	0.2	10.0	29787.916788840655	True	valid	42.23583887171402	4.223583887171403
+f20_random19	random	0.2	15.0	79551.77653153124	True	valid	63.954135122903665	4.263609008193578
+f20_random19	random	0.2	20.0	118306.15630327421	False	outside_control_response_range		
+f20_random19	random	0.2	25.0	135785.6184507125	False	outside_control_response_range		
+f20_random19	random	0.2	30.0	142440.3133403897	False	outside_control_response_range		
+f20_random19	random	0.2	40.0	145944.68059041866	False	outside_control_response_range		
+f20_random19	random	0.2	50.0	146541.7485648704	False	outside_control_response_range		
+f20_random19	random	0.2	60.0	146670.7608137556	False	outside_control_response_range		
+f20_random19	random	0.2	70.0	146705.00577106225	False	outside_control_response_range		
+f20_proximal	proximal	0.2	0.0	0.0	False	zero_contrast		
+f20_proximal	proximal	0.2	5.0	6955.317365850658	True	valid	24.470413092172272	4.894082618434455
+f20_proximal	proximal	0.2	10.0	43071.65113641927	True	valid	48.40737153485087	4.840737153485087
+f20_proximal	proximal	0.2	15.0	90870.52706989466	True	valid	69.18695571037337	4.612463714024892
+f20_proximal	proximal	0.2	20.0	122068.71900275434	False	outside_control_response_range		
+f20_proximal	proximal	0.2	25.0	136939.4434722512	False	outside_control_response_range		
+f20_proximal	proximal	0.2	30.0	142853.93413278533	False	outside_control_response_range		
+f20_proximal	proximal	0.2	40.0	146010.8414150808	False	outside_control_response_range		
+f20_proximal	proximal	0.2	50.0	146553.7987517287	False	outside_control_response_range		
+f20_proximal	proximal	0.2	60.0	146672.94593492843	False	outside_control_response_range		
+f20_proximal	proximal	0.2	70.0	146705.22840936354	False	outside_control_response_range		
+f20_distal	distal	0.2	0.0	0.0	False	zero_contrast		
+f20_distal	distal	0.2	5.0	12707.687650181211	True	valid	30.937679530627626	6.187535906125525
+f20_distal	distal	0.2	10.0	65466.981890720985	True	valid	57.80126049175461	5.780126049175461
+f20_distal	distal	0.2	15.0	105484.93606745351	False	outside_control_response_range		
+f20_distal	distal	0.2	20.0	126360.59984770347	False	outside_control_response_range		
+f20_distal	distal	0.2	25.0	136517.27399189942	False	outside_control_response_range		
+f20_distal	distal	0.2	30.0	141453.1256138983	False	outside_control_response_range		
+f20_distal	distal	0.2	40.0	145179.1361579117	False	outside_control_response_range		
+f20_distal	distal	0.2	50.0	146201.06091949833	False	outside_control_response_range		
+f20_distal	distal	0.2	60.0	146520.11542868498	False	outside_control_response_range		
+f20_distal	distal	0.2	70.0	146634.20212469625	False	outside_control_response_range		
+f25_uniform	uniform	0.25	0.0	0.0	False	zero_contrast		
+f25_uniform	uniform	0.25	5.0	2863.2324018043646	True	valid	16.26265874417436	3.2525317488348717
+f25_uniform	uniform	0.25	10.0	14249.830564505148	True	valid	32.249064616270466	3.2249064616270466
+f25_uniform	uniform	0.25	15.0	44120.359010871965	True	valid	48.867265388974566	3.2578176925983042
+f25_uniform	uniform	0.25	20.0	85717.22887223242	True	valid	66.77776373712877	3.338888186856438
+f25_uniform	uniform	0.25	25.0	117084.70594499764	False	outside_control_response_range		
+f25_uniform	uniform	0.25	30.0	133288.09229759217	False	outside_control_response_range		
+f25_uniform	uniform	0.25	40.0	143777.3836824222	False	outside_control_response_range		
+f25_uniform	uniform	0.25	50.0	145955.00885134024	False	outside_control_response_range		
+f25_uniform	uniform	0.25	60.0	146486.6641938948	False	outside_control_response_range		
+f25_uniform	uniform	0.25	70.0	146639.10802890745	False	outside_control_response_range		
+f25_random00	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random00	random	0.25	5.0	3254.2084923877583	True	valid	17.35277354382096	3.4705547087641917
+f25_random00	random	0.25	10.0	17251.509870060785	True	valid	34.57647081167293	3.4576470811672926
+f25_random00	random	0.25	15.0	51250.77900375557	True	valid	51.9769512208443	3.4651300813896198
+f25_random00	random	0.25	20.0	91788.34257921959	True	valid	69.62052748251669	3.4810263741258347
+f25_random00	random	0.25	25.0	120141.98263971972	False	outside_control_response_range		
+f25_random00	random	0.25	30.0	134511.10311507137	False	outside_control_response_range		
+f25_random00	random	0.25	40.0	143878.83379167077	False	outside_control_response_range		
+f25_random00	random	0.25	50.0	145926.3447149378	False	outside_control_response_range		
+f25_random00	random	0.25	60.0	146461.91981120844	False	outside_control_response_range		
+f25_random00	random	0.25	70.0	146625.3266215364	False	outside_control_response_range		
+f25_random01	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random01	random	0.25	5.0	3505.141656570489	True	valid	18.001437679711685	3.600287535942337
+f25_random01	random	0.25	10.0	19008.858836831037	True	valid	35.820571972436454	3.5820571972436452
+f25_random01	random	0.25	15.0	57102.204391442734	True	valid	54.392895749543044	3.6261930499695363
+f25_random01	random	0.25	20.0	99552.04008246302	False	outside_control_response_range		
+f25_random01	random	0.25	25.0	125109.09983162284	False	outside_control_response_range		
+f25_random01	random	0.25	30.0	136669.07404394855	False	outside_control_response_range		
+f25_random01	random	0.25	40.0	144008.9607879627	False	outside_control_response_range		
+f25_random01	random	0.25	50.0	145822.94078766028	False	outside_control_response_range		
+f25_random01	random	0.25	60.0	146386.99110933163	False	outside_control_response_range		
+f25_random01	random	0.25	70.0	146584.75672378635	False	outside_control_response_range		
+f25_random02	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random02	random	0.25	5.0	3035.1092127150264	True	valid	16.75437304473214	3.350874608946428
+f25_random02	random	0.25	10.0	15483.038396422198	True	valid	33.2390057944079	3.32390057944079
+f25_random02	random	0.25	15.0	47881.241732450275	True	valid	50.52901668021798	3.368601112014532
+f25_random02	random	0.25	20.0	90377.03436963809	True	valid	68.95438344789642	3.447719172394821
+f25_random02	random	0.25	25.0	120246.74387954608	False	outside_control_response_range		
+f25_random02	random	0.25	30.0	135032.89046058728	False	outside_control_response_range		
+f25_random02	random	0.25	40.0	144253.26371931838	False	outside_control_response_range		
+f25_random02	random	0.25	50.0	146083.0759230451	False	outside_control_response_range		
+f25_random02	random	0.25	60.0	146522.73539348604	False	outside_control_response_range		
+f25_random02	random	0.25	70.0	146649.61552186986	False	outside_control_response_range		
+f25_random03	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random03	random	0.25	5.0	3049.42338194858	True	valid	16.794422297799137	3.3588844595598273
+f25_random03	random	0.25	10.0	15882.633509494728	True	valid	33.549346761670506	3.3549346761670504
+f25_random03	random	0.25	15.0	47066.7059944994	True	valid	50.1699696005506	3.3446646400367066
+f25_random03	random	0.25	20.0	85263.34996131744	True	valid	66.5676725200511	3.328383626002555
+f25_random03	random	0.25	25.0	114124.74488458144	False	outside_control_response_range		
+f25_random03	random	0.25	30.0	130571.63112981596	False	outside_control_response_range		
+f25_random03	random	0.25	40.0	142779.9256886446	False	outside_control_response_range		
+f25_random03	random	0.25	50.0	145649.87417785442	False	outside_control_response_range		
+f25_random03	random	0.25	60.0	146387.25598973388	False	outside_control_response_range		
+f25_random03	random	0.25	70.0	146603.4196020137	False	outside_control_response_range		
+f25_random04	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random04	random	0.25	5.0	2859.48452304376	True	valid	16.251709949578196	3.250341989915639
+f25_random04	random	0.25	10.0	14192.414481912203	True	valid	32.201743730779974	3.2201743730779975
+f25_random04	random	0.25	15.0	44089.94179255069	True	valid	48.8539113367537	3.2569274224502465
+f25_random04	random	0.25	20.0	86086.29182861565	True	valid	66.94885024769968	3.3474425123849842
+f25_random04	random	0.25	25.0	117737.90712981865	False	outside_control_response_range		
+f25_random04	random	0.25	30.0	133999.0772338979	False	outside_control_response_range		
+f25_random04	random	0.25	40.0	144199.97109814896	False	outside_control_response_range		
+f25_random04	random	0.25	50.0	146128.12351177185	False	outside_control_response_range		
+f25_random04	random	0.25	60.0	146554.56917813985	False	outside_control_response_range		
+f25_random04	random	0.25	70.0	146667.08275736982	False	outside_control_response_range		
+f25_random05	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random05	random	0.25	5.0	3215.5670635061197	True	valid	17.24947027502667	3.449894055005334
+f25_random05	random	0.25	10.0	16981.634353730347	True	valid	34.37821768434939	3.437821768434939
+f25_random05	random	0.25	15.0	50960.66879669223	True	valid	51.854368464086875	3.4569578976057915
+f25_random05	random	0.25	20.0	91394.86131173527	True	valid	69.43448604919776	3.471724302459888
+f25_random05	random	0.25	25.0	119566.30757366838	False	outside_control_response_range		
+f25_random05	random	0.25	30.0	134202.58363613696	False	outside_control_response_range		
+f25_random05	random	0.25	40.0	143957.13726769874	False	outside_control_response_range		
+f25_random05	random	0.25	50.0	146004.89476556948	False	outside_control_response_range		
+f25_random05	random	0.25	60.0	146501.57127915393	False	outside_control_response_range		
+f25_random05	random	0.25	70.0	146643.61306776365	False	outside_control_response_range		
+f25_random06	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random06	random	0.25	5.0	3395.600855081135	True	valid	17.72291088744723	3.5445821774894464
+f25_random06	random	0.25	10.0	18377.22253254496	True	valid	35.38239553743671	3.538239553743671
+f25_random06	random	0.25	15.0	53474.90628703881	True	valid	52.90627165108059	3.5270847767387057
+f25_random06	random	0.25	20.0	93068.85779717627	False	outside_control_response_range		
+f25_random06	random	0.25	25.0	120039.40823763721	False	outside_control_response_range		
+f25_random06	random	0.25	30.0	134230.66100768605	False	outside_control_response_range		
+f25_random06	random	0.25	40.0	143958.79190652954	False	outside_control_response_range		
+f25_random06	random	0.25	50.0	146018.38675735422	False	outside_control_response_range		
+f25_random06	random	0.25	60.0	146511.05689071363	False	outside_control_response_range		
+f25_random06	random	0.25	70.0	146649.12364258585	False	outside_control_response_range		
+f25_random07	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random07	random	0.25	5.0	3202.8006006942105	True	valid	17.215133975335114	3.4430267950670226
+f25_random07	random	0.25	10.0	16783.643034033732	True	valid	34.231476345512746	3.423147634551275
+f25_random07	random	0.25	15.0	51246.07205717454	True	valid	51.974965112862904	3.4649976741908604
+f25_random07	random	0.25	20.0	93259.98112742542	False	outside_control_response_range		
+f25_random07	random	0.25	25.0	121207.393845157	False	outside_control_response_range		
+f25_random07	random	0.25	30.0	134831.75633692363	False	outside_control_response_range		
+f25_random07	random	0.25	40.0	143750.03198335957	False	outside_control_response_range		
+f25_random07	random	0.25	50.0	145826.86190594803	False	outside_control_response_range		
+f25_random07	random	0.25	60.0	146412.1013883275	False	outside_control_response_range		
+f25_random07	random	0.25	70.0	146601.63747053602	False	outside_control_response_range		
+f25_random08	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random08	random	0.25	5.0	3084.3164309486497	True	valid	16.891480133562702	3.3782960267125404
+f25_random08	random	0.25	10.0	15913.85144411143	True	valid	33.573385148818126	3.3573385148818127
+f25_random08	random	0.25	15.0	48739.69592267402	True	valid	50.903321329617505	3.3935547553078336
+f25_random08	random	0.25	20.0	90004.98986996428	True	valid	68.77930369816144	3.438965184908072
+f25_random08	random	0.25	25.0	118803.32432808998	False	outside_control_response_range		
+f25_random08	random	0.25	30.0	133771.41301063134	False	outside_control_response_range		
+f25_random08	random	0.25	40.0	143865.687548095	False	outside_control_response_range		
+f25_random08	random	0.25	50.0	145993.88220976267	False	outside_control_response_range		
+f25_random08	random	0.25	60.0	146504.24782180449	False	outside_control_response_range		
+f25_random08	random	0.25	70.0	146647.2206850808	False	outside_control_response_range		
+f25_random09	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random09	random	0.25	5.0	3290.1423711916664	True	valid	17.44800212787463	3.4896004255749262
+f25_random09	random	0.25	10.0	17601.538767791986	True	valid	34.83063774058905	3.4830637740589045
+f25_random09	random	0.25	15.0	51589.97899124993	True	valid	52.119843998257345	3.4746562665504896
+f25_random09	random	0.25	20.0	90891.1734593141	True	valid	69.19669433209083	3.4598347166045413
+f25_random09	random	0.25	25.0	118798.08154300608	False	outside_control_response_range		
+f25_random09	random	0.25	30.0	133515.40471223314	False	outside_control_response_range		
+f25_random09	random	0.25	40.0	143502.4837887083	False	outside_control_response_range		
+f25_random09	random	0.25	50.0	145785.47173092293	False	outside_control_response_range		
+f25_random09	random	0.25	60.0	146406.7064988371	False	outside_control_response_range		
+f25_random09	random	0.25	70.0	146602.19164336263	False	outside_control_response_range		
+f25_random10	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random10	random	0.25	5.0	2868.5705344911985	True	valid	16.278236234719788	3.2556472469439575
+f25_random10	random	0.25	10.0	14305.390524372115	True	valid	32.29474872640076	3.2294748726400764
+f25_random10	random	0.25	15.0	44088.02789835371	True	valid	48.853071121238074	3.2568714080825383
+f25_random10	random	0.25	20.0	85179.1766419246	True	valid	66.5287485463705	3.326437427318525
+f25_random10	random	0.25	25.0	116631.91236850581	False	outside_control_response_range		
+f25_random10	random	0.25	30.0	133273.9035124852	False	outside_control_response_range		
+f25_random10	random	0.25	40.0	143995.46382135618	False	outside_control_response_range		
+f25_random10	random	0.25	50.0	146072.38257489513	False	outside_control_response_range		
+f25_random10	random	0.25	60.0	146537.8934212544	False	outside_control_response_range		
+f25_random10	random	0.25	70.0	146661.53997033506	False	outside_control_response_range		
+f25_random11	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random11	random	0.25	5.0	3190.8182526567684	True	valid	17.182812614497045	3.436562522899409
+f25_random11	random	0.25	10.0	16665.25550147504	True	valid	34.143201607945265	3.4143201607945266
+f25_random11	random	0.25	15.0	50933.04583117842	True	valid	51.8426784469575	3.4561785631305
+f25_random11	random	0.25	20.0	93209.75014818017	False	outside_control_response_range		
+f25_random11	random	0.25	25.0	121400.68853450204	False	outside_control_response_range		
+f25_random11	random	0.25	30.0	134959.65724478697	False	outside_control_response_range		
+f25_random11	random	0.25	40.0	143658.7287188413	False	outside_control_response_range		
+f25_random11	random	0.25	50.0	145729.0884486071	False	outside_control_response_range		
+f25_random11	random	0.25	60.0	146355.21276139643	False	outside_control_response_range		
+f25_random11	random	0.25	70.0	146572.11757299406	False	outside_control_response_range		
+f25_random12	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random12	random	0.25	5.0	3248.3613771952155	True	valid	17.337202080668014	3.467440416133603
+f25_random12	random	0.25	10.0	17215.160916595294	True	valid	34.54988583461801	3.454988583461801
+f25_random12	random	0.25	15.0	50736.65885258355	True	valid	51.75947430713052	3.450631620475368
+f25_random12	random	0.25	20.0	91026.86771832668	True	valid	69.2607162836767	3.463035814183835
+f25_random12	random	0.25	25.0	119553.43687923854	False	outside_control_response_range		
+f25_random12	random	0.25	30.0	134349.2298140072	False	outside_control_response_range		
+f25_random12	random	0.25	40.0	144068.0978342944	False	outside_control_response_range		
+f25_random12	random	0.25	50.0	146054.5261141799	False	outside_control_response_range		
+f25_random12	random	0.25	60.0	146523.6834607579	False	outside_control_response_range		
+f25_random12	random	0.25	70.0	146654.09862525543	False	outside_control_response_range		
+f25_random13	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random13	random	0.25	5.0	3193.027664183677	True	valid	17.188779172983484	3.4377558345966968
+f25_random13	random	0.25	10.0	16709.694054150652	True	valid	34.176383854483014	3.4176383854483015
+f25_random13	random	0.25	15.0	51151.37725189465	True	valid	51.9349892195227	3.4623326146348465
+f25_random13	random	0.25	20.0	93098.19080991494	False	outside_control_response_range		
+f25_random13	random	0.25	25.0	120842.7932286153	False	outside_control_response_range		
+f25_random13	random	0.25	30.0	134469.5775179006	False	outside_control_response_range		
+f25_random13	random	0.25	40.0	143581.37652125958	False	outside_control_response_range		
+f25_random13	random	0.25	50.0	145757.912100842	False	outside_control_response_range		
+f25_random13	random	0.25	60.0	146380.13253169486	False	outside_control_response_range		
+f25_random13	random	0.25	70.0	146585.05302929576	False	outside_control_response_range		
+f25_random14	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random14	random	0.25	5.0	3344.792315272515	True	valid	17.591305815529267	3.5182611631058536
+f25_random14	random	0.25	10.0	17836.604748406444	True	valid	34.999489077802316	3.4999489077802317
+f25_random14	random	0.25	15.0	54178.00852627884	True	valid	53.196747456857075	3.546449830457138
+f25_random14	random	0.25	20.0	96429.02969153743	False	outside_control_response_range		
+f25_random14	random	0.25	25.0	123015.2875544716	False	outside_control_response_range		
+f25_random14	random	0.25	30.0	135491.22225225013	False	outside_control_response_range		
+f25_random14	random	0.25	40.0	143610.89868651476	False	outside_control_response_range		
+f25_random14	random	0.25	50.0	145660.44899286336	False	outside_control_response_range		
+f25_random14	random	0.25	60.0	146314.44969051404	False	outside_control_response_range		
+f25_random14	random	0.25	70.0	146550.2626433386	False	outside_control_response_range		
+f25_random15	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random15	random	0.25	5.0	3321.087991125173	True	valid	17.52937238708911	3.505874477417822
+f25_random15	random	0.25	10.0	17600.72856688453	True	valid	34.83005323305347	3.483005323305347
+f25_random15	random	0.25	15.0	53685.56439324822	True	valid	52.99344765436861	3.5328965102912404
+f25_random15	random	0.25	20.0	96582.51625830475	False	outside_control_response_range		
+f25_random15	random	0.25	25.0	123749.64988792568	False	outside_control_response_range		
+f25_random15	random	0.25	30.0	136278.5361307124	False	outside_control_response_range		
+f25_random15	random	0.25	40.0	144116.91079767977	False	outside_control_response_range		
+f25_random15	random	0.25	50.0	145920.55622342357	False	outside_control_response_range		
+f25_random15	random	0.25	60.0	146438.5713404758	False	outside_control_response_range		
+f25_random15	random	0.25	70.0	146609.93763430696	False	outside_control_response_range		
+f25_random16	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random16	random	0.25	5.0	3181.5488038676804	True	valid	17.157746414103354	3.431549282820671
+f25_random16	random	0.25	10.0	16573.434517243648	True	valid	34.074459051494685	3.4074459051494683
+f25_random16	random	0.25	15.0	50784.729465655495	True	valid	51.779855824281405	3.451990388285427
+f25_random16	random	0.25	20.0	93564.75299696707	False	outside_control_response_range		
+f25_random16	random	0.25	25.0	122290.07338551243	False	outside_control_response_range		
+f25_random16	random	0.25	30.0	135986.16710016667	False	outside_control_response_range		
+f25_random16	random	0.25	40.0	144393.04635608598	False	outside_control_response_range		
+f25_random16	random	0.25	50.0	146092.79210982384	False	outside_control_response_range		
+f25_random16	random	0.25	60.0	146516.65291197947	False	outside_control_response_range		
+f25_random16	random	0.25	70.0	146644.03589658593	False	outside_control_response_range		
+f25_random17	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random17	random	0.25	5.0	3166.669896255493	True	valid	17.117396568241908	3.4234793136483814
+f25_random17	random	0.25	10.0	16618.74538016048	True	valid	34.10841178041476	3.4108411780414762
+f25_random17	random	0.25	15.0	49831.07954917283	True	valid	51.3735939444788	3.424906262965253
+f25_random17	random	0.25	20.0	89954.23480625243	True	valid	68.75543612548987	3.437771806274493
+f25_random17	random	0.25	25.0	118485.22395864785	False	outside_control_response_range		
+f25_random17	random	0.25	30.0	133685.27215347692	False	outside_control_response_range		
+f25_random17	random	0.25	40.0	143934.46793438893	False	outside_control_response_range		
+f25_random17	random	0.25	50.0	146030.07050236023	False	outside_control_response_range		
+f25_random17	random	0.25	60.0	146518.28915564268	False	outside_control_response_range		
+f25_random17	random	0.25	70.0	146652.49866250937	False	outside_control_response_range		
+f25_random18	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random18	random	0.25	5.0	3025.2127512373563	True	valid	16.7266041904762	3.3453208380952395
+f25_random18	random	0.25	10.0	15446.43675261457	True	valid	33.210331446317035	3.3210331446317034
+f25_random18	random	0.25	15.0	47528.40564370419	True	valid	50.373968104933816	3.358264540328921
+f25_random18	random	0.25	20.0	89371.65304829997	True	valid	68.48177317976652	3.424088658988326
+f25_random18	random	0.25	25.0	119353.68573573354	False	outside_control_response_range		
+f25_random18	random	0.25	30.0	134636.81719443577	False	outside_control_response_range		
+f25_random18	random	0.25	40.0	144299.33984476965	False	outside_control_response_range		
+f25_random18	random	0.25	50.0	146145.58923086064	False	outside_control_response_range		
+f25_random18	random	0.25	60.0	146557.8297344348	False	outside_control_response_range		
+f25_random18	random	0.25	70.0	146667.61189669123	False	outside_control_response_range		
+f25_random19	random	0.25	0.0	0.0	False	zero_contrast		
+f25_random19	random	0.25	5.0	3515.96648274553	True	valid	18.028582600152365	3.605716520030473
+f25_random19	random	0.25	10.0	19315.820839804215	True	valid	36.0300962488135	3.60300962488135
+f25_random19	random	0.25	15.0	54659.159603598484	True	valid	53.39477192596805	3.5596514617312036
+f25_random19	random	0.25	20.0	93530.40072945433	False	outside_control_response_range		
+f25_random19	random	0.25	25.0	120013.48112946506	False	outside_control_response_range		
+f25_random19	random	0.25	30.0	133770.02856462682	False	outside_control_response_range		
+f25_random19	random	0.25	40.0	143501.30069033924	False	outside_control_response_range		
+f25_random19	random	0.25	50.0	145812.95360725943	False	outside_control_response_range		
+f25_random19	random	0.25	60.0	146427.697322094	False	outside_control_response_range		
+f25_random19	random	0.25	70.0	146614.24245960728	False	outside_control_response_range		
+f25_proximal	proximal	0.25	0.0	0.0	False	zero_contrast		
+f25_proximal	proximal	0.25	5.0	4991.441849608296	True	valid	21.21504276364783	4.243008552729566
+f25_proximal	proximal	0.25	10.0	30278.812994450287	True	valid	42.48933267417593	4.248933267417593
+f25_proximal	proximal	0.25	15.0	70311.86112104988	True	valid	59.851208266735156	3.990080551115677
+f25_proximal	proximal	0.25	20.0	102117.03594959591	False	outside_control_response_range		
+f25_proximal	proximal	0.25	25.0	123357.10165120661	False	outside_control_response_range		
+f25_proximal	proximal	0.25	30.0	135308.79262905265	False	outside_control_response_range		
+f25_proximal	proximal	0.25	40.0	144031.0348518905	False	outside_control_response_range		
+f25_proximal	proximal	0.25	50.0	145997.60686249446	False	outside_control_response_range		
+f25_proximal	proximal	0.25	60.0	146493.36472192963	False	outside_control_response_range		
+f25_proximal	proximal	0.25	70.0	146639.1574480223	False	outside_control_response_range		
+f25_distal	distal	0.25	0.0	0.0	False	zero_contrast		
+f25_distal	distal	0.25	5.0	7791.70798641727	True	valid	25.632202284358954	5.126440456871791
+f25_distal	distal	0.25	10.0	45431.68535024389	True	valid	49.44450162413171	4.944450162413171
+f25_distal	distal	0.25	15.0	85644.02568850156	True	valid	66.74385606820363	4.449590404546909
+f25_distal	distal	0.25	20.0	111057.61763535574	False	outside_control_response_range		
+f25_distal	distal	0.25	25.0	126379.66885989849	False	outside_control_response_range		
+f25_distal	distal	0.25	30.0	135175.42539967617	False	outside_control_response_range		
+f25_distal	distal	0.25	40.0	142782.46853007062	False	outside_control_response_range		
+f25_distal	distal	0.25	50.0	145224.15325259167	False	outside_control_response_range		
+f25_distal	distal	0.25	60.0	146092.2232483475	False	outside_control_response_range		
+f25_distal	distal	0.25	70.0	146432.57711472642	False	outside_control_response_range		
+f30_uniform	uniform	0.3	0.0	0.0	False	zero_contrast		
+f30_uniform	uniform	0.3	5.0	2138.5039634123414	True	valid	13.932399603459043	2.7864799206918085
+f30_uniform	uniform	0.3	10.0	9441.240609425284	True	valid	27.691792701033933	2.7691792701033933
+f30_uniform	uniform	0.3	15.0	28594.0759961786	True	valid	41.60651538993993	2.7737676926626618
+f30_uniform	uniform	0.3	20.0	61349.61336403073	True	valid	56.11572652524456	2.8057863262622282
+f30_uniform	uniform	0.3	25.0	95428.7693618124	False	outside_control_response_range		
+f30_uniform	uniform	0.3	30.0	119258.75149660002	False	outside_control_response_range		
+f30_uniform	uniform	0.3	40.0	139291.15572682393	False	outside_control_response_range		
+f30_uniform	uniform	0.3	50.0	144499.10275012828	False	outside_control_response_range		
+f30_uniform	uniform	0.3	60.0	145971.02857358658	False	outside_control_response_range		
+f30_uniform	uniform	0.3	70.0	146438.9764675695	False	outside_control_response_range		
+f30_random00	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random00	random	0.3	5.0	2447.752052900237	True	valid	14.986757957878101	2.99735159157562
+f30_random00	random	0.3	10.0	11683.744854996026	True	valid	30.018159078791733	3.0018159078791733
+f30_random00	random	0.3	15.0	35139.506827856014	True	valid	44.860772036438554	2.9907181357625703
+f30_random00	random	0.3	20.0	69091.5998418827	True	valid	59.32529987751242	2.966264993875621
+f30_random00	random	0.3	25.0	100609.54288186916	False	outside_control_response_range		
+f30_random00	random	0.3	30.0	121858.51473394406	False	outside_control_response_range		
+f30_random00	random	0.3	40.0	139550.73699797955	False	outside_control_response_range		
+f30_random00	random	0.3	50.0	144311.35110490778	False	outside_control_response_range		
+f30_random00	random	0.3	60.0	145801.68783300222	False	outside_control_response_range		
+f30_random00	random	0.3	70.0	146336.5749844122	False	outside_control_response_range		
+f30_random01	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random01	random	0.3	5.0	2356.0958181501132	True	valid	14.686154598818637	2.9372309197637274
+f30_random01	random	0.3	10.0	10865.905335943622	True	valid	29.232552552993795	2.9232552552993796
+f30_random01	random	0.3	15.0	33298.47795487926	True	valid	43.98903959722612	2.9326026398150744
+f30_random01	random	0.3	20.0	69124.2220355443	True	valid	59.3392637013595	2.966963185067975
+f30_random01	random	0.3	25.0	102577.7691205055	False	outside_control_response_range		
+f30_random01	random	0.3	30.0	123769.2795200395	False	outside_control_response_range		
+f30_random01	random	0.3	40.0	140376.33487572218	False	outside_control_response_range		
+f30_random01	random	0.3	50.0	144689.23774032152	False	outside_control_response_range		
+f30_random01	random	0.3	60.0	145987.46934360816	False	outside_control_response_range		
+f30_random01	random	0.3	70.0	146429.4939512566	False	outside_control_response_range		
+f30_random02	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random02	random	0.3	5.0	2269.4438780499468	True	valid	14.393006307715078	2.8786012615430154
+f30_random02	random	0.3	10.0	10290.767549906279	True	valid	28.636968678489964	2.8636968678489962
+f30_random02	random	0.3	15.0	31462.66275038929	True	valid	43.088923858589645	2.8725949239059765
+f30_random02	random	0.3	20.0	66241.74504541393	True	valid	58.122972243243694	2.906148612162185
+f30_random02	random	0.3	25.0	100005.36820155809	False	outside_control_response_range		
+f30_random02	random	0.3	30.0	122355.24590776509	False	outside_control_response_range		
+f30_random02	random	0.3	40.0	140406.07689078583	False	outside_control_response_range		
+f30_random02	random	0.3	50.0	144858.8400196368	False	outside_control_response_range		
+f30_random02	random	0.3	60.0	146079.6792860524	False	outside_control_response_range		
+f30_random02	random	0.3	70.0	146469.91293423815	False	outside_control_response_range		
+f30_random03	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random03	random	0.3	5.0	2282.031218475706	True	valid	14.43614995332336	2.887229990664672
+f30_random03	random	0.3	10.0	10609.248277163033	True	valid	28.971180931665764	2.8971180931665765
+f30_random03	random	0.3	15.0	31782.751307912626	True	valid	43.24834597951469	2.8832230653009794
+f30_random03	random	0.3	20.0	63697.54858776489	True	valid	57.07279030217183	2.8536395151085916
+f30_random03	random	0.3	25.0	94673.66378485334	False	outside_control_response_range		
+f30_random03	random	0.3	30.0	116931.29192282453	False	outside_control_response_range		
+f30_random03	random	0.3	40.0	137886.24620963834	False	outside_control_response_range		
+f30_random03	random	0.3	50.0	144047.89431990072	False	outside_control_response_range		
+f30_random03	random	0.3	60.0	145835.3832590812	False	outside_control_response_range		
+f30_random03	random	0.3	70.0	146396.3147782293	False	outside_control_response_range		
+f30_random04	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random04	random	0.3	5.0	2147.9968629042746	True	valid	13.966536385370762	2.7933072770741525
+f30_random04	random	0.3	10.0	9506.02790033309	True	valid	27.766631498902846	2.7766631498902847
+f30_random04	random	0.3	15.0	28839.281978076822	True	valid	41.737312229086456	2.7824874819390972
+f30_random04	random	0.3	20.0	61776.468257386434	True	valid	56.28915731239967	2.8144578656199832
+f30_random04	random	0.3	25.0	95708.95137679919	False	outside_control_response_range		
+f30_random04	random	0.3	30.0	119359.35004321116	False	outside_control_response_range		
+f30_random04	random	0.3	40.0	139394.96093357226	False	outside_control_response_range		
+f30_random04	random	0.3	50.0	144595.47013279656	False	outside_control_response_range		
+f30_random04	random	0.3	60.0	146025.7812309698	False	outside_control_response_range		
+f30_random04	random	0.3	70.0	146466.17128831043	False	outside_control_response_range		
+f30_random05	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random05	random	0.3	5.0	2369.0028250673395	True	valid	14.729061970911019	2.945812394182204
+f30_random05	random	0.3	10.0	11083.391939157902	True	valid	29.44848041484221	2.944848041484221
+f30_random05	random	0.3	15.0	33738.00357316593	True	valid	44.19974586795688	2.9466497245304586
+f30_random05	random	0.3	20.0	67966.42423528158	True	valid	58.84663880996122	2.942331940498061
+f30_random05	random	0.3	25.0	99687.24581204566	False	outside_control_response_range		
+f30_random05	random	0.3	30.0	121243.3472631753	False	outside_control_response_range		
+f30_random05	random	0.3	40.0	139794.92400084515	False	outside_control_response_range		
+f30_random05	random	0.3	50.0	144698.6688304014	False	outside_control_response_range		
+f30_random05	random	0.3	60.0	146052.9203812586	False	outside_control_response_range		
+f30_random05	random	0.3	70.0	146472.16330355252	False	outside_control_response_range		
+f30_random06	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random06	random	0.3	5.0	2338.4432330107043	True	valid	14.62715786872164	2.925431573744328
+f30_random06	random	0.3	10.0	10877.885383672223	True	valid	29.244579260922393	2.924457926092239
+f30_random06	random	0.3	15.0	32905.8156921883	True	valid	43.79930801701031	2.9199538678006873
+f30_random06	random	0.3	20.0	66736.83653491511	True	valid	58.329585654706754	2.9164792827353376
+f30_random06	random	0.3	25.0	98935.29569976781	False	outside_control_response_range		
+f30_random06	random	0.3	30.0	120902.44627836054	False	outside_control_response_range		
+f30_random06	random	0.3	40.0	139853.29377148207	False	outside_control_response_range		
+f30_random06	random	0.3	50.0	144800.47232232944	False	outside_control_response_range		
+f30_random06	random	0.3	60.0	146117.54720407707	False	outside_control_response_range		
+f30_random06	random	0.3	70.0	146507.83839446056	False	outside_control_response_range		
+f30_random07	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random07	random	0.3	5.0	2447.5734939799254	True	valid	14.986181443627776	2.9972362887255555
+f30_random07	random	0.3	10.0	11547.92875461366	True	valid	29.892657708186633	2.989265770818663
+f30_random07	random	0.3	15.0	35474.179528630455	True	valid	45.016383137758766	3.0010922091839176
+f30_random07	random	0.3	20.0	71691.60450699748	True	valid	60.45345654087811	3.0226728270439054
+f30_random07	random	0.3	25.0	103684.3386651278	False	outside_control_response_range		
+f30_random07	random	0.3	30.0	123760.95027376275	False	outside_control_response_range		
+f30_random07	random	0.3	40.0	139851.46658458747	False	outside_control_response_range		
+f30_random07	random	0.3	50.0	144301.61813172587	False	outside_control_response_range		
+f30_random07	random	0.3	60.0	145769.53365012867	False	outside_control_response_range		
+f30_random07	random	0.3	70.0	146314.513232077	False	outside_control_response_range		
+f30_random08	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random08	random	0.3	5.0	2423.5449277684565	True	valid	14.90828108454411	2.9816562169088217
+f30_random08	random	0.3	10.0	11402.448763677352	True	valid	29.75604596852621	2.975604596852621
+f30_random08	random	0.3	15.0	34945.40173249787	True	valid	44.77014442587915	2.9846762950586103
+f30_random08	random	0.3	20.0	70558.6966337592	True	valid	59.958526586989834	2.9979263293494918
+f30_random08	random	0.3	25.0	102110.03089047933	False	outside_control_response_range		
+f30_random08	random	0.3	30.0	122406.71442083298	False	outside_control_response_range		
+f30_random08	random	0.3	40.0	139591.3334909102	False	outside_control_response_range		
+f30_random08	random	0.3	50.0	144386.83502280706	False	outside_control_response_range		
+f30_random08	random	0.3	60.0	145866.5003968463	False	outside_control_response_range		
+f30_random08	random	0.3	70.0	146377.73334533075	False	outside_control_response_range		
+f30_random09	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random09	random	0.3	5.0	2446.29412218653	True	valid	14.982049710110584	2.9964099420221166
+f30_random09	random	0.3	10.0	11635.789200522131	True	valid	29.97406280021177	2.9974062800211767
+f30_random09	random	0.3	15.0	35185.71058935074	True	valid	44.88230341872672	2.9921535612484482
+f30_random09	random	0.3	20.0	69641.59762063084	True	valid	59.56141180736162	2.9780705903680813
+f30_random09	random	0.3	25.0	101163.3568728344	False	outside_control_response_range		
+f30_random09	random	0.3	30.0	122168.3568527217	False	outside_control_response_range		
+f30_random09	random	0.3	40.0	139736.34337223333	False	outside_control_response_range		
+f30_random09	random	0.3	50.0	144471.2242674803	False	outside_control_response_range		
+f30_random09	random	0.3	60.0	145904.35414335717	False	outside_control_response_range		
+f30_random09	random	0.3	70.0	146393.98578367635	False	outside_control_response_range		
+f30_random10	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random10	random	0.3	5.0	2237.3168648129968	True	valid	14.282005196580824	2.856401039316165
+f30_random10	random	0.3	10.0	10075.819119710388	True	valid	28.405207187202834	2.8405207187202834
+f30_random10	random	0.3	15.0	30701.147582110938	True	valid	42.70509144025796	2.8470060960171972
+f30_random10	random	0.3	20.0	64883.92839278817	True	valid	57.560333333229266	2.8780166666614635
+f30_random10	random	0.3	25.0	98702.15548530716	False	outside_control_response_range		
+f30_random10	random	0.3	30.0	121442.82902591162	False	outside_control_response_range		
+f30_random10	random	0.3	40.0	140062.46181272934	False	outside_control_response_range		
+f30_random10	random	0.3	50.0	144780.9057493554	False	outside_control_response_range		
+f30_random10	random	0.3	60.0	146080.8461052358	False	outside_control_response_range		
+f30_random10	random	0.3	70.0	146484.75817716503	False	outside_control_response_range		
+f30_random11	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random11	random	0.3	5.0	2300.978213034028	True	valid	14.500728546418234	2.9001457092836467
+f30_random11	random	0.3	10.0	10530.896356685716	True	valid	28.88997445179422	2.888997445179422
+f30_random11	random	0.3	15.0	32097.351995395205	True	valid	43.40397552422809	2.8935983682818724
+f30_random11	random	0.3	20.0	66794.66341251395	True	valid	58.35377416250094	2.917688708125047
+f30_random11	random	0.3	25.0	100284.86406901777	False	outside_control_response_range		
+f30_random11	random	0.3	30.0	122259.4253013107	False	outside_control_response_range		
+f30_random11	random	0.3	40.0	139860.32227791546	False	outside_control_response_range		
+f30_random11	random	0.3	50.0	144484.36306970296	False	outside_control_response_range		
+f30_random11	random	0.3	60.0	145896.68593770912	False	outside_control_response_range		
+f30_random11	random	0.3	70.0	146386.40253934063	False	outside_control_response_range		
+f30_random12	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random12	random	0.3	5.0	2359.3358624045604	True	valid	14.696943745046303	2.9393887490092605
+f30_random12	random	0.3	10.0	11128.06171623254	True	valid	29.49220002340662	2.9492200023406623
+f30_random12	random	0.3	15.0	33099.48674285338	True	valid	43.89306833023958	2.9262045553493055
+f30_random12	random	0.3	20.0	65641.75259191969	True	valid	57.87366934455969	2.8936834672279845
+f30_random12	random	0.3	25.0	97114.3088578271	False	outside_control_response_range		
+f30_random12	random	0.3	30.0	119427.91698342365	False	outside_control_response_range		
+f30_random12	random	0.3	40.0	139341.03357716734	False	outside_control_response_range		
+f30_random12	random	0.3	50.0	144642.57424858736	False	outside_control_response_range		
+f30_random12	random	0.3	60.0	146066.4454058762	False	outside_control_response_range		
+f30_random12	random	0.3	70.0	146490.0355478002	False	outside_control_response_range		
+f30_random13	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random13	random	0.3	5.0	2266.4582645783566	True	valid	14.382744536831767	2.8765489073663533
+f30_random13	random	0.3	10.0	10255.642054308068	True	valid	28.599437250864348	2.859943725086435
+f30_random13	random	0.3	15.0	31370.984694033974	True	valid	43.043058335596186	2.869537222373079
+f30_random13	random	0.3	20.0	66400.52724518455	True	valid	58.1891440507826	2.90945720253913
+f30_random13	random	0.3	25.0	100400.08013603231	False	outside_control_response_range		
+f30_random13	random	0.3	30.0	122317.03945626576	False	outside_control_response_range		
+f30_random13	random	0.3	40.0	139574.5382562691	False	outside_control_response_range		
+f30_random13	random	0.3	50.0	144208.43511752787	False	outside_control_response_range		
+f30_random13	random	0.3	60.0	145727.5921281965	False	outside_control_response_range		
+f30_random13	random	0.3	70.0	146294.54065512543	False	outside_control_response_range		
+f30_random14	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random14	random	0.3	5.0	2361.275688248771	True	valid	14.703397423753895	2.940679484750779
+f30_random14	random	0.3	10.0	10929.09676865005	True	valid	29.295815857382937	2.9295815857382936
+f30_random14	random	0.3	15.0	33482.600300956496	True	valid	44.0775171325279	2.9385011421685268
+f30_random14	random	0.3	20.0	69118.73397568373	True	valid	59.33691420197886	2.966845710098943
+f30_random14	random	0.3	25.0	102277.11523835453	False	outside_control_response_range		
+f30_random14	random	0.3	30.0	123416.5294499245	False	outside_control_response_range		
+f30_random14	random	0.3	40.0	140021.9830242894	False	outside_control_response_range		
+f30_random14	random	0.3	50.0	144401.92360369684	False	outside_control_response_range		
+f30_random14	random	0.3	60.0	145810.08835186786	False	outside_control_response_range		
+f30_random14	random	0.3	70.0	146331.54052546562	False	outside_control_response_range		
+f30_random15	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random15	random	0.3	5.0	2417.3873925884986	True	valid	14.888215711615446	2.9776431423230894
+f30_random15	random	0.3	10.0	11303.269682840166	True	valid	29.66161044419742	2.966161044419742
+f30_random15	random	0.3	15.0	34627.17651334328	True	valid	44.62094640090039	2.974729760060026
+f30_random15	random	0.3	20.0	70840.25919680724	True	valid	60.08128744501759	3.0040643722508795
+f30_random15	random	0.3	25.0	103879.9201688117	False	outside_control_response_range		
+f30_random15	random	0.3	30.0	124564.43419307903	False	outside_control_response_range		
+f30_random15	random	0.3	40.0	140657.92469496626	False	outside_control_response_range		
+f30_random15	random	0.3	50.0	144799.4364787827	False	outside_control_response_range		
+f30_random15	random	0.3	60.0	146031.9125402499	False	outside_control_response_range		
+f30_random15	random	0.3	70.0	146447.91066421082	False	outside_control_response_range		
+f30_random16	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random16	random	0.3	5.0	2370.772187848084	True	valid	14.734928966485866	2.946985793297173
+f30_random16	random	0.3	10.0	10965.80082490773	True	valid	29.332364270220193	2.9332364270220195
+f30_random16	random	0.3	15.0	33671.973328999375	True	valid	44.16820082702553	2.944546721801702
+f30_random16	random	0.3	20.0	69785.51092654331	True	valid	59.623439818426	2.9811719909213
+f30_random16	random	0.3	25.0	103150.88219206696	False	outside_control_response_range		
+f30_random16	random	0.3	30.0	124136.17955625149	False	outside_control_response_range		
+f30_random16	random	0.3	40.0	140631.0055774324	False	outside_control_response_range		
+f30_random16	random	0.3	50.0	144864.65390268195	False	outside_control_response_range		
+f30_random16	random	0.3	60.0	146077.6503528045	False	outside_control_response_range		
+f30_random16	random	0.3	70.0	146470.95964508987	False	outside_control_response_range		
+f30_random17	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random17	random	0.3	5.0	2369.7589243977104	True	valid	14.73156954660166	2.946313909320332
+f30_random17	random	0.3	10.0	11272.821036561521	True	valid	29.632406153305237	2.9632406153305237
+f30_random17	random	0.3	15.0	33487.32409692774	True	valid	44.07978306513516	2.938652204342344
+f30_random17	random	0.3	20.0	65023.49224815326	True	valid	57.617917374741225	2.880895868737061
+f30_random17	random	0.3	25.0	95408.35859234333	False	outside_control_response_range		
+f30_random17	random	0.3	30.0	117885.13352811478	False	outside_control_response_range		
+f30_random17	random	0.3	40.0	138860.7455002249	False	outside_control_response_range		
+f30_random17	random	0.3	50.0	144537.4064332425	False	outside_control_response_range		
+f30_random17	random	0.3	60.0	146043.89798356075	False	outside_control_response_range		
+f30_random17	random	0.3	70.0	146485.28938819576	False	outside_control_response_range		
+f30_random18	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random18	random	0.3	5.0	2184.150671856126	True	valid	14.0954644077159	2.81909288154318
+f30_random18	random	0.3	10.0	9729.272448643878	True	valid	28.021020589586882	2.8021020589586882
+f30_random18	random	0.3	15.0	29561.509583547228	True	valid	42.11791335542864	2.8078608903619093
+f30_random18	random	0.3	20.0	62966.84892949648	True	valid	56.774015384393124	2.838700769219656
+f30_random18	random	0.3	25.0	96926.70089709495	False	outside_control_response_range		
+f30_random18	random	0.3	30.0	120497.0978134642	False	outside_control_response_range		
+f30_random18	random	0.3	40.0	140232.67080566465	False	outside_control_response_range		
+f30_random18	random	0.3	50.0	145014.33756497386	False	outside_control_response_range		
+f30_random18	random	0.3	60.0	146209.08826188344	False	outside_control_response_range		
+f30_random18	random	0.3	70.0	146546.8185896072	False	outside_control_response_range		
+f30_random19	random	0.3	0.0	0.0	False	zero_contrast		
+f30_random19	random	0.3	5.0	2547.054637843117	True	valid	15.303430039182752	3.0606860078365505
+f30_random19	random	0.3	10.0	12485.83625652761	True	valid	30.74187367606612	3.074187367606612
+f30_random19	random	0.3	15.0	37105.89259046416	True	valid	45.764450384481286	3.050963358965419
+f30_random19	random	0.3	20.0	70385.42101250551	True	valid	59.88315605212844	2.994157802606422
+f30_random19	random	0.3	25.0	100254.94499138171	False	outside_control_response_range		
+f30_random19	random	0.3	30.0	120780.40733751054	False	outside_control_response_range		
+f30_random19	random	0.3	40.0	139043.08591201232	False	outside_control_response_range		
+f30_random19	random	0.3	50.0	144279.14125172293	False	outside_control_response_range		
+f30_random19	random	0.3	60.0	145862.75652542006	False	outside_control_response_range		
+f30_random19	random	0.3	70.0	146388.9443251015	False	outside_control_response_range		
+f30_proximal	proximal	0.3	0.0	0.0	False	zero_contrast		
+f30_proximal	proximal	0.3	5.0	3653.017108795758	True	valid	18.36652929254433	3.6733058585088663
+f30_proximal	proximal	0.3	10.0	20921.17039825382	True	valid	37.09231899170389	3.709231899170389
+f30_proximal	proximal	0.3	15.0	54411.136733126026	True	valid	53.292766870967945	3.5528511247311965
+f30_proximal	proximal	0.3	20.0	85514.79489156566	True	valid	66.68401841066755	3.3342009205333776
+f30_proximal	proximal	0.3	25.0	109145.6152345524	False	outside_control_response_range		
+f30_proximal	proximal	0.3	30.0	125305.78423582563	False	outside_control_response_range		
+f30_proximal	proximal	0.3	40.0	140432.9141921905	False	outside_control_response_range		
+f30_proximal	proximal	0.3	50.0	144808.02220767044	False	outside_control_response_range		
+f30_proximal	proximal	0.3	60.0	146070.78072835307	False	outside_control_response_range		
+f30_proximal	proximal	0.3	70.0	146473.33421495566	False	outside_control_response_range		
+f30_distal	distal	0.3	0.0	0.0	False	zero_contrast		
+f30_distal	distal	0.3	5.0	5406.74120313137	True	valid	21.98007052436967	4.396014104873934
+f30_distal	distal	0.3	10.0	31999.03562991272	True	valid	43.35545045869831	4.33554504586983
+f30_distal	distal	0.3	15.0	68231.06066579047	True	valid	58.9587159192371	3.9305810612824734
+f30_distal	distal	0.3	20.0	94417.28438765777	False	outside_control_response_range		
+f30_distal	distal	0.3	25.0	112276.38246566599	False	outside_control_response_range		
+f30_distal	distal	0.3	30.0	124799.64107537997	False	outside_control_response_range		
+f30_distal	distal	0.3	40.0	138395.53347103138	False	outside_control_response_range		
+f30_distal	distal	0.3	50.0	143501.048939208	False	outside_control_response_range		
+f30_distal	distal	0.3	60.0	145385.26777688897	False	outside_control_response_range		
+f30_distal	distal	0.3	70.0	146122.53625892772	False	outside_control_response_range		

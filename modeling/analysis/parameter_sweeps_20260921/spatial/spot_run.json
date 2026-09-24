@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "elapsed_seconds": 129.60781407356262,
+  "case_count": 770,
+  "layout_count": 70,
+  "n_local_records": 57750,
+  "calcium": {
+    "v_half_mV": -37.47892660844856,
+    "slope_mV": 1.3984142481316566,
+    "tau_ms": 50.0,
+    "mode": "fixed"
+  },
+  "runner_sha256": "72cfe36bdcd9a7ac46eefaa94dcdafcf12f2d72ce3479eb15785532763d87d5b",
+  "helper_path": "/Users/kerschensteinerd/Documents/g2_loom_cg/analysis/parameter_sweeps_20260921/electrical/passive_tail.py",
+  "helper_sha256": "39194f68f8125c146d03cd14af990163b2c4784d2d5960e1542e05a79a57a7f8",
+  "full_original_protocol_checks": 8,
+  "max_tail_auc_relative_bound": 1.3120608584424707e-10,
+  "max_tail_start_ms": 88.0,
+  "max_direct_mean_auc_relative_error": 0.0,
+  "archive_definition": "Per-layout saved exactNEURONprefix at2ms from50ms; constant last-voltage extension through3050ms; baselinebefore50ms identically-45mV; same original localcalciumrecurrence/trapezoid; allboundsstored.",
+  "interpretation": "Numerically bounded latevoltagetail acceleration; no steady-state substitution for stimulus onset or calcium AUC."
+}

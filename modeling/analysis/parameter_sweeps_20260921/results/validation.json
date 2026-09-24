@@ -1,0 +1,62 @@
+[
+  {
+    "check": "finite_nonnegative_auc",
+    "passed": true
+  },
+  {
+    "check": "exact_zero_contrast",
+    "passed": true
+  },
+  {
+    "check": "adjoint_vs_full_filter_point0",
+    "passed": true,
+    "max_scaled_error": 1.0568084314801885e-14
+  },
+  {
+    "check": "adjoint_vs_full_filter_point50",
+    "passed": true,
+    "max_scaled_error": 1.4348590244528732e-14
+  },
+  {
+    "check": "adjoint_vs_full_filter_point1300",
+    "passed": true,
+    "max_scaled_error": 1.2299084308042105e-14
+  },
+  {
+    "check": "adjoint_vs_full_filter_point2550",
+    "passed": true,
+    "max_scaled_error": 1.0571053301267168e-14
+  },
+  {
+    "check": "adjoint_vs_full_filter_point2600",
+    "passed": true,
+    "max_scaled_error": 1.2657770612714659e-14
+  },
+  {
+    "check": "adjoint_vs_full_filter_point2601",
+    "passed": true,
+    "max_scaled_error": 1.0298028699698113e-14
+  },
+  {
+    "check": "archived_exact_parameters_reproduce_original_auc_float32_tolerance",
+    "passed": true,
+    "max_scaled_error": 2.53996691281103e-07,
+    "explanation": "Archived voltages float32; original summary computed before float32 storage"
+  },
+  {
+    "check": "spatial_original_reference",
+    "passed": true,
+    "observed_um": [
+      18.777339211434093,
+      34.337163202424904
+    ]
+  },
+  {
+    "check": "finite_all_spatial_profiles",
+    "passed": true
+  },
+  {
+    "check": "inputs_and_manuscript_unchanged",
+    "passed": true
+  }
+]

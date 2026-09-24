@@ -1,0 +1,270 @@
+{
+  "status": "illustrative_OFF_shape_calibration_only_not_channel_identification",
+  "parameters": {
+    "g_pas_S_cm2": 0.0001,
+    "inhibition_scale": 3.0,
+    "glycine_fraction": 0.3,
+    "inhibition_protocol": "tonic_pure_shunt",
+    "excitation_protocol": "sustained_3s",
+    "excitation_scale": 1.0
+  },
+  "selection_objective": "OFF shape SSE + 0.09*max(0, high-contrast Ca gain-1.3)^2; 1.3 is an illustrative soft compression target, not a measured bound.",
+  "calcium": {
+    "v_half_mV": -37.47892660844856,
+    "slope_mV": 1.3984142481316566,
+    "tau_ms": 50.0,
+    "mode": "fixed"
+  },
+  "bounds": {
+    "v_half_mV": [
+      -45.0,
+      -20.0
+    ],
+    "slope_mV": [
+      1.0,
+      6.0
+    ],
+    "tau_ms": "fixed at 50"
+  },
+  "targets_OFF_shape30": [
+    0.0345740518597063,
+    0.703657829532908
+  ],
+  "selected": {
+    "v_half_mV": -37.47892660844856,
+    "slope_mV": 1.3984142481316566,
+    "shape30": [
+      0.10220071886080527,
+      0.769355977592312
+    ],
+    "squared_shape_error": 0.008889612748112896,
+    "objective_sse": 0.016026300807363104,
+    "absolute_auc": [
+      [
+        2451.8557448203505,
+        11663.972032980291,
+        92589.34588035065
+      ],
+      [
+        28594.077250818395,
+        119258.75481623624,
+        146438.97636910639
+      ]
+    ],
+    "gaba_over_control": [
+      11.662218428316836,
+      10.22454053207843,
+      1.581596402661094
+    ],
+    "absolute_auc_increment": [
+      26142.221505998044,
+      107594.78278325594,
+      53849.630488755734
+    ],
+    "low_over_high_absolute_increment": 0.48546705462457657,
+    "boundary_hits": [],
+    "optimizer_success": true
+  },
+  "multistart_results": [
+    {
+      "v_half_mV": -37.47892660844856,
+      "slope_mV": 1.3984142481316566,
+      "shape30": [
+        0.10220071886080527,
+        0.769355977592312
+      ],
+      "squared_shape_error": 0.008889612748112896,
+      "objective_sse": 0.016026300807363104,
+      "absolute_auc": [
+        [
+          2451.8557448203505,
+          11663.972032980291,
+          92589.34588035065
+        ],
+        [
+          28594.077250818395,
+          119258.75481623624,
+          146438.97636910639
+        ]
+      ],
+      "gaba_over_control": [
+        11.662218428316836,
+        10.22454053207843,
+        1.581596402661094
+      ],
+      "absolute_auc_increment": [
+        26142.221505998044,
+        107594.78278325594,
+        53849.630488755734
+      ],
+      "low_over_high_absolute_increment": 0.48546705462457657,
+      "boundary_hits": [],
+      "optimizer_success": true
+    },
+    {
+      "v_half_mV": -37.478924309029985,
+      "slope_mV": 1.3984135263702209,
+      "shape30": [
+        0.1022005251557459,
+        0.7693559184020784
+      ],
+      "squared_shape_error": 0.008889578771521368,
+      "objective_sse": 0.016026300807368977,
+      "absolute_auc": [
+        [
+          2451.847699327669,
+          11663.943548302774,
+          92589.30868533107
+        ],
+        [
+          28594.026782964538,
+          119258.73869096293,
+          146438.9796057171
+        ]
+      ],
+      "gaba_over_control": [
+        11.662236113118047,
+        10.224564119081005,
+        1.5815970729773623
+      ],
+      "absolute_auc_increment": [
+        26142.179083636867,
+        107594.79514266015,
+        53849.67092038602
+      ],
+      "low_over_high_absolute_increment": 0.48546590233182185,
+      "boundary_hits": [],
+      "optimizer_success": true
+    },
+    {
+      "v_half_mV": -37.47892690201185,
+      "slope_mV": 1.3984143176092467,
+      "shape30": [
+        0.10220074060380203,
+        0.769355989804928
+      ],
+      "squared_shape_error": 0.008889617293618833,
+      "objective_sse": 0.01602630080737824,
+      "absolute_auc": [
+        [
+          2451.856642417223,
+          11663.975313787092,
+          92589.35092029297
+        ],
+        [
+          28594.083254103338,
+          119258.75738463865,
+          146438.97603712248
+        ]
+      ],
+      "gaba_over_control": [
+        11.662216607376015,
+        10.224537876350956,
+        1.5815963129840582
+      ],
+      "absolute_auc_increment": [
+        26142.226611686114,
+        107594.78207085156,
+        53849.62511682951
+      ],
+      "low_over_high_absolute_increment": 0.4854671978675658,
+      "boundary_hits": [],
+      "optimizer_success": true
+    },
+    {
+      "v_half_mV": -37.47892386956087,
+      "slope_mV": 1.398413490267285,
+      "shape30": [
+        0.10220050155414645,
+        0.7693558861723115
+      ],
+      "squared_shape_error": 0.00888957134446892,
+      "objective_sse": 0.016026300807395415,
+      "absolute_auc": [
+        [
+          2451.8467437239888,
+          11663.939702696338,
+          92589.30026778254
+        ],
+        [
+          28594.0191136301,
+          119258.73331910829,
+          146438.97985936765
+        ]
+      ],
+      "gaba_over_control": [
+        11.662237530474705,
+        10.224567029572297,
+        1.5815972195042356
+      ],
+      "absolute_auc_increment": [
+        26142.17236990611,
+        107594.79361641195,
+        53849.67959158511
+      ],
+      "low_over_high_absolute_increment": 0.48546569948377655,
+      "boundary_hits": [],
+      "optimizer_success": true
+    },
+    {
+      "v_half_mV": -37.47892313186224,
+      "slope_mV": 1.398413098723139,
+      "shape30": [
+        0.10220041832803706,
+        0.7693559000429597
+      ],
+      "squared_shape_error": 0.008889561910452697,
+      "objective_sse": 0.016026300807456977,
+      "absolute_auc": [
+        [
+          2451.8432481772893,
+          11663.928053183681,
+          92589.29039088829
+        ],
+        [
+          28593.99981806235,
+          119258.73174322896,
+          146438.98147103208
+        ]
+      ],
+      "gaba_over_control": [
+        11.662246287285802,
+        10.224577106395746,
+        1.581597405626549
+      ],
+      "absolute_auc_increment": [
+        26142.15656988506,
+        107594.80369004527,
+        53849.69108014379
+      ],
+      "low_over_high_absolute_increment": 0.485465302502442,
+      "boundary_hits": [],
+      "optimizer_success": true
+    }
+  ],
+  "same_voltage_v2_activation_shape30": [
+    0.30710348552763095,
+    0.5503544827348432
+  ],
+  "original_v2_shape30": [
+    0.37742878538267705,
+    0.41191756169350274
+  ],
+  "original_v2_squared_shape_error": 0.20266175217811522,
+  "protocols": {
+    "dt_ms": 0.1,
+    "sample_dt_ms": 2.0,
+    "tstop_ms": 3052.0,
+    "auc_window_ms": [
+      50,
+      3050
+    ],
+    "readout": "Mean of signed, local, baseline-subtracted calcium AUC over 75 fixed OFF contacts.",
+    "limitations": "Fixed pure-shunting inhibition and sustained 3-s excitation isolate the mechanism; no measured synaptic time course is fitted; model contact samples unregistered to imaging sublaminae."
+  },
+  "interpretation": "Only two OFF interior shape values calibrated. 15 and 70 percent endpoints are imposed separately per condition only for shape comparison. Absolute AUC remains shared scale. No indicator, release, driving-force, or membrane feedback transformation.",
+  "hashes": {
+    "/Users/kerschensteinerd/Documents/g2_loom_cg/analysis/fig3_model/experimental_fig3.json": "0403d347e9e9facd8bf5d7a9985a0faec241949cbc327f28e44a3c679b2216d3",
+    "outputs/fig3_v3/calibration_voltage_traces.npz": "96657b55576563e2e6d26ff9eb0d03f4155b67e552d8983bae76ecd6a9728aff"
+  }
+}

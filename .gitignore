@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mplconfig/
+*.log
+
+# New simulation runs belong in fresh output directories. The three historical
+# reference directories below contain inputs/results needed for reproduction.
+/modeling/outputs/*
+!/modeling/outputs/fig3_v3/
+!/modeling/outputs/fig3_v3_spatial/
+!/modeling/outputs/fig4_v9_retained_inhibition_20260916/
+**/reproduction*/
+/modeling/analysis/**/generated/

@@ -1,0 +1,23 @@
+{
+  "electrical_metrics.npz": "5083b905f2739b23d84fd1cd4caf554f7791b70da2ead333891ba0d1ebb24006",
+  "paired_metrics.tsv": "10eabf4a237ba1bbc4b42e3d4e3b0aa9c9b5bec68001c01482408cbcd7ff6738",
+  "contrast_matches.tsv": "e625117811ab0d9a132043e35c60dd644ebafdaaaa1986e8fa785281be253283",
+  "summary.json": "43ae9581cdc49e279f8a63c665807804f5cd46b5920f4dcce5fed217a9565eb5",
+  "README.md": "f874caa9d7396f4305ec906c817186478647654fe9b8b9e2a62be73c29a8a319",
+  "build_electrical_outputs.py": "b3d6e2412458ba6a9494d7d3ed5672f6888cf4853176238c8c19a3dcf247ba14",
+  "review/electrical_absolute_responses.svg": "6713ed74add48e0872c4f45c839070ab70c51ce721a2823a28aece8e01174685",
+  "review/electrical_absolute_responses.pdf": "6527d4836f0f794f15145038bf70198935cbdb180899ec7133460f471f3e3656",
+  "review/electrical_absolute_responses.png": "d2f656f3809d6cc155713a09e32baf40c3b9fcd0ff565c650d3aaa7e16487241",
+  "review/electrical_spread_preference.svg": "10b6faf7e5791b818ad003077018d239da51d89a425a4babc2c66ded48a2fe1b",
+  "review/electrical_low_preference.svg": "3e0382d4ab7eeec22c736f39057857c630e426a2893f25a1e88fde8855c86ffc",
+  "review/electrical_overview.pdf": "c4e47d6c00b32b7d84b44a506d4b9545ef975fae465b5af3459dad0ddef8c3d3",
+  "review/electrical_intermediate_preference.svg": "e2003a48f8ecafdf4e8d6573cf4e0a1b01cbf034162d56f818a71c42e218578e",
+  "review/electrical_overview.png": "c8631bb4e4416ab34197b2be2b6e038d6ecc6fb250a3dead40ff7d42489315c6",
+  "review/electrical_spread_preference.pdf": "89f8e6ea0fb349995bef0436ba72835e507ce216aca6543f17e422c001c4aec2",
+  "review/electrical_low_preference.pdf": "55af980d838ccc14c58720aa39fa8f7db01699a9f3a9a57f8ff086b380c4cbd1",
+  "review/electrical_overview.svg": "a8bdc3545d7921a99f29bd6a6ada7123cbb36aa9370fa9470176ad1dd82382c5",
+  "review/electrical_intermediate_preference.png": "30284262dc3abd601beefa7bc769471d571955b5280741655e08c58308e82db0",
+  "review/electrical_low_preference.png": "98300a34d1ceb4676b0526e97d3a11d0f44fe8f64f0704fc342052e65966699f",
+  "review/electrical_intermediate_preference.pdf": "19853570f21da17973d8aeb1a203bf361dfc3c7a415effa2205a029089989c1f",
+  "review/electrical_spread_preference.png": "8dd1597ba357fa354e703d7a7b3aaee26cce2fa2a238025e6a4c9ff12c1a16ed"
+}

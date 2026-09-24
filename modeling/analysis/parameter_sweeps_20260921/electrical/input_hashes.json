@@ -1,0 +1,21 @@
+{
+  "vg3_cid3_rf_simulation-main/src/calcium_readout.py": "3495bbdeb30e7f5588c8a6fcd0df435ea7f5700194e9039ecb460202cdc255e1",
+  "vg3_cid3_rf_simulation-main/src/run_functions.py": "ac05d5a346be2040e9dd4181d4a994ee0e09900506977ba166292c7a2cdebb34",
+  "vg3_cid3_rf_simulation-main/src/plotting.py": "975d846a941f24baf65d389df5a12254ec3bb8ea940444cad6810f4bfde91cc2",
+  "vg3_cid3_rf_simulation-main/src/vg3_base_functions.py": "e82b0137387634ddd35fd4ae6ecb7711811c5676212aaf557a7d0cef8878f64a",
+  "vg3_cid3_rf_simulation-main/data/locked_params.json": "8a33cfebdd5ad447f9833a326f2d85afcde0aebf7f334164f0644179607b6795",
+  "vg3_cid3_rf_simulation-main/data/fitted/fitted_off_epsc_params.json": "97019d31f3aef29ecb7aa02a1e5f6fa5cfb256507b2a1fd5171ea3cd2ce77458",
+  "vg3_cid3_rf_simulation-main/data/fitted/fitted_on_epsc_params.json": "112c3d3147d7f719a37a9cf55d9d78cac57461e4066349b0b00be661786cd4c9",
+  "vg3_cid3_rf_simulation-main/data/fitted/fitted_voltage_params_locked.json": "d7dd2a3376cbcd1be9441b7bc32174b28a0815c8f29a17353e94419f39aeed62",
+  "vg3_cid3_rf_simulation-main/data/fitted/fitted_inh_params.json": "bfe21bb624a34ec013e9014f99730971442a2a19c6f99d720b88e4509bdfd0ca",
+  "vg3_cid3_rf_simulation-main/data/cid3.swc": "0d779752e05df12297ab4a3af2a8e15ef04ee38da28301ece463e65892a9a7c7",
+  "vg3_cid3_rf_simulation-main/data/sm2nrn_cid3.mat": "fdf5164a77795496f58bbb261d45e44d7a22c89c6ef0ee2d0782dc90e942d0a4",
+  "vg3_cid3_rf_simulation-main/data/vg3_onbip_list.txt": "e3a206954183beafcc08edd683bd048626ddee594c1bd92645131e280f06c8ab",
+  "vg3_cid3_rf_simulation-main/data/vg3_offbip_list.txt": "bb350dd9f94a3498367e88674e12e5f38fc6f78fe18c1f6eaf457220a2335bd2",
+  "vg3_cid3_rf_simulation-main/scripts/fig3/run_fig3_pilot.py": "a1e11f49284b3ac41d832e53ca12ead20cfd01b7a5a961b1dd66ad3aa555856b",
+  "vg3_cid3_rf_simulation-main/scripts/fig3/protocol_v3.py": "5333406e5c54f6f9b2da9f20d90993b28e001a5ec0d8d440cb7c03a26baf2d56",
+  "vg3_cid3_rf_simulation-main/scripts/fig3/run_anatomy_v3.py": "7aaff914a9297e002a6b7096315fad885896656bbf4313ac09abf722b4a2aea1",
+  "analysis/parameter_sweeps_20260921/protocol.md": "e289533db6b06a35658478a4d50b6836b3f8ee006080eec5d57cb910d9b84653",
+  "analysis/parameter_sweeps_20260921/electrical/passive_tail.py": "39194f68f8125c146d03cd14af990163b2c4784d2d5960e1542e05a79a57a7f8",
+  "analysis/parameter_sweeps_20260921/electrical/run_electrical.py": "11097adb58990570f952ed03ba8ef8549c5116000e7da414ad5c2d501af0ad20"
+}

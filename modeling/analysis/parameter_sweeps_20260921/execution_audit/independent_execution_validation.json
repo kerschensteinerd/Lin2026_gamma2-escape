@@ -1,0 +1,1011 @@
+{
+  "status": "passed",
+  "checks_passed": 244,
+  "checks_total": 244,
+  "checks": [
+    {
+      "check": "spatial_design_70_layouts_242_contacts",
+      "passed": true
+    },
+    {
+      "check": "spatial_soma_distance_origin",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_control",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_uniform",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random00",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random00",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random01",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random01",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random02",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random02",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random03",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random03",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random04",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random04",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random05",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random05",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random06",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random06",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random07",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random07",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random08",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random08",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random09",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random09",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random10",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random10",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random11",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random11",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random12",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random12",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random13",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random13",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random14",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random14",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random15",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random15",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random16",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random16",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random17",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random17",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random18",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random18",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_random19",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_random19",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_proximal",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_proximal",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f20_distal",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f20_distal",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_uniform",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random00",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random00",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random01",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random01",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random02",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random02",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random03",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random03",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random04",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random04",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random05",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random05",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random06",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random06",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random07",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random07",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random08",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random08",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random09",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random09",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random10",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random10",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random11",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random11",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random12",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random12",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random13",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random13",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random14",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random14",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random15",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random15",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random16",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random16",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random17",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random17",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random18",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random18",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_random19",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_random19",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_proximal",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_proximal",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f25_distal",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f25_distal",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_uniform",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random00",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random00",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random01",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random01",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random02",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random02",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random03",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random03",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random04",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random04",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random05",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random05",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random06",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random06",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random07",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random07",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random08",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random08",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random09",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random09",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random10",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random10",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random11",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random11",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random12",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random12",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random13",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random13",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random14",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random14",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random15",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random15",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random16",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random16",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random17",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random17",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random18",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random18",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_random19",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_random19",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_proximal",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_proximal",
+      "passed": true
+    },
+    {
+      "check": "at_most_one_partial_f30_distal",
+      "passed": true
+    },
+    {
+      "check": "layout_weights_f30_distal",
+      "passed": true
+    },
+    {
+      "check": "matched_total_inhibitory_budgets",
+      "passed": true,
+      "maximum_error_uS": 7.632783294297951e-17
+    },
+    {
+      "check": "independent_layout_reconstruction",
+      "passed": true,
+      "maximum_error_uS": 8.586881206085195e-17
+    },
+    {
+      "check": "900_unique_focal_site_conditions",
+      "passed": true
+    },
+    {
+      "check": "210_unique_focal_layout_conditions",
+      "passed": true
+    },
+    {
+      "check": "recomputed_focal_source_dv_mV",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "recomputed_focal_source_calcium_au_ms",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "recomputed_focal_voltage_1e_um",
+      "passed": true,
+      "maximum_absolute_error": 6.465938895416912e-13
+    },
+    {
+      "check": "recomputed_focal_calcium_1e_um",
+      "passed": true,
+      "maximum_absolute_error": 3.055333763768431e-13
+    },
+    {
+      "check": "recomputed_focal_voltage_cable_integral_um",
+      "passed": true,
+      "maximum_absolute_error": 1.1368683772161603e-13
+    },
+    {
+      "check": "recomputed_focal_calcium_cable_integral_um",
+      "passed": true,
+      "maximum_absolute_error": 2.2737367544323206e-13
+    },
+    {
+      "check": "recomputed_focal_calcium_absolute_cable_integral_au_ms_um",
+      "passed": true,
+      "maximum_absolute_error": 1.4551915228366852e-11
+    },
+    {
+      "check": "independent_focal_censor_flags",
+      "passed": true
+    },
+    {
+      "check": "production_focal_validation.json",
+      "passed": true,
+      "checks": 20
+    },
+    {
+      "check": "production_spot_validation.json",
+      "passed": true,
+      "checks": 98
+    },
+    {
+      "check": "spatial_770_unique_spot_conditions",
+      "passed": true
+    },
+    {
+      "check": "spatial_zero_contrast",
+      "passed": true
+    },
+    {
+      "check": "spatial_all_tail_bounds",
+      "passed": true,
+      "maximum_relative_bound": 9.937442897025432e-08
+    },
+    {
+      "check": "spatial_all_baselines_and_reversals",
+      "passed": true
+    },
+    {
+      "check": "electrical_prescribed_axes",
+      "passed": true
+    },
+    {
+      "check": "electrical_10692_unique_spot_conditions",
+      "passed": true
+    },
+    {
+      "check": "electrical_972_unique_focal_conditions",
+      "passed": true
+    },
+    {
+      "check": "electrical_finite_nonnegative_mean_auc",
+      "passed": true
+    },
+    {
+      "check": "electrical_finite_nonnegative_local_auc",
+      "passed": true
+    },
+    {
+      "check": "electrical_finite_nonnegative_mean_peak_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_finite_nonnegative_local_peak_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_finite_nonnegative_mean_peak_ca",
+      "passed": true
+    },
+    {
+      "check": "electrical_finite_nonnegative_tail_auc_bound",
+      "passed": true
+    },
+    {
+      "check": "electrical_finite_nonnegative_tail_voltage_bound_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_finite_nonnegative_tail_bound_scale",
+      "passed": true
+    },
+    {
+      "check": "electrical_zero_contrast",
+      "passed": true
+    },
+    {
+      "check": "electrical_baseline_and_reversal_bounds",
+      "passed": true
+    },
+    {
+      "check": "electrical_all_tail_bounds",
+      "passed": true,
+      "maximum_relative_bound": 9.989162416504709e-08
+    },
+    {
+      "check": "electrical_local_then_mean_mean_auc",
+      "passed": true
+    },
+    {
+      "check": "electrical_local_then_mean_mean_peak_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_local_then_mean_mean_peak_ca",
+      "passed": true
+    },
+    {
+      "check": "electrical_contrast_monotonicity",
+      "passed": true
+    },
+    {
+      "check": "electrical_reduced_inhibition_increases_absolute_auc",
+      "passed": true
+    },
+    {
+      "check": "electrical_nominal_matches_calcium_archive",
+      "passed": true,
+      "maximum_scaled_error": 2.539967557954386e-07,
+      "tolerance": 5e-07
+    },
+    {
+      "check": "electrical_identical_drive_E1_C0",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E1_C1",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E1_C2",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E1_C3",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E1_C4",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E1_C5",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E1_C6",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E2_C0",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E2_C1",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E2_C2",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E2_C3",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E2_C4",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E2_C5",
+      "passed": true
+    },
+    {
+      "check": "electrical_identical_drive_E2_C6",
+      "passed": true
+    },
+    {
+      "check": "electrical_recording_alignment_0_0_1_0_1",
+      "passed": true
+    },
+    {
+      "check": "electrical_independent_clearance_0_0_1_0_1",
+      "passed": true,
+      "maximum_scaled_error": 3.149452153390891e-14
+    },
+    {
+      "check": "electrical_recording_alignment_0_0_1_2_10",
+      "passed": true
+    },
+    {
+      "check": "electrical_independent_clearance_0_0_1_2_10",
+      "passed": true,
+      "maximum_scaled_error": 3.0745766088569175e-14
+    },
+    {
+      "check": "electrical_recording_alignment_4_4_0_1_10",
+      "passed": true
+    },
+    {
+      "check": "electrical_independent_clearance_4_4_0_1_10",
+      "passed": true,
+      "maximum_scaled_error": 3.9122617928535914e-14
+    },
+    {
+      "check": "electrical_recording_alignment_4_4_2_1_6",
+      "passed": true
+    },
+    {
+      "check": "electrical_independent_clearance_4_4_2_1_6",
+      "passed": true,
+      "maximum_scaled_error": 3.836703006534489e-14
+    },
+    {
+      "check": "electrical_recording_alignment_8_8_0_0_1",
+      "passed": true
+    },
+    {
+      "check": "electrical_independent_clearance_8_8_0_0_1",
+      "passed": true,
+      "maximum_scaled_error": 4.2594548165042506e-14
+    },
+    {
+      "check": "electrical_recording_alignment_8_0_3_2_3",
+      "passed": true
+    },
+    {
+      "check": "electrical_independent_clearance_8_0_3_2_3",
+      "passed": true,
+      "maximum_scaled_error": 3.8690750958806366e-14
+    },
+    {
+      "check": "electrical_spatial_overlap_0_0_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_0_0_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_0_0_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_0_1_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_0_1_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_0_1_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_0_2_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_0_2_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_0_2_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_1_0_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_1_0_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_1_0_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_1_1_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_1_1_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_1_1_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_1_2_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_1_2_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_1_2_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_2_0_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_2_0_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_2_0_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_2_1_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_2_1_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_2_1_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_2_2_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_2_2_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_2_2_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_3_0_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_3_0_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_3_0_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_3_1_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_3_1_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_3_1_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_3_2_calcium_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_3_2_voltage_1e_um",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_overlap_3_2_source_dv_mV",
+      "passed": true
+    },
+    {
+      "check": "electrical_spatial_spot_overlap",
+      "passed": true,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "production_electrical_tail_validation.json",
+      "passed": true,
+      "checks": 5
+    },
+    {
+      "check": "production_electrical_focal_validation.json",
+      "passed": true,
+      "checks": 5
+    },
+    {
+      "check": "calcium_supplement_artifact_hashes",
+      "passed": true,
+      "files": 22,
+      "mismatches": []
+    },
+    {
+      "check": "calcium_supplement_frozen_numerical_source",
+      "passed": true
+    },
+    {
+      "check": "protected_original_inputs_unchanged",
+      "passed": true,
+      "files": 82,
+      "changed": []
+    }
+  ]
+}

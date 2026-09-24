@@ -1,0 +1,16 @@
+{
+  "g_pas": 0.001,
+  "inh_rev": -60.0,
+  "G_exc": 400.0,
+  "G_inh": 600.0,
+  "G_inh_voltage_fit": 400.0,
+  "sep_inh_scale": 1.5,
+  "sse_voltage_fit": 58.26,
+  "source_trial": 48,
+  "stimulus": "single ON or single OFF event (n_events=1)",
+  "selection_rationale": "Trial 48 of the SINGLE-EVENT voltage retune fit G_exc=G_inh=400 to Kim Fig 1C (SSE=58.26). On top of that the scientist chose a 1.5x INHIBITION BOOST for ON/OFF separation, so G_inh = 400 x 1.5 = 600 is baked in (G_exc unchanged at 400). E_Cl=-60: inhibition shunts the cross layer at small spots (stays ~rest) and hyperpolarizes it at large spots. The 1.5x boost pushes inhibitory conductance ~1.5x above the voltage-fit balance (still space-clamp-defensible).",
+  "diam_um": [50, 100, 200, 300, 400, 600],
+  "model_dV_on_at_Ginh400":  [2.374, 3.801, 1.392, -3.659, -7.275, -10.402],
+  "model_dV_off_at_Ginh400": [6.015, 13.935, 8.789, 0.871, -4.449, -9.442],
+  "note": "PRIMARY config. model_dV_* above are the pre-boost values (G_inh=400); with the baked 1.5x inhibition the soma responses sit slightly more hyperpolarized and the ON/OFF layers separate. Scripts apply exc_scale=G_exc=400 and inh_scale=G_inh=600 automatically. To change the separation level, edit G_inh (= 400 x desired_boost) or re-run separation_tuning_sweep."
+}

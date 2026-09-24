@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "nominal_fraction": 0.25,
+  "change": "Total effective inhibitory load only; no refit or new transmitter assignment.",
+  "parameters": {
+    "g_pas_S_cm2": 0.0001,
+    "inhibition_scale": 3.0,
+    "inhibition_protocol": "tonic_pure_shunt",
+    "excitation_protocol": "sustained_3s",
+    "excitation_scale": 1.0,
+    "nominal_retained_effective_inhibition_fraction": 0.25,
+    "sensitivity_retained_effective_inhibition_fractions": [
+      0.2,
+      0.25,
+      0.3
+    ],
+    "full_control_inhibition_fraction": 1.0
+  },
+  "calcium": {
+    "v_half_mV": -37.47892660844856,
+    "slope_mV": 1.3984142481316566,
+    "tau_ms": 50.0,
+    "mode": "fixed"
+  },
+  "prior_calibration": "outputs/fig3_v3/calibration.json",
+  "focal_source_segment": 4705,
+  "focal_conductance_uS": 0.012785038085113628,
+  "total_control_inhibition_nS": 193.66351679974264,
+  "total_unit_contrast_excitation_nS": 49.164017292788145,
+  "n_model_reconstructions": 1,
+  "n_off_sampling_sites": 75,
+  "n_segments": 12398,
+  "immutable": {
+    "excitation_unit_contrast_sha256": "f88934c0070d1ad2ff080bf1b3911a53ae751cbc16a45bfccec1934914df82c7",
+    "control_inhibition_sha256": "0fc1032670b3f0199a1510b814c952b52c042e595965c2aaf25c12d85471fa01",
+    "calcium_sha256": "fcabd10dd79a668513fd27c9ce2ab023e5f208838bbcb1757af1bf9895a258b0"
+  },
+  "runtime": {
+    "python": "/Users/kerschensteinerd/Documents/g2_loom_cg/vg3_cid3_rf_simulation-main/.venv/bin/python",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "neuron": "9.0.2"
+  },
+  "runner_sha256": "f9d5f488b45d158f9aaf6e5ab5184c00a0111a0b3fd1ba41b33b50d59f203e87",
+  "historical_control": "Historical numerical control arrays retained exactly; 70% control rerun verifies unchanged protocol.",
+  "elapsed_seconds": 259.08773398399353,
+  "checks_passed": 167,
+  "checks_total": 167
+}

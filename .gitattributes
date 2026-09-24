@@ -1,0 +1,2 @@
+# Input/output hashes refer to the exact archived bytes, including line endings.
+modeling/** -text

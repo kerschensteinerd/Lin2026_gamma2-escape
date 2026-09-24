@@ -1,0 +1,1389 @@
+{
+  "import_date": "2026-09-24",
+  "source_snapshots": [
+    "vg3_cid3_rf_simulation-main",
+    "analysis/parameter_sweeps_20260921"
+  ],
+  "source_git_history_available": false,
+  "scope": "Model source, morphology, fitted parameters, required historical calibration inputs, Figure 4 reference outputs, and parameter-sweep source/numerical results.",
+  "preservation": "Core model code/data and archived numerical arrays were copied byte for byte. Sweep path/provenance handling was adapted for this repository layout; see the analysis README.",
+  "excluded": [
+    "virtual environments",
+    "Python caches",
+    "temporary logs",
+    "obsolete model candidate outputs",
+    "manuscript workbooks/artwork",
+    "regenerable sweep plot exports and raw simulation caches"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 99,
+      "sha256": "f9631b694112ec63875ecf7bce8175bc1713e546fcbf95286a76064b116fe2dd",
+      "status": "new_repository_documentation_or_configuration"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 429,
+      "sha256": "0775cddd8baa6c95689b0e6e7349cbb191bb55a95ce8f26c602cb25aef68c832",
+      "status": "new_repository_documentation_or_configuration"
+    },
+    {
+      "path": "README.md",
+      "bytes": 330,
+      "sha256": "00c9fa0700d4b41f5a15ab144329645d55a45d16296a7719d3dc6ca27fcb1020",
+      "status": "new_repository_documentation_or_configuration"
+    },
+    {
+      "path": "modeling/LICENSE",
+      "bytes": 1077,
+      "sha256": "1f4b7061ad2899b5498a8e1908a9908bd156534528b0ba1a9ba2082ae767712b",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/LICENSE"
+      ]
+    },
+    {
+      "path": "modeling/README.md",
+      "bytes": 5211,
+      "sha256": "239dd536bbe8468a0b9d84e343ff64bc92d79a3828f34beee86a9f65e73efb44",
+      "status": "new_repository_documentation_or_configuration"
+    },
+    {
+      "path": "modeling/README_original.md",
+      "bytes": 3485,
+      "sha256": "9384c9f2d1a2bfc1ee272c5a0559979e1f0b0c1f7608a747230aec7d28bfc94a",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/README.md"
+      ]
+    },
+    {
+      "path": "modeling/analysis/README.md",
+      "bytes": 6386,
+      "sha256": "c71fb06d159e5c03122239acb9bb475d192cc09d5dd321547dd3f579775b9204",
+      "status": "new_repository_documentation_or_configuration"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/README.md",
+      "bytes": 553,
+      "sha256": "980a65852f15d2ca57876bbe9249ef0e8346977ca627136a0a9f448459adc481",
+      "source_path": "analysis/parameter_sweeps_20260921/README.md",
+      "source_sha256": "984295a915d376936e12463b00697675df706b9ecdbd673d93b489af74ffa3dd",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/build_sweep_outputs.py",
+      "bytes": 14381,
+      "sha256": "6bd3b3f123bcd2c08c39534dc319e1eeacb10358df472ca7ad1622084d0bbdf1",
+      "source_path": "analysis/parameter_sweeps_20260921/build_sweep_outputs.py",
+      "source_sha256": "1860cb2af35eea9f13b9a90bf4133e1cad61c7d2aac445d2c805b581e75bba18",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/calcium_report_20260921.md",
+      "bytes": 11448,
+      "sha256": "984295a915d376936e12463b00697675df706b9ecdbd673d93b489af74ffa3dd",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/README.md"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/calcium_supplement/README.md",
+      "bytes": 1906,
+      "sha256": "6322788c4e32b58bbb59ac64e5c106e5138c008261a5e128525accd7c9fa0517",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/calcium_supplement/README.md"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/calcium_supplement/build_calcium_supplement.py",
+      "bytes": 18052,
+      "sha256": "45c6317c41481d66974c55f1f0f24d2629570e6ef6f3a5c14239c3662e754753",
+      "source_path": "analysis/parameter_sweeps_20260921/calcium_supplement/build_calcium_supplement.py",
+      "source_sha256": "66cc28d3d3cc8c27839fe4e5c3da27e593695de7868273408f4e6f68671c9999",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/calcium_supplement/legend.md",
+      "bytes": 7290,
+      "sha256": "0195bea0455e41e367d3fca894332e45381b8d0c9690c2bdefba77ccff08dfbf",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/calcium_supplement/legend.md"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/calcium_supplement/manifest.json",
+      "bytes": 3221,
+      "sha256": "da37da55030f8ef212ac64fc91a5a5f255da4027a0c3826104b171d6aab8171d",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/calcium_supplement/manifest.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/completed_sweeps_report.md",
+      "bytes": 8961,
+      "sha256": "e9a955e45d6a66f435ca0f3944fb9ac14b6f7aaff6993e792676a08f0933ff9d",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/completed_sweeps_report.md"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/README.md",
+      "bytes": 3307,
+      "sha256": "f874caa9d7396f4305ec906c817186478647654fe9b8b9e2a62be73c29a8a319",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/README.md"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/build_electrical_outputs.py",
+      "bytes": 15456,
+      "sha256": "838e94f810ece1a82adbcf51da0387b5de9dead75ce3b1305afc172a7fd47c3e",
+      "source_path": "analysis/parameter_sweeps_20260921/electrical/build_electrical_outputs.py",
+      "source_sha256": "b3d6e2412458ba6a9494d7d3ed5672f6888cf4853176238c8c19a3dcf247ba14",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/contrast_matches.tsv",
+      "bytes": 494261,
+      "sha256": "e625117811ab0d9a132043e35c60dd644ebafdaaaa1986e8fa785281be253283",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/contrast_matches.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/electrical_metrics.npz",
+      "bytes": 156913,
+      "sha256": "5083b905f2739b23d84fd1cd4caf554f7791b70da2ead333891ba0d1ebb24006",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/electrical_metrics.npz"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/electrical_sweep.npz",
+      "bytes": 10415716,
+      "sha256": "4f32e07f05c55aab820b2502cf6d971d2e2baca4e101d8d63841b07687591e37",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/electrical_sweep.npz"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/focal_responses.tsv",
+      "bytes": 190213,
+      "sha256": "122d8c6a053e0b980bd22c1313946358e377041c6830184d19dc46eefebc5fce",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/focal_responses.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/focal_validation.json",
+      "bytes": 1076,
+      "sha256": "06cea1fdecd51a0c5d946ed9b214d0e3678fb46cd884ad83493cdf8869e74b2c",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/focal_validation.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/input_hashes.json",
+      "bytes": 2455,
+      "sha256": "69512decbb4a69613289af860120cfe2d79f13323599a560be522b36f098e8bf",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/input_hashes.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/paired_metrics.tsv",
+      "bytes": 207042,
+      "sha256": "10eabf4a237ba1bbc4b42e3d4e3b0aa9c9b5bec68001c01482408cbcd7ff6738",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/paired_metrics.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/passive_tail.py",
+      "bytes": 6491,
+      "sha256": "6a57f32ab21bc87f001f6127e94785a7a8957519dec37f8b5a8957555d150701",
+      "source_path": "analysis/parameter_sweeps_20260921/electrical/passive_tail.py",
+      "source_sha256": "39194f68f8125c146d03cd14af990163b2c4784d2d5960e1542e05a79a57a7f8",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/review_manifest.json",
+      "bytes": 2235,
+      "sha256": "6eafcd7bbaee600fe5da553c4f952dcba8d39abd97b5bbe30079dc22d71ee2a1",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/review_manifest.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/run_electrical.py",
+      "bytes": 11898,
+      "sha256": "6e0ba6236048df89729d8e5eb793af1f08b3b24a490c4f3080fe462b92107917",
+      "source_path": "analysis/parameter_sweeps_20260921/electrical/run_electrical.py",
+      "source_sha256": "11097adb58990570f952ed03ba8ef8549c5116000e7da414ad5c2d501af0ad20",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/run_manifest.json",
+      "bytes": 3825,
+      "sha256": "0fe8b1a41a791b105d5ea1939cfd931f05e79c40b3d545b7ecabc58c68eb6cfd",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/run_manifest.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/spot_responses.tsv",
+      "bytes": 2425887,
+      "sha256": "ea2bc2314342796956251bd76267ae6725d50e988ce803b96d0accc43e88fe2e",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/spot_responses.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/summary.json",
+      "bytes": 16525,
+      "sha256": "43ae9581cdc49e279f8a63c665807804f5cd46b5920f4dcce5fed217a9565eb5",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/summary.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/tail_validation.json",
+      "bytes": 2372,
+      "sha256": "bea85e31d24513ec068e893971d637c065fb7cea0f7f0148d5b442d624e61fc5",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/tail_validation.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/validate_focal.py",
+      "bytes": 1974,
+      "sha256": "5dc1933fb698307ba58ca50a32786c1197a8a1a03848dc719cb18218c8a2821a",
+      "source_path": "analysis/parameter_sweeps_20260921/electrical/validate_focal.py",
+      "source_sha256": "9bbd46cf4da04d9270021f5cb4ec29c89591fb8f3e109ac08fbd51ecbbfb0e80",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/electrical/validate_tail.py",
+      "bytes": 2546,
+      "sha256": "e4d3dfaa5dabd889dc6e2447ed065dbb73b9f3eb6a3fb8cf3c5a0c97202fae42",
+      "source_path": "analysis/parameter_sweeps_20260921/electrical/validate_tail.py",
+      "source_sha256": "02a961739aa420eae5c0718fc6b7302253141b9737f3ec5a30e8acb7b84bfd36",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/execution_audit/execution_scope.md",
+      "bytes": 3598,
+      "sha256": "0b96bf3bf2c486a1080f2902ee2bea53c7461e7ab2b6d4c0f2b7731658f4cec9",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/execution_audit/execution_scope.md"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/execution_audit/final_review.json",
+      "bytes": 807,
+      "sha256": "70b60022bc6616a0e6efecd6d75be1a9e7f264911ccdbace6eda1d845a7deb67",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/execution_audit/final_review.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/execution_audit/independent_execution_validation.json",
+      "bytes": 22361,
+      "sha256": "782812ae94faee6c55a2c78387c9959e91e4068bd310973f1d7d594cf7d7107b",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/execution_audit/independent_execution_validation.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/execution_audit/input_hashes.json",
+      "bytes": 11270,
+      "sha256": "ad9856d0dafbd51106484b278c8736e1d162eb0167bb6ae4ac38fe39bf0b28cc",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/execution_audit/input_hashes.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/build_sweep_outputs.py",
+      "bytes": 14147,
+      "sha256": "1860cb2af35eea9f13b9a90bf4133e1cad61c7d2aac445d2c805b581e75bba18",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/build_sweep_outputs.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/calcium_supplement/build_calcium_supplement.py",
+      "bytes": 17664,
+      "sha256": "66cc28d3d3cc8c27839fe4e5c3da27e593695de7868273408f4e6f68671c9999",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/calcium_supplement/build_calcium_supplement.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/electrical/build_electrical_outputs.py",
+      "bytes": 15019,
+      "sha256": "b3d6e2412458ba6a9494d7d3ed5672f6888cf4853176238c8c19a3dcf247ba14",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/build_electrical_outputs.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/electrical/passive_tail.py",
+      "bytes": 6523,
+      "sha256": "39194f68f8125c146d03cd14af990163b2c4784d2d5960e1542e05a79a57a7f8",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/passive_tail.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/electrical/run_electrical.py",
+      "bytes": 11667,
+      "sha256": "11097adb58990570f952ed03ba8ef8549c5116000e7da414ad5c2d501af0ad20",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/run_electrical.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/electrical/validate_focal.py",
+      "bytes": 1787,
+      "sha256": "9bbd46cf4da04d9270021f5cb4ec29c89591fb8f3e109ac08fbd51ecbbfb0e80",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/validate_focal.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/electrical/validate_tail.py",
+      "bytes": 2359,
+      "sha256": "02a961739aa420eae5c0718fc6b7302253141b9737f3ec5a30e8acb7b84bfd36",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/electrical/validate_tail.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/execution_audit/independent_execution_validation.py",
+      "bytes": 14700,
+      "sha256": "a80887de77528de109513f83916c4ad7c13c2e62f5aa70e70b65467511ef2606",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/execution_audit/independent_execution_validation.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/independent_validator.py",
+      "bytes": 19236,
+      "sha256": "e9a4d91c5ee8244bee8bb386668731432758be378306b524a823e50ba7ce3d2a",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/independent_validator.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/run_calcium_sweep.py",
+      "bytes": 16443,
+      "sha256": "da738752ac3441bea3a32029a8d997196c6458c17fd79e0905de8d5cf3926db2",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/run_calcium_sweep.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/spatial/build_outputs.py",
+      "bytes": 22669,
+      "sha256": "7a0f0819b02cd09114de1c5d8338722c0c7979411b9b1da9c071108d2b27eb7a",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/build_outputs.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/spatial/run_spatial.py",
+      "bytes": 23317,
+      "sha256": "72cfe36bdcd9a7ac46eefaa94dcdafcf12f2d72ce3479eb15785532763d87d5b",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/run_spatial.py",
+        "analysis/parameter_sweeps_20260921/spatial/run_spatial_spot_snapshot.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/spatial/run_spatial_focal_snapshot.py",
+      "bytes": 15147,
+      "sha256": "a52836ef1576864ca33a5e66fe46f2ba88b301cc611529cf35dc45f0274fd3c1",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/run_spatial_focal_snapshot.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/spatial/run_spatial_spot_snapshot.py",
+      "bytes": 23317,
+      "sha256": "72cfe36bdcd9a7ac46eefaa94dcdafcf12f2d72ce3479eb15785532763d87d5b",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/run_spatial.py",
+        "analysis/parameter_sweeps_20260921/spatial/run_spatial_spot_snapshot.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/independent_validation.json",
+      "bytes": 24832,
+      "sha256": "84065f9ccd7b5ed3cd3d9cc73b50766b9af912575557dc02c8bfdabd5ffe421f",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/independent_validation.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/independent_validator.py",
+      "bytes": 21623,
+      "sha256": "3f869221582031744620f88c2fc0c3ddcf0fed992a24ce523f1d6266947aac60",
+      "source_path": "analysis/parameter_sweeps_20260921/independent_validator.py",
+      "source_sha256": "e9a4d91c5ee8244bee8bb386668731432758be378306b524a823e50ba7ce3d2a",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/protocol.md",
+      "bytes": 23564,
+      "sha256": "e289533db6b06a35658478a4d50b6836b3f8ee006080eec5d57cb910d9b84653",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/protocol.md"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/results/calcium_sweep.npz",
+      "bytes": 3379640,
+      "sha256": "2dcf966cf65bfc69ca1d9319db5ab6949a0e3ecbb6cb1db622fcdb15b2a14826",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/results/calcium_sweep.npz"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/results/calcium_sweep_metrics.tsv",
+      "bytes": 3300895,
+      "sha256": "d8daa8d12d4dad207509de243c94bdc8925b280f1012179535aa19d43955fa1d",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/results/calcium_sweep_metrics.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/results/input_hashes.json",
+      "bytes": 2510,
+      "sha256": "aa41fb1c1c47ce790c3358d16b6c3660fc3388e43f1063a0af406d330a42a023",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/results/input_hashes.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/results/run_manifest.json",
+      "bytes": 3701,
+      "sha256": "e392038e8715cc39fdb079ddfaa3b69d0955f12f7e73724f4db814dfc4e3f353",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/results/run_manifest.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/results/summary.json",
+      "bytes": 13812,
+      "sha256": "7afdad28dd625b8f781734f0b8907a5f1b2c0a6ec4c2197cbed08502aace96f8",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/results/summary.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/results/validation.json",
+      "bytes": 1432,
+      "sha256": "b84ffbd03cf1e7270dc2605c10a751626b50f5f0c7adcdae39c050bf76706f23",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/results/validation.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/run_calcium_sweep.py",
+      "bytes": 16458,
+      "sha256": "fbfc2f3d2acac685c0783551756c313b87a55f8d9c65ad11b5bd89a5d7ce8297",
+      "source_path": "analysis/parameter_sweeps_20260921/run_calcium_sweep.py",
+      "source_sha256": "da738752ac3441bea3a32029a8d997196c6458c17fd79e0905de8d5cf3926db2",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/README.md",
+      "bytes": 5775,
+      "sha256": "ead5c95b93066d1516959719aae06abdc73d77bd2b4229020e96f6b3cf72591e",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/README.md"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/build_outputs.py",
+      "bytes": 23167,
+      "sha256": "342b79cd225fca11858a2e1fe4377cf795dd4f061cc1c013ffe60b499e03ddb0",
+      "source_path": "analysis/parameter_sweeps_20260921/spatial/build_outputs.py",
+      "source_sha256": "7a0f0819b02cd09114de1c5d8338722c0c7979411b9b1da9c071108d2b27eb7a",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/focal_all_sites.tsv",
+      "bytes": 229527,
+      "sha256": "879b9ef62d15be922ca3d5d27f6aa1d98d904608e08577b5bf94119f4ff72d14",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/focal_all_sites.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/focal_binned_profiles.tsv",
+      "bytes": 1964044,
+      "sha256": "ce228d01fbc923b76d67861c12adb9e2aac64d6e84d14a80a75df8d269c0e48c",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/focal_binned_profiles.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/focal_layout_controls.tsv",
+      "bytes": 54258,
+      "sha256": "79756394e836bc551a465a8d6f9321cad079e181c742ff6cfe24680f0a169dcb",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/focal_layout_controls.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/focal_layout_paired_effects.tsv",
+      "bytes": 94153,
+      "sha256": "e951fbc972b443a9de2e2adb34ccd2bacf22b8e2cafc0b35ebfd4701550862c7",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/focal_layout_paired_effects.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/focal_run.json",
+      "bytes": 910,
+      "sha256": "9bddd0c3a3a7605f113b3ec419c975fad292939c59c0d664e5090adeb69c129b",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/focal_run.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/focal_site_paired_effects.tsv",
+      "bytes": 311111,
+      "sha256": "7d8a17d496b49c5bd60a9a184500cbc9a97ff8fbeb83a0bea5e9dcec689fd626",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/focal_site_paired_effects.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/focal_site_summary.tsv",
+      "bytes": 2361,
+      "sha256": "ffb3408389806504369ff08213b02dd469c384b20af428bc77791f03c0565823",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/focal_site_summary.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/focal_validation.json",
+      "bytes": 3408,
+      "sha256": "513045bfe31520d96dda7eef6555648a5e97942aa1e1ee2a6b936513edac0b0f",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/focal_validation.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/horizontal_matches.tsv",
+      "bytes": 66574,
+      "sha256": "b256e591096a42b8627f99a896c4a32c1cd23330a89d9d4719f80482a56b8094",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/horizontal_matches.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/layout_contact_weights.tsv",
+      "bytes": 1277168,
+      "sha256": "589cb226d91680930fad522a2dc455edffda05a50e61f58938a00c437b665c94",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/layout_contact_weights.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/layout_sensitivity_summary.tsv",
+      "bytes": 2085,
+      "sha256": "2bd12cc06dde7a3a1c8cc6c96c0822386b40c1248e390c9450aa63ddbfbae3a8",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/layout_sensitivity_summary.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/layout_summary.tsv",
+      "bytes": 15049,
+      "sha256": "d7e8e36ded88cac710636170525366941ead1f6e9cf20515a84fcd3a00563801",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/layout_summary.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/layout_weights.npz",
+      "bytes": 20786,
+      "sha256": "9d2b4be056fdb1f7bffd0438ee5d0620bc0fd8b9939d6cb4a5c9ad2b8191621a",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/layout_weights.npz"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/output_manifest.json",
+      "bytes": 18521,
+      "sha256": "73b226db390c0c135a48e6ab17558eb6207bcbde4375fa6d5569a081105af052",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/output_manifest.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/run_spatial.py",
+      "bytes": 23470,
+      "sha256": "26e22da746c58f83b7f8969876090b1f627434d2a4da5bc8dcf314444bcb7197",
+      "source_path": "analysis/parameter_sweeps_20260921/spatial/run_spatial.py",
+      "source_sha256": "72cfe36bdcd9a7ac46eefaa94dcdafcf12f2d72ce3479eb15785532763d87d5b",
+      "status": "adapted_for_repository_layout"
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/run_spatial_focal_snapshot.py",
+      "bytes": 15147,
+      "sha256": "a52836ef1576864ca33a5e66fe46f2ba88b301cc611529cf35dc45f0274fd3c1",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/run_spatial_focal_snapshot.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/run_spatial_spot_snapshot.py",
+      "bytes": 23317,
+      "sha256": "72cfe36bdcd9a7ac46eefaa94dcdafcf12f2d72ce3479eb15785532763d87d5b",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/run_spatial.py",
+        "analysis/parameter_sweeps_20260921/spatial/run_spatial_spot_snapshot.py"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/source_geometry.npz",
+      "bytes": 7143561,
+      "sha256": "c7d44e014e095a630d0d05a17fa31264d525d3b438bf7117511dc7550d488b9f",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/source_geometry.npz"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/source_hashes_before.json",
+      "bytes": 5016,
+      "sha256": "e63b69120b2299f006e70aa50ac17de7efea3874c94363f961edfd7317c62b53",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/source_hashes_before.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/source_sites.tsv",
+      "bytes": 6331,
+      "sha256": "481f8c76dac38bb461aec1cfdeee860d663ccb2b0331dbce43c7f945a107ac24",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/source_sites.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/spot_contrast_effects.tsv",
+      "bytes": 117025,
+      "sha256": "87f4daddabb27aeaa90520fa7cd857e2ea18577a345816603cab3b68355af1b9",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/spot_contrast_effects.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/spot_layout_metrics.tsv",
+      "bytes": 16231,
+      "sha256": "3de2ec7994a2ef4052dd9b9578fe04b7a6373f5b5e05f04771fc5bd604ebecce",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/spot_layout_metrics.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/spot_local_responses.tsv",
+      "bytes": 4379140,
+      "sha256": "e36dfa30d03946bf52956f7c9d65388c44af8fe3c9c8bc3e3c7b456b6b54a761",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/spot_local_responses.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/spot_responses.tsv",
+      "bytes": 139528,
+      "sha256": "13bde8dea4813419ff845348b0f2356c51303c149193b02cfa7d72652879b113",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/spot_responses.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/spot_run.json",
+      "bytes": 1106,
+      "sha256": "d1e20f6a673a4ff59f308086b52325abc0c8a4839efb5bd9fa191be8e4880ace",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/spot_run.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/spot_tail_diagnostics.tsv",
+      "bytes": 153198,
+      "sha256": "c82c32a4454220bb92cd4994a47ccac0a255d69696ad40cae03a9c5b2fcc308f",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/spot_tail_diagnostics.tsv"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/spot_validation.json",
+      "bytes": 19830,
+      "sha256": "91a7431a5a73272ba256722ec466571f310e2f49ee6adcb320e2999c952a4380",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/spot_validation.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/spatial/summary.json",
+      "bytes": 15195,
+      "sha256": "5b3cea7116a0e1ea644dc62a8b89958dc1ce447f298282796bc321696d12db05",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/spatial/summary.json"
+      ]
+    },
+    {
+      "path": "modeling/analysis/parameter_sweeps_20260921/validation_independent.md",
+      "bytes": 3831,
+      "sha256": "a581af814f22b47ab0b918a3c321ea3309a5dee582b7ea19cde401823a83010b",
+      "byte_identical_source_files": [
+        "analysis/parameter_sweeps_20260921/validation_independent.md"
+      ]
+    },
+    {
+      "path": "modeling/data/cid3.swc",
+      "bytes": 511220,
+      "sha256": "0d779752e05df12297ab4a3af2a8e15ef04ee38da28301ece463e65892a9a7c7",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/data/cid3.swc"
+      ]
+    },
+    {
+      "path": "modeling/data/fitted/fitted_inh_params.json",
+      "bytes": 3374,
+      "sha256": "bfe21bb624a34ec013e9014f99730971442a2a19c6f99d720b88e4509bdfd0ca",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/data/fitted/fitted_inh_params.json"
+      ]
+    },
+    {
+      "path": "modeling/data/fitted/fitted_off_epsc_params.json",
+      "bytes": 2544,
+      "sha256": "97019d31f3aef29ecb7aa02a1e5f6fa5cfb256507b2a1fd5171ea3cd2ce77458",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/data/fitted/fitted_off_epsc_params.json"
+      ]
+    },
+    {
+      "path": "modeling/data/fitted/fitted_on_epsc_params.json",
+      "bytes": 2777,
+      "sha256": "112c3d3147d7f719a37a9cf55d9d78cac57461e4066349b0b00be661786cd4c9",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/data/fitted/fitted_on_epsc_params.json"
+      ]
+    },
+    {
+      "path": "modeling/data/fitted/fitted_voltage_params_locked.json",
+      "bytes": 1302,
+      "sha256": "d7dd2a3376cbcd1be9441b7bc32174b28a0815c8f29a17353e94419f39aeed62",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/data/fitted/fitted_voltage_params_locked.json"
+      ]
+    },
+    {
+      "path": "modeling/data/locked_params.json",
+      "bytes": 2597,
+      "sha256": "8a33cfebdd5ad447f9833a326f2d85afcde0aebf7f334164f0644179607b6795",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/data/locked_params.json"
+      ]
+    },
+    {
+      "path": "modeling/data/sm2nrn_cid3.mat",
+      "bytes": 8414435,
+      "sha256": "fdf5164a77795496f58bbb261d45e44d7a22c89c6ef0ee2d0782dc90e942d0a4",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/data/sm2nrn_cid3.mat"
+      ]
+    },
+    {
+      "path": "modeling/data/vg3_offbip_list.txt",
+      "bytes": 306,
+      "sha256": "bb350dd9f94a3498367e88674e12e5f38fc6f78fe18c1f6eaf457220a2335bd2",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/data/vg3_offbip_list.txt"
+      ]
+    },
+    {
+      "path": "modeling/data/vg3_onbip_list.txt",
+      "bytes": 245,
+      "sha256": "e3a206954183beafcc08edd683bd048626ddee594c1bd92645131e280f06c8ab",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/data/vg3_onbip_list.txt"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig3_v3/anatomy_maps.npz",
+      "bytes": 2344948,
+      "sha256": "3b91cd8e4902e45ff06f18cc0d67ac0c21022e845154f3570add60a64482da7b",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig3_v3/anatomy_maps.npz"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig3_v3/calibration.json",
+      "bytes": 7363,
+      "sha256": "88b7cb125720390959798073de9beebffce1d502a465de9cbc887b43d0877b6e",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig3_v3/calibration.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig3_v3/contrast_voltage_traces.npz",
+      "bytes": 44132,
+      "sha256": "abb9595b99a6bb1dd9d6a799a8b1da916b982c4f157cf68fd36ac630d477acf7",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig3_v3/contrast_voltage_traces.npz"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig3_v3/figure_data.json",
+      "bytes": 7187,
+      "sha256": "041cdeeee87013d3df4c5d64db183e8cd35b310f08c4404592c7dd5f477ddceb",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig3_v3/figure_data.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig3_v3/metadata.json",
+      "bytes": 22468,
+      "sha256": "e4f3bc302a9eab164335d3ef010ccfe68e21306eb9adf5eb2d3dd279f7e15a4f",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig3_v3/metadata.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig3_v3/parameters.json",
+      "bytes": 156,
+      "sha256": "07f146c04fcb9b78de1508065c93084319cc0abe3eacecc4eb1deece406dad9a",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig3_v3/parameters.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig3_v3/voltage_parameters.json",
+      "bytes": 195,
+      "sha256": "e4d85bdfdcaf0a095cf1652eb1bdae335fa61d1392aca95107fd5cd41cf1699a",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig3_v3/voltage_parameters.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig3_v3_spatial/finite_local_maps.npz",
+      "bytes": 1877547,
+      "sha256": "44ebaf760906504450030d77708fc5d83aec3819d1d3cc3d631b55ab42cdc4ab",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig3_v3_spatial/finite_local_maps.npz"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig3_v3_spatial/finite_local_summary.json",
+      "bytes": 29588,
+      "sha256": "e59cd819c67b5922b45831fd4daeae6122151687d3a6e499a05285705289e164",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig3_v3_spatial/finite_local_summary.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig3_v3_spatial/selected_parameters.json",
+      "bytes": 775,
+      "sha256": "c04b82e3c7fbd06e9e3edec1429662763810e4639d2dfe3add6b298bd7fd10fb",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig3_v3_spatial/selected_parameters.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig3_v3_spatial/selected_spatial_maps.npz",
+      "bytes": 1170620,
+      "sha256": "e8e810cfa04de9f48c9971dce1c4d0f05fec734b69665fe3f7d7bea7715a65d6",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig3_v3_spatial/selected_spatial_maps.npz"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/README.md",
+      "bytes": 1243,
+      "sha256": "402d32c9f72ad1ec3678ef1dd68be7be4d65833ea70c81b824e5e5963a625bb4",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/README.md"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/contrast_sensitivity.tsv",
+      "bytes": 3778,
+      "sha256": "3fe87f89b960fbc505c9dcc0004a681c4455c89acd6d141c4cf767f5f992eb3b",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/contrast_sensitivity.tsv"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/input_hashes.json",
+      "bytes": 5081,
+      "sha256": "641c0b642eb7cc5c332a18e9b0d3f56d4c8f9b5b21bcb992709875ca0758eb56",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/input_hashes.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/nominal25/anatomy_maps.npz",
+      "bytes": 2335737,
+      "sha256": "1fe3aacc2c98c02747614f5e04a14c598d9f0b5533854a3f66c23387cbfaf67b",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/nominal25/anatomy_maps.npz"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/nominal25/contrast_voltage_traces.npz",
+      "bytes": 39226,
+      "sha256": "84857b75fb79ec3212ac926abd15036d1155175388a97e3a6557c0a105751cea",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/nominal25/contrast_voltage_traces.npz"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/nominal25/figure_data.json",
+      "bytes": 7063,
+      "sha256": "ea7771de76cc536f0a1e6c5475b89073b512aba832637499e6a79d48873fd24a",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/nominal25/figure_data.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/nominal25/finite_local_maps.npz",
+      "bytes": 1084863,
+      "sha256": "7d9c7b50ed8b8cc3f2db760b5af86cc18391faf60c0c28eafef600fa520e6d82",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/nominal25/finite_local_maps.npz"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/nominal25/metadata.json",
+      "bytes": 8045,
+      "sha256": "42f87354d7b53b6857ad0d35c139df6d79d6917514c34164cb8f4f2912738e7e",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/nominal25/metadata.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/provenance.json",
+      "bytes": 1836,
+      "sha256": "659c4d8d19079f311234ffb71fbeb28db850ef4df92bbfba14d713858189fb32",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/provenance.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/run_retained_inhibition_v9.py",
+      "bytes": 24802,
+      "sha256": "f9d5f488b45d158f9aaf6e5ab5184c00a0111a0b3fd1ba41b33b50d59f203e87",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig4/run_retained_inhibition_v9.py",
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/run_retained_inhibition_v9.py"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/sensitivity_summary.json",
+      "bytes": 9126,
+      "sha256": "08f4bedd32ee27ba9f692dd435ae2da76a3e11cb3266deb26b35f65d8d0b36d7",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/sensitivity_summary.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/sensitivity_voltage_traces.npz",
+      "bytes": 68031,
+      "sha256": "dd3d76091bc66d253371ed50861ab4dac46ea1a35e65c9bea69d538755701db6",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/sensitivity_voltage_traces.npz"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/spatial_sensitivity.json",
+      "bytes": 12045,
+      "sha256": "74847253573bf0ff39799f2e7c3464c06b8ce74044723c0ab5f5ce0a94bcce2f",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/spatial_sensitivity.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/stimulus_hashes.json",
+      "bytes": 8093,
+      "sha256": "71eab6482347bdffee928d4878dea8493b1a1a41c4f5b9a9c76292134cef080e",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/stimulus_hashes.json"
+      ]
+    },
+    {
+      "path": "modeling/outputs/fig4_v9_retained_inhibition_20260916/validation.json",
+      "bytes": 16202,
+      "sha256": "b6610ae66131a6dbb1b873532803dc4c0046f8dcc1af630ef37a3b2b75456860",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/validation.json"
+      ]
+    },
+    {
+      "path": "modeling/requirements-tested.txt",
+      "bytes": 126,
+      "sha256": "b666a93c2ce042338af8e854856a16799c2bb534b9bdf097e835f03dc0a6a203",
+      "status": "new_repository_documentation_or_configuration"
+    },
+    {
+      "path": "modeling/requirements.txt",
+      "bytes": 30,
+      "sha256": "5598ba4811e03db669bfeade8c412c6af45f74fbd92bc0eeb91a51bd8396076a",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/requirements.txt"
+      ]
+    },
+    {
+      "path": "modeling/scripts/example/run_example.py",
+      "bytes": 7385,
+      "sha256": "823cb443eaf1c94de3d87752ba1ac6f351f907fce8c8281d13750aeb350f9edf",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/example/run_example.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/assemble_figure_v3.py",
+      "bytes": 2129,
+      "sha256": "199fe8957952446d8491ae1ce987dcbe25c4d8bfc8d40087637e54221b0b873b",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/assemble_figure_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/assemble_figure_v4.py",
+      "bytes": 2131,
+      "sha256": "52d9be582554a877ed317529e2f9299694e489e23a721346a852e9a2a67745db",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/assemble_figure_v4.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/assemble_figure_v5.py",
+      "bytes": 2321,
+      "sha256": "980108cb6a6670c6a9e2b089bb105ba69c9a3eb520a584b34e379741c9d49316",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/assemble_figure_v5.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/assemble_figure_v6.py",
+      "bytes": 2345,
+      "sha256": "61039d6ed6c43349626794f6bcd58ededca6a67a0328803b59976ac74c176a13",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/assemble_figure_v6.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/assemble_figure_v8.py",
+      "bytes": 3008,
+      "sha256": "fa2e84efba4c491ab154ea6bcefbeb7c9c1efcf0ce0629f8b3edc7806253d998",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/assemble_figure_v8.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/build_anatomy_panels.py",
+      "bytes": 10059,
+      "sha256": "17b74fe0f2027ef53aad45a689cce76b4a4d84a9b0080386be000a580a718bc9",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/build_anatomy_panels.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/build_experimental_figure_v3.py",
+      "bytes": 7277,
+      "sha256": "49e5c10b0e53e224b6bc8def61292d0ed5f53157705de8294c8695da32b78fba",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/build_experimental_figure_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/build_experimental_figure_v4.py",
+      "bytes": 8425,
+      "sha256": "4f6b792aed4cac0c2bc01d0dda774c32aa7eca0a8c3389bcc9e25f4791e7f16b",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/build_experimental_figure_v4.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/build_experimental_figure_v5.py",
+      "bytes": 8234,
+      "sha256": "ccb075de23b9592ff274f074bc41aaf7296a5a47b2405f324993bd622f2d4232",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/build_experimental_figure_v5.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/build_experimental_figure_v6.py",
+      "bytes": 8229,
+      "sha256": "7fc14df3b3e997dcb97661e2d6cd36d14badd3f9d24cbc736f1ee5bd30b282b3",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/build_experimental_figure_v6.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/build_experimental_figure_v8.py",
+      "bytes": 9353,
+      "sha256": "b059c0a3350aabdcced77a8dad5bf77052dc10a7875e7507b0462c8f739f89d9",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/build_experimental_figure_v8.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/build_figure_v3.py",
+      "bytes": 13418,
+      "sha256": "5a2d9ea25310cb197f264a058907f7871e8ecaceb90069ed7beea686a30b476e",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/build_figure_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/build_model_figure_v5.py",
+      "bytes": 10674,
+      "sha256": "916225cf071f0092f06b48cfd1b8ce066c934685c67052c3f0d09f6f1c1de9c1",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/build_model_figure_v5.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/build_model_figure_v6.py",
+      "bytes": 10724,
+      "sha256": "0ba35fbc7dc35f830cde73cb8cf7f8d036d678e01e5775a12acb525500a128b3",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/build_model_figure_v6.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/calibrate_calcium_v3.py",
+      "bytes": 8561,
+      "sha256": "3ef00de9367d30ebd7cc15e756ffa97e50d7a0f54172cfe77747c8de953a88a7",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/calibrate_calcium_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/calibrate_spatial_v3.py",
+      "bytes": 5091,
+      "sha256": "a559e6df3133ae94d93cb9ab2e59af6f3f5522ab86397d64edbdd3f6225f470f",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/calibrate_spatial_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/check_calcium_rf_v3.py",
+      "bytes": 4260,
+      "sha256": "9fab96a14e7eb080917e48ca447118ad20a5a008766b102e94ac446cdf26b1ad",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/check_calcium_rf_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/compare_fig3_experiment.py",
+      "bytes": 14753,
+      "sha256": "d26a609aa9d033561731c4ff88f990d6a24c4fd62b310127e862051793a6ebb3",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/compare_fig3_experiment.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/diagnose_spread_20260909.py",
+      "bytes": 9662,
+      "sha256": "499d04b10a5289ce8f7b8705057dfbef414be867abafccc618650dd1ec86a1ca",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/diagnose_spread_20260909.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/finite_local_spread_v3.py",
+      "bytes": 5878,
+      "sha256": "8eae9285bece968432461b4c64ab45166e605fc1516968b5650ef0f4fa64dc15",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/finite_local_spread_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/prepare_figure_v3.py",
+      "bytes": 2729,
+      "sha256": "5860f847eec2cdcf98fb29d42529c93c3538cd6d7f1778609ec905991752f920",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/prepare_figure_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/protocol_v3.py",
+      "bytes": 2482,
+      "sha256": "5333406e5c54f6f9b2da9f20d90993b28e001a5ec0d8d440cb7c03a26baf2d56",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/protocol_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/run_anatomy_maps.py",
+      "bytes": 18368,
+      "sha256": "a6ef756083c46ee045411b043a74d0d520f14f0bbb1a803ddaa2ae702ddf2ea1",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/run_anatomy_maps.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/run_anatomy_v3.py",
+      "bytes": 10398,
+      "sha256": "7aaff914a9297e002a6b7096315fad885896656bbf4313ac09abf722b4a2aea1",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/run_anatomy_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/run_fig3_pilot.py",
+      "bytes": 20145,
+      "sha256": "a1e11f49284b3ac41d832e53ca12ead20cfd01b7a5a961b1dd66ad3aa555856b",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/run_fig3_pilot.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/screen_shared_v3.py",
+      "bytes": 2157,
+      "sha256": "767091b642b617ccafb0f23931d2da76ecda5c2d1528fba95a2b16b6bb94bb5b",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/screen_shared_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/select_spatial_v3.py",
+      "bytes": 8335,
+      "sha256": "40fc84fa63de4dfb8b70520584d69f06459d73e6c519e3bca396e59b4e855d2a",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/select_spatial_v3.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig3/validate_calcium_readout.py",
+      "bytes": 3935,
+      "sha256": "def5e61cd4dbad12a4c404e9bf17315ee7fd3e1205fbbfedc86667a6d243f47d",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig3/validate_calcium_readout.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig4/assemble_v9.py",
+      "bytes": 3507,
+      "sha256": "80134491c007f006adf9074fcd8fd61a6261d8332adb74e3bf7bfe4967036dbe",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig4/assemble_v9.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig4/build_model_v9.py",
+      "bytes": 11221,
+      "sha256": "a8b7286b8da51256fcc90560629cf92691d0365b797bc2adf25c5a298208ca1f",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig4/build_model_v9.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig4/build_panel_i_v9.py",
+      "bytes": 3048,
+      "sha256": "aadf54ef62e3a223a70169abe7aa375cdc3a426f72cac99bae2a0a54551886f4",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig4/build_panel_i_v9.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig4/preserve_experimental_v9.py",
+      "bytes": 2938,
+      "sha256": "45b37ee1bbb16a9007aad4ac7d869afb26822680b3dd5b0a16782109c1884e2f",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig4/preserve_experimental_v9.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig4/run_retained_inhibition_v9.py",
+      "bytes": 24802,
+      "sha256": "f9d5f488b45d158f9aaf6e5ab5184c00a0111a0b3fd1ba41b33b50d59f203e87",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig4/run_retained_inhibition_v9.py",
+        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/run_retained_inhibition_v9.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig4/save_native_artifacts_v9.jsx",
+      "bytes": 3369,
+      "sha256": "59672d0412a493eba3bd6eb6da9850de80bca51112ce9d4833e07082235dd0c4",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig4/save_native_artifacts_v9.jsx"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig4/update_figure7_marker_v8.py",
+      "bytes": 3052,
+      "sha256": "d46149f9f411387c3b8a12094d3ff0d341ca100a4357c1cd7e63be14a9d3a003",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig4/update_figure7_marker_v8.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/fig4/verify_artifacts_v9.py",
+      "bytes": 4257,
+      "sha256": "e64d34301f246784b7685bf319621cd641b670064405cab9b041b5fdf6acdee3",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/fig4/verify_artifacts_v9.py"
+      ]
+    },
+    {
+      "path": "modeling/scripts/sweep/run_inhibition_sweep.py",
+      "bytes": 3451,
+      "sha256": "2cecb47ecd2d1cac94143415ca9a9ade01722542d4c4c16d3045eeea252ac164",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/scripts/sweep/run_inhibition_sweep.py"
+      ]
+    },
+    {
+      "path": "modeling/setup.sh",
+      "bytes": 1503,
+      "sha256": "251138e3a93d03fd4ed7ae6e4cdeb9200ee1941ef6904daff3d7d857b8ca8887",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/setup.sh"
+      ]
+    },
+    {
+      "path": "modeling/src/calcium_readout.py",
+      "bytes": 8148,
+      "sha256": "3495bbdeb30e7f5588c8a6fcd0df435ea7f5700194e9039ecb460202cdc255e1",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/src/calcium_readout.py"
+      ]
+    },
+    {
+      "path": "modeling/src/plotting.py",
+      "bytes": 4267,
+      "sha256": "975d846a941f24baf65d389df5a12254ec3bb8ea940444cad6810f4bfde91cc2",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/src/plotting.py"
+      ]
+    },
+    {
+      "path": "modeling/src/run_functions.py",
+      "bytes": 12928,
+      "sha256": "ac05d5a346be2040e9dd4181d4a994ee0e09900506977ba166292c7a2cdebb34",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/src/run_functions.py"
+      ]
+    },
+    {
+      "path": "modeling/src/vg3_base_functions.py",
+      "bytes": 41228,
+      "sha256": "e82b0137387634ddd35fd4ae6ecb7711811c5676212aaf557a7d0cef8878f64a",
+      "byte_identical_source_files": [
+        "vg3_cid3_rf_simulation-main/src/vg3_base_functions.py"
+      ]
+    }
+  ]
+}
