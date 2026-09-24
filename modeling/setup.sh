@@ -30,4 +30,4 @@ fi
 echo "Installing remaining Python dependencies..."
 pip3 install -r requirements.txt
 
-echo "Setup complete. Try: python3 scripts/example/run_example.py"
+echo "Setup complete. Try: python3 scripts/fig3/validate_calcium_readout.py"

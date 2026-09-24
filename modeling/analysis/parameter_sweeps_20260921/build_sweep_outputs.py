@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Detailed exports and scientific review plots; no new simulation or fitting."""
+"""Detailed analytical exports and individual calcium-sweep panels."""
 from pathlib import Path
 import csv,json,hashlib,sys
 import numpy as np
@@ -31,8 +31,8 @@ GRAY='#333333';ORANGE='#d55e00';TEAL='#079ba8'
 
 
 def save(fig,name):
-    fig.savefig(OUT/f'{name}.svg',facecolor='white')
-    fig.savefig(OUT/f'{name}.png',facecolor='white',dpi=180)
+    fig.savefig(OUT/f'{name}.svg',facecolor='white',bbox_inches='tight')
+    fig.savefig(OUT/f'{name}.png',facecolor='white',dpi=180,bbox_inches='tight')
     plt.close(fig)
 
 
@@ -57,72 +57,101 @@ def centered(data):
     lim=float(np.nanmax(np.abs(data)));return TwoSlopeNorm(vmin=-lim,vcenter=0,vmax=lim)
 
 
-def base(rows,cols,size,title,subtitle):
-    fig,axes=plt.subplots(rows,cols,figsize=size)
-    fig.subplots_adjust(left=.075,right=.945,bottom=.12,top=.89,wspace=.47,hspace=.55)
-    fig.suptitle(title,x=.075,ha='left',y=.98,fontsize=15,fontweight='bold')
-    fig.text(.075,.943,subtitle,fontsize=9,ha='left')
-    return fig,axes
+def panel():
+    return plt.subplots(figsize=(5.4, 4.2), layout='constrained')
 
-footer='Star: exact original parameters. Diamond: historical (-40, 4 mV). Gray: technically unavailable or no 1/e crossing.\nOne reconstruction; parameter-grid coverage is descriptive, not a biological probability. No parameters were refitted.'
 
-fig,ax=base(3,3,(13.5,11.2),'Calcium activation sweep','25% retained inhibition | 2,601 midpoint / slope combinations | shared fixed voltage responses and 50-ms clearance')
-heat(fig,ax[0,0],np.log10(gain[:,1,1]),'A  Intermediate-contrast gain','log10 reduced / control AUC',norm=Normalize(0,np.nanmax(np.log10(gain[:n,1,1]))))
-for a,k,label in [(ax[0,1],0,'B  Low-contrast preference'),(ax[0,2],1,'C  Intermediate-contrast preference')]:
-    v=np.log2(pref[:,1,k]);heat(fig,a,v,label,f'log2 [gain({[15,30][k]}%) / gain(70%)]',cmap='RdBu_r',norm=centered(v[:n]),contour=0)
+def heat_panel(data, title, label, **kwargs):
+    fig, ax = panel()
+    heat(fig, ax, data, title, label, **kwargs)
+    ax.legend(handles=[
+        Line2D([], [], ls='', marker='*', ms=8, mfc=TEAL, mec='white',
+               label='Original parameters'),
+        Line2D([], [], ls='', marker='D', ms=4, mfc='none', mec='black',
+               label='Historical (-40, 4 mV)')],
+        loc='upper center', bbox_to_anchor=(.5, -.23), ncol=2,
+        fontsize=7, frameon=False)
+    return fig, ax
+
+
+# Each heatmap or curve is saved separately; color ranges remain shared.
+fig, ax = heat_panel(np.log10(gain[:,1,1]),
+    'Intermediate-contrast gain; 25% retained', 'log10 reduced / control AUC',
+    norm=Normalize(0,np.nanmax(np.log10(gain[:n,1,1]))))
+save(fig, 'calcium_gain30')
+for k, label in [(0, 'low'), (1, 'intermediate')]:
+    v=np.log2(pref[:,1,k])
+    fig, ax = heat_panel(v, f'{label.title()}-contrast preference; 25% retained',
+        f'log2 [gain({[15,30][k]}%) / gain(70%)]', cmap='RdBu_r', norm=centered(v[:n]), contour=0)
+    save(fig, f'calcium_preference_{label}')
 dshape=shape[:,2,6]-shape[:,0,6]
-heat(fig,ax[1,0],dshape,'D  Normalized 30% shape separation','reduced minus control',cmap='RdBu_r',norm=centered(dshape[:n]),contour=0)
+fig, ax = heat_panel(dshape, 'Normalized 30% shape separation; 25% retained',
+    'reduced minus control', cmap='RdBu_r', norm=centered(dshape[:n]), contour=0)
+save(fig, 'calcium_shape30_difference')
 dspread=cross[:,1]-cross[:,0]
-heat(fig,ax[1,1],dspread,'E  Focal calcium spread increase','change in first 1/e distance (um)',norm=Normalize(0,np.nanmax(dspread[:n])))
-heat(fig,ax[1,2],shift[:,1],'F  Calcium-only contrast equivalence','mean horizontal multiplier',norm=Normalize(np.nanmin(shift[:n,1]),np.nanmax(shift[:n,1])) )
-cs=ax[1,2].contour(half,slope,counts[:n,1].reshape(51,51).T,levels=[.5,1.5,2.5,3.5],colors='black',linewidths=.5,linestyles='dotted')
-ax[1,2].text(.02,.98,'Dotted: transitions in match count',transform=ax[1,2].transAxes,va='top',fontsize=6.5,bbox=dict(facecolor='white',alpha=.8,edgecolor='none'))
+fig, ax = heat_panel(dspread, 'Focal calcium spread increase; 25% retained',
+    'change in first 1/e distance (µm)', norm=Normalize(0,np.nanmax(dspread[:n])))
+save(fig, 'calcium_spread_increase')
+fig, ax = heat_panel(shift[:,1], 'Calcium-only contrast equivalence; 25% retained',
+    'mean horizontal multiplier', norm=Normalize(np.nanmin(shift[:n,1]),np.nanmax(shift[:n,1])))
+ax.contour(half,slope,counts[:n,1].reshape(51,51).T,levels=[.5,1.5,2.5,3.5],colors='black',linewidths=.5,linestyles='dotted')
+ax.text(.02,.98,'Dotted: transitions in match count',transform=ax.transAxes,va='top',fontsize=6.5,bbox=dict(facecolor='white',alpha=.8,edgecolor='none'))
+save(fig, 'calcium_contrast_equivalence')
+fig, ax = panel()
 for i,style,label in [(n,'-','Original'),(historical,'--','Historical')]:
     for j,col,name in [(0,GRAY,'Control'),(2,ORANGE,'Reduced')]:
-        ax[2,0].plot(contrasts,auc[i,j]/1000,style,color=col,lw=1.5,label=f'{label}: {name}')
-ax[2,0].set(title='G  Absolute contrast responses',xlabel='Contrast (%)',ylabel='Ca AUC (10³ a.u. ms²)',ylim=(0,155));ax[2,0].legend(fontsize=7,frameon=False,loc='lower right')
+        ax.plot(contrasts,auc[i,j]/1000,style,color=col,lw=1.5,label=f'{label}: {name}')
+ax.set(title='Absolute contrast responses; 25% retained',xlabel='Contrast (%)',ylabel='Ca AUC (10³ a.u. ms²)',ylim=(0,155))
+ax.legend(fontsize=7,frameon=False,loc='lower right')
+save(fig, 'calcium_contrast_responses')
+fig, ax = panel()
 for i,style,label in [(n,'-','Original'),(historical,'--','Historical')]:
-    for j,col in [(0,GRAY),(1,ORANGE)]:ax[2,1].plot(x,profiles[i,j],style,color=col,lw=1.5)
-ax[2,1].axhline(1/np.e,color='#888888',ls=':',lw=.7)
-ax[2,1].set(title='H  Source-normalized focal profiles',xlabel='Cable path distance (um)',ylabel='Relative calcium',ylim=(-.02,1.03),xlim=(0,x[-1]))
+    for j,col,name in [(0,GRAY,'Control'),(1,ORANGE,'Reduced')]:
+        ax.plot(x,profiles[i,j],style,color=col,lw=1.5,label=f'{label}: {name}')
+ax.axhline(1/np.e,color='#888888',ls=':',lw=.7)
+ax.set(title='Source-normalized focal profiles; 25% retained',xlabel='Cable path distance (µm)',ylabel='Relative calcium',ylim=(-.02,1.03),xlim=(0,x[-1]))
+ax.legend(fontsize=7,frameon=False)
+save(fig, 'calcium_focal_profiles')
+fig, ax = panel()
 valid=np.isfinite(dspread[:n])&np.isfinite(pref[:n,1,1])
-h=ax[2,2].scatter(dspread[:n][valid],np.log2(pref[:n,1,1][valid]),c=pairs[:n,0][valid],s=3,cmap='viridis',alpha=.5,rasterized=True)
-ax[2,2].scatter(dspread[-1],np.log2(pref[-1,1,1]),marker='*',s=100,color=TEAL,edgecolors='white',zorder=5)
-ax[2,2].scatter(dspread[historical],np.log2(pref[historical,1,1]),marker='D',s=25,facecolors='none',edgecolors='black',zorder=5)
-ax[2,2].axhline(0,color='black',lw=.6)
-ax[2,2].set(title='I  Spread and contrast preference',xlabel='Change in calcium 1/e distance (um)',ylabel='log2 [gain(30%) / gain(70%)]')
-cb=fig.colorbar(h,ax=ax[2,2],fraction=.046,pad=.025);cb.set_label('Midpoint (mV)',fontsize=8)
-fig.text(.075,.025,footer,fontsize=8)
-save(fig,'calcium_sweep_overview')
+h=ax.scatter(dspread[:n][valid],np.log2(pref[:n,1,1][valid]),c=pairs[:n,0][valid],s=3,cmap='viridis',alpha=.5,rasterized=True)
+ax.scatter(dspread[-1],np.log2(pref[-1,1,1]),marker='*',s=100,color=TEAL,edgecolors='white',zorder=5,label='Original')
+ax.scatter(dspread[historical],np.log2(pref[historical,1,1]),marker='D',s=25,facecolors='none',edgecolors='black',zorder=5,label='Historical')
+ax.axhline(0,color='black',lw=.6)
+ax.set(title='Spread and contrast preference; 25% retained',xlabel='Change in calcium 1/e distance (µm)',ylabel='log2 [gain(30%) / gain(70%)]')
+fig.colorbar(h,ax=ax,fraction=.046,pad=.025,label='Midpoint (mV)')
+ax.legend(fontsize=7,frameon=False)
+save(fig, 'calcium_spread_preference')
 
-fig,ax=base(3,3,(13.5,10.5),'Dependence on retained inhibition','Rows: 20%, 25%, and 30% of control inhibitory conductance | identical color scales across rows')
 allp15=np.log2(pref[:n,:,0]);allp30=np.log2(pref[:n,:,1]);alls=shape[:n,1:,6]-shape[:n,0,6,None]
 for row,f in enumerate([20,25,30]):
-    heat(fig,ax[row,0],np.log2(pref[:,row,0]),f'{f}% retained: low-contrast preference','log2 [gain(15%) / gain(70%)]',cmap='RdBu_r',norm=centered(allp15),contour=0)
-    heat(fig,ax[row,1],np.log2(pref[:,row,1]),f'{f}% retained: intermediate preference','log2 [gain(30%) / gain(70%)]',cmap='RdBu_r',norm=centered(allp30),contour=0)
-    heat(fig,ax[row,2],shape[:,row+1,6]-shape[:,0,6],f'{f}% retained: 30% shape separation','reduced minus control',cmap='RdBu_r',norm=centered(alls),contour=0)
-fig.text(.075,.025,footer,fontsize=8);save(fig,'calcium_sweep_residual_sensitivity')
+    items=[('preference15',np.log2(pref[:,row,0]),'Low-contrast preference','log2 [gain(15%) / gain(70%)]',centered(allp15)),
+           ('preference30',np.log2(pref[:,row,1]),'Intermediate preference','log2 [gain(30%) / gain(70%)]',centered(allp30)),
+           ('shape30',shape[:,row+1,6]-shape[:,0,6],'30% shape separation','reduced minus control',centered(alls))]
+    for name,values,title,label,norm in items:
+        fig, ax = heat_panel(values,f'{title}; {f}% retained',label,cmap='RdBu_r',norm=norm,contour=0)
+        save(fig,f'calcium_retained{f}_{name}')
 
-fig,ax=base(3,4,(16,10.5),'Absolute responses and gain','25% retained inhibition | raw calcium proxy responses shown beside ratios | all contrast conditions use the same amplitude scale')
 for row,(c,ci) in enumerate([(15,3),(30,6),(70,10)]):
-    for col,j,label in [(0,0,'Control'),(1,2,'Reduced')]:
-        heat(fig,ax[row,col],auc[:,j,ci]/1000,f'{c}% contrast: {label}','Ca AUC (10³ a.u. ms²)',norm=Normalize(0,150))
-    heat(fig,ax[row,2],inc[:,1,row]/1000,f'{c}% contrast: absolute increment','Ca AUC (10³ a.u. ms²)',norm=Normalize(0,150))
-    heat(fig,ax[row,3],np.log10(gain[:,1,row]),f'{c}% contrast: fractional gain','log10 reduced / control AUC',norm=Normalize(0,np.nanmax(np.log10(gain[:n,1]))))
-fig.text(.075,.025,footer+'\nRatio denominators at or below 0.15 a.u. ms² are masked; all raw responses remain in the data.',fontsize=8);save(fig,'calcium_sweep_absolute_responses')
+    for j,label in [(0,'control'),(2,'reduced')]:
+        fig,ax=heat_panel(auc[:,j,ci]/1000,f'{c}% contrast: {label}; 25% retained','Ca AUC (10³ a.u. ms²)',norm=Normalize(0,150))
+        save(fig,f'calcium_contrast{c}_{label}')
+    fig,ax=heat_panel(inc[:,1,row]/1000,f'{c}% contrast: absolute increment; 25% retained','Ca AUC (10³ a.u. ms²)',norm=Normalize(0,150))
+    save(fig,f'calcium_contrast{c}_increment')
+    fig,ax=heat_panel(np.log10(gain[:,1,row]),f'{c}% contrast: fractional gain; 25% retained','log10 reduced / control AUC',norm=Normalize(0,np.nanmax(np.log10(gain[:n,1]))))
+    save(fig,f'calcium_contrast{c}_gain')
 
 examples=[(n,'Exact original'),(historical,'Historical reference')]+[(np.flatnonzero((pairs[:,0]==mid)&(pairs[:,1]==k))[0],f'Domain corner {mid} / {k}') for mid,k in [(-45,1),(-45,6),(-20,1),(-20,6)]]
-fig,axes=base(2,3,(13.5,8.5),'Original settings and all four domain corners','Complete corner set shown alongside original and historical settings | control (gray), 25% retained inhibition (orange)')
-v=np.linspace(-45,0,451)
 for j,(i,label) in enumerate(examples):
-    ax=axes.flat[j]
+    fig,ax=panel()
     mid,k=pairs[i]
-    for ci,color,condition in [(0,GRAY,'Control'),(2,ORANGE,'Reduced')]:ax.plot(contrasts,auc[i,ci]/1000,color=color,lw=1.8,label=condition)
+    for ci,color,condition in [(0,GRAY,'Control'),(2,ORANGE,'25% retained')]:
+        ax.plot(contrasts,auc[i,ci]/1000,color=color,lw=1.8,label=condition)
     ax.set(title=f'{label}\nMidpoint {mid:.2f} mV; slope {k:.2f} mV',xlabel='Contrast (%)',ylabel='Ca AUC (10³ a.u. ms²)',ylim=(-2,155))
     labels=[f'{value:.3g}' if np.isfinite(value) else 'undefined' for value in pref[i,1]]
     ax.text(.03,.96,f'P15: {labels[0]}\nP30: {labels[1]}',transform=ax.transAxes,va='top',fontsize=8)
-fig.text(.075,.025,'P15 and P30 compare fractional gain with gain at 70% contrast; values >1 indicate preferential enhancement.\nUndefined ratios have technically weak denominators; raw responses are retained. Responses are model proxies, not calibrated fluorescence.',fontsize=8)
-save(fig,'calcium_sweep_examples')
+    ax.legend(fontsize=7,frameon=False,loc='lower right')
+    save(fig,f'calcium_example_{j+1}')
 
 # Full long-form exports explicitly record each equivalence exclusion.
 with (OUT/'contrast_responses_and_matches.tsv').open('w') as f:
@@ -180,6 +209,21 @@ for j,r in enumerate([.2,.25,.3]):
     value=m[valid][:,selected].mean(axis=1)
     common[str(r)]=dict(contrasts=[5,10,15],n_valid=int(valid.sum()),minimum=float(value.min()),median=float(np.median(value)),maximum=float(value.max()))
 (OUT/'common_support_shift.json').write_text(json.dumps(common,indent=2)+'\n')
+(OUT/'README.md').write_text(
+    '# Calcium sweep panels\n\n'
+    'These 36 SVG/PNG plots are exported individually from the archived sweep. '
+    'Related heatmaps keep shared color scales. Stars identify the exact original '
+    'parameters; diamonds identify the historical (-40, 4 mV) setting. Gray cells '
+    'mark unavailable metrics or unobserved first 1/e crossings.\n\n'
+    'P15 and P30 compare fractional calcium gain at 15% and 30% contrast with '
+    'gain at 70% contrast. Values above one indicate preferential enhancement. '
+    'Ratio denominators at or below 0.15 a.u. ms² are masked; all raw responses '
+    'remain in the data. Horizontal equivalence uses only supported matches; '
+    'dotted boundaries mark changes in match count.\n\n'
+    'These are proxy responses from one reconstruction. Parameter-grid coverage '
+    'is descriptive, not a biological probability. No parameters were refitted. '
+    'The accompanying TSV/JSON exports retain full responses, match exclusions, '
+    'activation and spatial metadata, and numerical precision checks.\n')
 hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in OUT.iterdir() if p.is_file() and p.name!='review_manifest.json'}
 (OUT/'review_manifest.json').write_text(json.dumps(dict(source_archive_sha256=hashlib.sha256((RESULTS/'calcium_sweep.npz').read_bytes()).hexdigest(),builder_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),files=hashes),indent=2)+'\n')
-print('Saved four review figures (SVG/PNG), long-form data, activation/spatial metadata, and audit metadata.')
+print('Saved 36 individual panels (SVG/PNG), long-form data, activation/spatial metadata, and audit metadata.')

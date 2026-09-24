@@ -6,14 +6,17 @@
   ],
   "source_git_history_available": false,
   "scope": "Model source, morphology, fitted parameters, required historical calibration inputs, Figure 4 reference outputs, and parameter-sweep source/numerical results.",
-  "preservation": "Core model code/data and archived numerical arrays were copied byte for byte. Sweep path/provenance handling was adapted for this repository layout; see the analysis README.",
+  "preservation": "Parameters and archived numerical results are preserved byte for byte. Retained simulation functions and analysis formulas are unchanged. Plotting exports individual panels; publication-page layout and assembly code is excluded.",
   "excluded": [
     "virtual environments",
     "Python caches",
     "temporary logs",
     "obsolete model candidate outputs",
     "manuscript workbooks/artwork",
-    "regenerable sweep plot exports and raw simulation caches"
+    "regenerable sweep plot exports and raw simulation caches",
+    "original example entry points",
+    "historical figure plotting and assembly scripts",
+    "publication page layouts"
   ],
   "files": [
     {
@@ -44,23 +47,15 @@
     },
     {
       "path": "modeling/README.md",
-      "bytes": 5211,
-      "sha256": "239dd536bbe8468a0b9d84e343ff64bc92d79a3828f34beee86a9f65e73efb44",
-      "status": "new_repository_documentation_or_configuration"
-    },
-    {
-      "path": "modeling/README_original.md",
-      "bytes": 3485,
-      "sha256": "9384c9f2d1a2bfc1ee272c5a0559979e1f0b0c1f7608a747230aec7d28bfc94a",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/README.md"
-      ]
+      "bytes": 4718,
+      "sha256": "c785594c1dd90c1717d452b8ad4f7ab31baaea34a5fa661b6965a259e0ac9aa5",
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
       "path": "modeling/analysis/README.md",
-      "bytes": 6386,
-      "sha256": "c71fb06d159e5c03122239acb9bb475d192cc09d5dd321547dd3f579775b9204",
-      "status": "new_repository_documentation_or_configuration"
+      "bytes": 6365,
+      "sha256": "63c37a78d147af05ed2d895d866deada14aea870d797f5a68a61c5aef6baa339",
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
       "path": "modeling/analysis/parameter_sweeps_20260921/README.md",
@@ -72,11 +67,11 @@
     },
     {
       "path": "modeling/analysis/parameter_sweeps_20260921/build_sweep_outputs.py",
-      "bytes": 14381,
-      "sha256": "6bd3b3f123bcd2c08c39534dc319e1eeacb10358df472ca7ad1622084d0bbdf1",
+      "bytes": 15084,
+      "sha256": "4b2b36d2a7be9eb78c8301a0a8d1445bbb4f30ff1a75e7f2de34f392a9e58b88",
       "source_path": "analysis/parameter_sweeps_20260921/build_sweep_outputs.py",
       "source_sha256": "1860cb2af35eea9f13b9a90bf4133e1cad61c7d2aac445d2c805b581e75bba18",
-      "status": "adapted_for_repository_layout"
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
       "path": "modeling/analysis/parameter_sweeps_20260921/calcium_report_20260921.md",
@@ -88,35 +83,19 @@
     },
     {
       "path": "modeling/analysis/parameter_sweeps_20260921/calcium_supplement/README.md",
-      "bytes": 1906,
-      "sha256": "6322788c4e32b58bbb59ac64e5c106e5138c008261a5e128525accd7c9fa0517",
-      "byte_identical_source_files": [
-        "analysis/parameter_sweeps_20260921/calcium_supplement/README.md"
-      ]
+      "bytes": 4969,
+      "sha256": "420cfb97674d3b98524993ff26e8e1e26c4ea1976fdafd2dcfd0afe0ab33041f",
+      "source_path": "analysis/parameter_sweeps_20260921/calcium_supplement/README.md",
+      "source_sha256": "6322788c4e32b58bbb59ac64e5c106e5138c008261a5e128525accd7c9fa0517",
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
-      "path": "modeling/analysis/parameter_sweeps_20260921/calcium_supplement/build_calcium_supplement.py",
-      "bytes": 18052,
-      "sha256": "45c6317c41481d66974c55f1f0f24d2629570e6ef6f3a5c14239c3662e754753",
       "source_path": "analysis/parameter_sweeps_20260921/calcium_supplement/build_calcium_supplement.py",
       "source_sha256": "66cc28d3d3cc8c27839fe4e5c3da27e593695de7868273408f4e6f68671c9999",
-      "status": "adapted_for_repository_layout"
-    },
-    {
-      "path": "modeling/analysis/parameter_sweeps_20260921/calcium_supplement/legend.md",
-      "bytes": 7290,
-      "sha256": "0195bea0455e41e367d3fca894332e45381b8d0c9690c2bdefba77ccff08dfbf",
-      "byte_identical_source_files": [
-        "analysis/parameter_sweeps_20260921/calcium_supplement/legend.md"
-      ]
-    },
-    {
-      "path": "modeling/analysis/parameter_sweeps_20260921/calcium_supplement/manifest.json",
-      "bytes": 3221,
-      "sha256": "da37da55030f8ef212ac64fc91a5a5f255da4027a0c3826104b171d6aab8171d",
-      "byte_identical_source_files": [
-        "analysis/parameter_sweeps_20260921/calcium_supplement/manifest.json"
-      ]
+      "status": "updated_for_analysis_and_individual_panel_outputs",
+      "path": "modeling/analysis/parameter_sweeps_20260921/calcium_supplement/plot_calcium_panels.py",
+      "bytes": 14522,
+      "sha256": "d469ec52a8f949a1e106c7a2ea786ba06bb6cb6a0546cd3c6cd28412813c064c"
     },
     {
       "path": "modeling/analysis/parameter_sweeps_20260921/completed_sweeps_report.md",
@@ -128,19 +107,19 @@
     },
     {
       "path": "modeling/analysis/parameter_sweeps_20260921/electrical/README.md",
-      "bytes": 3307,
-      "sha256": "f874caa9d7396f4305ec906c817186478647654fe9b8b9e2a62be73c29a8a319",
-      "byte_identical_source_files": [
-        "analysis/parameter_sweeps_20260921/electrical/README.md"
-      ]
+      "bytes": 3491,
+      "sha256": "1e5fdf29da1ae60e177948eff4c8b0be2c3418694e3ed4a4f4282862384daa55",
+      "source_path": "analysis/parameter_sweeps_20260921/electrical/README.md",
+      "source_sha256": "f874caa9d7396f4305ec906c817186478647654fe9b8b9e2a62be73c29a8a319",
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
       "path": "modeling/analysis/parameter_sweeps_20260921/electrical/build_electrical_outputs.py",
-      "bytes": 15456,
-      "sha256": "838e94f810ece1a82adbcf51da0387b5de9dead75ce3b1305afc172a7fd47c3e",
+      "bytes": 15056,
+      "sha256": "369e1ed9fe71d1b6f735c01f667aaa6a1317874171764dd7a0747b4e2edca82f",
       "source_path": "analysis/parameter_sweeps_20260921/electrical/build_electrical_outputs.py",
       "source_sha256": "b3d6e2412458ba6a9494d7d3ed5672f6888cf4853176238c8c19a3dcf247ba14",
-      "status": "adapted_for_repository_layout"
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
       "path": "modeling/analysis/parameter_sweeps_20260921/electrical/contrast_matches.tsv",
@@ -303,30 +282,6 @@
       ]
     },
     {
-      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/build_sweep_outputs.py",
-      "bytes": 14147,
-      "sha256": "1860cb2af35eea9f13b9a90bf4133e1cad61c7d2aac445d2c805b581e75bba18",
-      "byte_identical_source_files": [
-        "analysis/parameter_sweeps_20260921/build_sweep_outputs.py"
-      ]
-    },
-    {
-      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/calcium_supplement/build_calcium_supplement.py",
-      "bytes": 17664,
-      "sha256": "66cc28d3d3cc8c27839fe4e5c3da27e593695de7868273408f4e6f68671c9999",
-      "byte_identical_source_files": [
-        "analysis/parameter_sweeps_20260921/calcium_supplement/build_calcium_supplement.py"
-      ]
-    },
-    {
-      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/electrical/build_electrical_outputs.py",
-      "bytes": 15019,
-      "sha256": "b3d6e2412458ba6a9494d7d3ed5672f6888cf4853176238c8c19a3dcf247ba14",
-      "byte_identical_source_files": [
-        "analysis/parameter_sweeps_20260921/electrical/build_electrical_outputs.py"
-      ]
-    },
-    {
       "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/electrical/passive_tail.py",
       "bytes": 6523,
       "sha256": "39194f68f8125c146d03cd14af990163b2c4784d2d5960e1542e05a79a57a7f8",
@@ -380,14 +335,6 @@
       "sha256": "da738752ac3441bea3a32029a8d997196c6458c17fd79e0905de8d5cf3926db2",
       "byte_identical_source_files": [
         "analysis/parameter_sweeps_20260921/run_calcium_sweep.py"
-      ]
-    },
-    {
-      "path": "modeling/analysis/parameter_sweeps_20260921/historical_sources/spatial/build_outputs.py",
-      "bytes": 22669,
-      "sha256": "7a0f0819b02cd09114de1c5d8338722c0c7979411b9b1da9c071108d2b27eb7a",
-      "byte_identical_source_files": [
-        "analysis/parameter_sweeps_20260921/spatial/build_outputs.py"
       ]
     },
     {
@@ -498,19 +445,19 @@
     },
     {
       "path": "modeling/analysis/parameter_sweeps_20260921/spatial/README.md",
-      "bytes": 5775,
-      "sha256": "ead5c95b93066d1516959719aae06abdc73d77bd2b4229020e96f6b3cf72591e",
-      "byte_identical_source_files": [
-        "analysis/parameter_sweeps_20260921/spatial/README.md"
-      ]
+      "bytes": 5760,
+      "sha256": "61bd3cb5e51eb7705fef72af2aee3f3c7163d0cf2de00fc0f74e870587bd424a",
+      "source_path": "analysis/parameter_sweeps_20260921/spatial/README.md",
+      "source_sha256": "ead5c95b93066d1516959719aae06abdc73d77bd2b4229020e96f6b3cf72591e",
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
       "path": "modeling/analysis/parameter_sweeps_20260921/spatial/build_outputs.py",
-      "bytes": 23167,
-      "sha256": "342b79cd225fca11858a2e1fe4377cf795dd4f061cc1c013ffe60b499e03ddb0",
+      "bytes": 23941,
+      "sha256": "8196e2d782446ede6c155e314614b03ae9b53b5a2969d040442acc1d49ae0b2a",
       "source_path": "analysis/parameter_sweeps_20260921/spatial/build_outputs.py",
       "source_sha256": "7a0f0819b02cd09114de1c5d8338722c0c7979411b9b1da9c071108d2b27eb7a",
-      "status": "adapted_for_repository_layout"
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
       "path": "modeling/analysis/parameter_sweeps_20260921/spatial/focal_all_sites.tsv",
@@ -1041,126 +988,6 @@
       ]
     },
     {
-      "path": "modeling/scripts/example/run_example.py",
-      "bytes": 7385,
-      "sha256": "823cb443eaf1c94de3d87752ba1ac6f351f907fce8c8281d13750aeb350f9edf",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/example/run_example.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/assemble_figure_v3.py",
-      "bytes": 2129,
-      "sha256": "199fe8957952446d8491ae1ce987dcbe25c4d8bfc8d40087637e54221b0b873b",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/assemble_figure_v3.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/assemble_figure_v4.py",
-      "bytes": 2131,
-      "sha256": "52d9be582554a877ed317529e2f9299694e489e23a721346a852e9a2a67745db",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/assemble_figure_v4.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/assemble_figure_v5.py",
-      "bytes": 2321,
-      "sha256": "980108cb6a6670c6a9e2b089bb105ba69c9a3eb520a584b34e379741c9d49316",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/assemble_figure_v5.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/assemble_figure_v6.py",
-      "bytes": 2345,
-      "sha256": "61039d6ed6c43349626794f6bcd58ededca6a67a0328803b59976ac74c176a13",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/assemble_figure_v6.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/assemble_figure_v8.py",
-      "bytes": 3008,
-      "sha256": "fa2e84efba4c491ab154ea6bcefbeb7c9c1efcf0ce0629f8b3edc7806253d998",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/assemble_figure_v8.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/build_anatomy_panels.py",
-      "bytes": 10059,
-      "sha256": "17b74fe0f2027ef53aad45a689cce76b4a4d84a9b0080386be000a580a718bc9",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/build_anatomy_panels.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/build_experimental_figure_v3.py",
-      "bytes": 7277,
-      "sha256": "49e5c10b0e53e224b6bc8def61292d0ed5f53157705de8294c8695da32b78fba",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/build_experimental_figure_v3.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/build_experimental_figure_v4.py",
-      "bytes": 8425,
-      "sha256": "4f6b792aed4cac0c2bc01d0dda774c32aa7eca0a8c3389bcc9e25f4791e7f16b",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/build_experimental_figure_v4.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/build_experimental_figure_v5.py",
-      "bytes": 8234,
-      "sha256": "ccb075de23b9592ff274f074bc41aaf7296a5a47b2405f324993bd622f2d4232",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/build_experimental_figure_v5.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/build_experimental_figure_v6.py",
-      "bytes": 8229,
-      "sha256": "7fc14df3b3e997dcb97661e2d6cd36d14badd3f9d24cbc736f1ee5bd30b282b3",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/build_experimental_figure_v6.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/build_experimental_figure_v8.py",
-      "bytes": 9353,
-      "sha256": "b059c0a3350aabdcced77a8dad5bf77052dc10a7875e7507b0462c8f739f89d9",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/build_experimental_figure_v8.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/build_figure_v3.py",
-      "bytes": 13418,
-      "sha256": "5a2d9ea25310cb197f264a058907f7871e8ecaceb90069ed7beea686a30b476e",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/build_figure_v3.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/build_model_figure_v5.py",
-      "bytes": 10674,
-      "sha256": "916225cf071f0092f06b48cfd1b8ce066c934685c67052c3f0d09f6f1c1de9c1",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/build_model_figure_v5.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/build_model_figure_v6.py",
-      "bytes": 10724,
-      "sha256": "0ba35fbc7dc35f830cde73cb8cf7f8d036d678e01e5775a12acb525500a128b3",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/build_model_figure_v6.py"
-      ]
-    },
-    {
       "path": "modeling/scripts/fig3/calibrate_calcium_v3.py",
       "bytes": 8561,
       "sha256": "3ef00de9367d30ebd7cc15e756ffa97e50d7a0f54172cfe77747c8de953a88a7",
@@ -1185,35 +1012,11 @@
       ]
     },
     {
-      "path": "modeling/scripts/fig3/compare_fig3_experiment.py",
-      "bytes": 14753,
-      "sha256": "d26a609aa9d033561731c4ff88f990d6a24c4fd62b310127e862051793a6ebb3",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/compare_fig3_experiment.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/diagnose_spread_20260909.py",
-      "bytes": 9662,
-      "sha256": "499d04b10a5289ce8f7b8705057dfbef414be867abafccc618650dd1ec86a1ca",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/diagnose_spread_20260909.py"
-      ]
-    },
-    {
       "path": "modeling/scripts/fig3/finite_local_spread_v3.py",
       "bytes": 5878,
       "sha256": "8eae9285bece968432461b4c64ab45166e605fc1516968b5650ef0f4fa64dc15",
       "byte_identical_source_files": [
         "vg3_cid3_rf_simulation-main/scripts/fig3/finite_local_spread_v3.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig3/prepare_figure_v3.py",
-      "bytes": 2729,
-      "sha256": "5860f847eec2cdcf98fb29d42529c93c3538cd6d7f1778609ec905991752f920",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/prepare_figure_v3.py"
       ]
     },
     {
@@ -1242,11 +1045,11 @@
     },
     {
       "path": "modeling/scripts/fig3/run_fig3_pilot.py",
-      "bytes": 20145,
-      "sha256": "a1e11f49284b3ac41d832e53ca12ead20cfd01b7a5a961b1dd66ad3aa555856b",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig3/run_fig3_pilot.py"
-      ]
+      "bytes": 3078,
+      "sha256": "c39a743d616d298ac507d4deedb9337c2a9739b53d77fbd67a2503be9406cb81",
+      "source_path": "vg3_cid3_rf_simulation-main/scripts/fig3/run_fig3_pilot.py",
+      "source_sha256": "a1e11f49284b3ac41d832e53ca12ead20cfd01b7a5a961b1dd66ad3aa555856b",
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
       "path": "modeling/scripts/fig3/screen_shared_v3.py",
@@ -1273,85 +1076,28 @@
       ]
     },
     {
-      "path": "modeling/scripts/fig4/assemble_v9.py",
-      "bytes": 3507,
-      "sha256": "80134491c007f006adf9074fcd8fd61a6261d8332adb74e3bf7bfe4967036dbe",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig4/assemble_v9.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig4/build_model_v9.py",
-      "bytes": 11221,
-      "sha256": "a8b7286b8da51256fcc90560629cf92691d0365b797bc2adf25c5a298208ca1f",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig4/build_model_v9.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig4/build_panel_i_v9.py",
-      "bytes": 3048,
-      "sha256": "aadf54ef62e3a223a70169abe7aa375cdc3a426f72cac99bae2a0a54551886f4",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig4/build_panel_i_v9.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig4/preserve_experimental_v9.py",
-      "bytes": 2938,
-      "sha256": "45b37ee1bbb16a9007aad4ac7d869afb26822680b3dd5b0a16782109c1884e2f",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig4/preserve_experimental_v9.py"
-      ]
+      "source_path": "vg3_cid3_rf_simulation-main/scripts/fig4/build_model_v9.py",
+      "source_sha256": "a8b7286b8da51256fcc90560629cf92691d0365b797bc2adf25c5a298208ca1f",
+      "status": "updated_for_analysis_and_individual_panel_outputs",
+      "path": "modeling/scripts/fig4/plot_model_panels.py",
+      "bytes": 6178,
+      "sha256": "2c4fb4136f3e50bf42c70154ba202b70d41c3142915689faeb64dbca0e436d93"
     },
     {
       "path": "modeling/scripts/fig4/run_retained_inhibition_v9.py",
-      "bytes": 24802,
-      "sha256": "f9d5f488b45d158f9aaf6e5ab5184c00a0111a0b3fd1ba41b33b50d59f203e87",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig4/run_retained_inhibition_v9.py",
-        "vg3_cid3_rf_simulation-main/outputs/fig4_v9_retained_inhibition_20260916/run_retained_inhibition_v9.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig4/save_native_artifacts_v9.jsx",
-      "bytes": 3369,
-      "sha256": "59672d0412a493eba3bd6eb6da9850de80bca51112ce9d4833e07082235dd0c4",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig4/save_native_artifacts_v9.jsx"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig4/update_figure7_marker_v8.py",
-      "bytes": 3052,
-      "sha256": "d46149f9f411387c3b8a12094d3ff0d341ca100a4357c1cd7e63be14a9d3a003",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig4/update_figure7_marker_v8.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/fig4/verify_artifacts_v9.py",
-      "bytes": 4257,
-      "sha256": "e64d34301f246784b7685bf319621cd641b670064405cab9b041b5fdf6acdee3",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/fig4/verify_artifacts_v9.py"
-      ]
-    },
-    {
-      "path": "modeling/scripts/sweep/run_inhibition_sweep.py",
-      "bytes": 3451,
-      "sha256": "2cecb47ecd2d1cac94143415ca9a9ade01722542d4c4c16d3045eeea252ac164",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/scripts/sweep/run_inhibition_sweep.py"
-      ]
+      "bytes": 24741,
+      "sha256": "1337ec013c64a131f3030430f2f498d82070d04166edbf7495a840ba6db1576a",
+      "source_path": "vg3_cid3_rf_simulation-main/scripts/fig4/run_retained_inhibition_v9.py",
+      "source_sha256": "f9d5f488b45d158f9aaf6e5ab5184c00a0111a0b3fd1ba41b33b50d59f203e87",
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
       "path": "modeling/setup.sh",
-      "bytes": 1503,
-      "sha256": "251138e3a93d03fd4ed7ae6e4cdeb9200ee1941ef6904daff3d7d857b8ca8887",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/setup.sh"
-      ]
+      "bytes": 1513,
+      "sha256": "229f68ff7339c32097e4971e17f96b7b0eb2ed7907ba0a2e6e92576d4c26742f",
+      "source_path": "vg3_cid3_rf_simulation-main/setup.sh",
+      "source_sha256": "251138e3a93d03fd4ed7ae6e4cdeb9200ee1941ef6904daff3d7d857b8ca8887",
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
       "path": "modeling/src/calcium_readout.py",
@@ -1362,20 +1108,12 @@
       ]
     },
     {
-      "path": "modeling/src/plotting.py",
-      "bytes": 4267,
-      "sha256": "975d846a941f24baf65d389df5a12254ec3bb8ea940444cad6810f4bfde91cc2",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/src/plotting.py"
-      ]
-    },
-    {
       "path": "modeling/src/run_functions.py",
-      "bytes": 12928,
-      "sha256": "ac05d5a346be2040e9dd4181d4a994ee0e09900506977ba166292c7a2cdebb34",
-      "byte_identical_source_files": [
-        "vg3_cid3_rf_simulation-main/src/run_functions.py"
-      ]
+      "bytes": 12888,
+      "sha256": "5008a2160abfe7af301e98788988204438f4f6262938f9f4b7161793483173c3",
+      "source_path": "vg3_cid3_rf_simulation-main/src/run_functions.py",
+      "source_sha256": "ac05d5a346be2040e9dd4181d4a994ee0e09900506977ba166292c7a2cdebb34",
+      "status": "updated_for_analysis_and_individual_panel_outputs"
     },
     {
       "path": "modeling/src/vg3_base_functions.py",
@@ -1385,5 +1123,6 @@
         "vg3_cid3_rf_simulation-main/src/vg3_base_functions.py"
       ]
     }
-  ]
+  ],
+  "updated_date": "2026-09-24"
 }

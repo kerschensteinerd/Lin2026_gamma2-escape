@@ -35,11 +35,11 @@ The 770 spot cases preserve the original 0.1-ms NEURON onset transient, 2-ms sam
 - `focal_all_sites.tsv`, `focal_layout_controls.tsv`, `focal_binned_profiles.tsv`: absolute and normalized focal descriptors.
 - `focal_site_paired_effects.tsv`, `focal_site_summary.tsv`, `focal_layout_paired_effects.tsv`: paired changes and censoring.
 - `spot_responses.tsv`, `spot_local_responses.tsv`, `spot_layout_metrics.tsv`, `spot_contrast_effects.tsv`, `horizontal_matches.tsv`: all model responses and comparisons.
-- `focal_cache/`, `spot_voltage_cache/`: reproducible transfer maps/input resistances and voltage prefixes.
+- `focal_cache/`, `spot_voltage_cache/`: transfer maps/input resistances and voltage prefixes generated during new runs; not bundled with the reference results.
 - `focal_validation.json`, `spot_validation.json`, `spot_tail_diagnostics.tsv`, `source_hashes_before.json`: validation and provenance.
-- `spatial_sites.pdf/.svg/.png`, `spatial_layouts.pdf/.svg/.png`: editable and preview figures.
+- `build_outputs.py`: derived metrics and separate panel visualizations of site and layout effects.
 
-Rerun with the repository `.venv/bin/python`, then `run_spatial.py --stage focal`, `run_spatial.py --stage spot`, and `build_outputs.py`. The spot stage imports the preserved `../electrical/passive_tail.py` helper and verifies its hash. Original sources, calibration, figures, and manuscript remain unchanged.
+See [the reproduction guide](../../README.md) for commands and output-directory options. Run `build_outputs.py` without arguments to plot the archived results. The spot stage imports `../electrical/passive_tail.py` and verifies its hash.
 
 ## Interpretation
 

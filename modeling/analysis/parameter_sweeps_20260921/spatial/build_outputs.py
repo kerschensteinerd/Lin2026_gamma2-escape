@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Summarize and plot prespecified spatial-control results without selecting cases."""
+"""Summarize spatial-control results and export individual analytical panels."""
 from pathlib import Path
 import csv,json,hashlib
 import numpy as np
@@ -39,8 +39,10 @@ def read(p):
 def write(name,rows):
     with (OUT/name).open('w',newline='') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]),delimiter='\t');w.writeheader();w.writerows(rows)
+def panel():
+    return plt.subplots(figsize=(5.6,4.3),layout='constrained')
 def save(fig,name):
-    for ext in ['png','pdf','svg']:fig.savefig(OUT/f'{name}.{ext}',dpi=220,facecolor='white')
+    for ext in ['png','pdf','svg']:fig.savefig(OUT/f'{name}.{ext}',dpi=220,facecolor='white',bbox_inches='tight')
     plt.close(fig)
 def dist(x):
     x=np.array(x,float);return dict(n=int(len(x)),min=float(x.min()),q25=float(np.quantile(x,.25)),median=float(np.median(x)),q75=float(np.quantile(x,.75)),max=float(x.max()))
@@ -133,65 +135,77 @@ def main():
         focal_validation=focal,spot_validation=spot,
         interpretation='Deterministic within-arbor sensitivity. Sites, layouts, contrasts, and randomseeds are not independent biological replicates or confidence bounds.')
     (OUT/'summary.json').write_text(json.dumps(summary,indent=2,allow_nan=False)+'\n')
-    # Figure1: retain all75sites and all3strengths, including crossing censoring.
-    fig,ax=plt.subplots(2,3,figsize=(10.8,6.5),layout='constrained')
-    for j,strength in enumerate(ST):
-        a=ax[0,j];b=ax[1,j];a.plot([0,76],[0,76],color='.7',lw=.8,zorder=0)
+    # Every site/strength comparison is an independent panel.
+    for strength in ST:
+        fig_a,a=panel();fig_b,b=panel()
+        a.plot([0,76],[0,76],color='.7',lw=.8,zorder=0)
         for f in F:
             rr=[r for r in sitepair if r['retained_fraction']==f and r['focal_strength_multiplier']==strength]
             observed=[r for r in rr if r['both_calcium_crossings_observed']];censored=[r for r in rr if r['reduced_calcium_crossing_censored']]
             a.scatter([r['control_calcium_1e_um'] for r in observed],[r['reduced_calcium_1e_um'] for r in observed],s=10,c=COL[f],alpha=.7,lw=0,label=f'{f:.0%} retained')
             if censored:a.scatter([r['control_calcium_1e_um'] for r in censored],[76]*len(censored),s=27,c=COL[f],marker='^',edgecolors='white',lw=.3)
-            b.scatter([r['source_soma_path_um'] for r in rr],[r['delta_calcium_cable_integral_um'] for r in rr],s=10,c=COL[f],alpha=.7,lw=0)
+            b.scatter([r['source_soma_path_um'] for r in rr],[r['delta_calcium_cable_integral_um'] for r in rr],s=10,c=COL[f],alpha=.7,lw=0,label=f'{f:.0%} retained')
             canonical=next(r for r in rr if r['source_segment']==4705)
             if canonical['both_calcium_crossings_observed']:a.scatter([canonical['control_calcium_1e_um']],[canonical['reduced_calcium_1e_um']],s=65,c=COL[f],marker='*',edgecolors='black',lw=.45,zorder=4)
             b.scatter([canonical['source_soma_path_um']],[canonical['delta_calcium_cable_integral_um']],s=65,c=COL[f],marker='*',edgecolors='black',lw=.45,zorder=4)
-        a.set(xlim=(0,60),ylim=(0,80),xlabel='Control calcium 1/e distance (µm)',ylabel='Reduced calcium 1/e distance (µm)',title=f'{chr(65+j)}  Focal conductance {strength:g}×')
-        b.axhline(0,color='.7',lw=.8);b.set(xlabel='Source path distance from soma (µm)',ylabel='Change in normalized cable integral (µm)',title=f'{chr(68+j)}  All 75 sites, {strength:g}× drive')
-    ax[0,0].legend(frameon=False,fontsize=7,loc='upper left')
-    fig.suptitle('Spatial robustness across input sites and shared focal strengths',fontsize=12)
-    fig.supxlabel('Stars: original source. Upper triangles: six reduced-condition crossings not observed within arbor. One reconstruction; no biological error bars.',fontsize=8)
-    save(fig,'spatial_sites')
-    # Figure2: nominal25curves and allfraction continuous summary effects.
-    fig,ax=plt.subplots(2,3,figsize=(11,6.8),layout='constrained')
+        a.set(xlim=(0,60),ylim=(0,80),xlabel='Control calcium 1/e distance (µm)',ylabel='Reduced calcium 1/e distance (µm)',title=f'Focal conductance {strength:g}×; all 75 sites')
+        b.axhline(0,color='.7',lw=.8);b.set(xlabel='Source path distance from soma (µm)',ylabel='Change in normalized cable integral (µm)',title=f'All 75 sites, {strength:g}× focal drive')
+        star=Line2D([],[],marker='*',ls='',mfc='white',mec='black',ms=8,label='Original source')
+        censored_key=Line2D([],[],marker='^',ls='',color='.5',ms=5,label='Unobserved reduced crossing')
+        for axis,extras in [(a,[star,censored_key]),(b,[star])]:
+            handles,_=axis.get_legend_handles_labels()
+            axis.legend(handles=handles+extras,frameon=False,fontsize=7,loc='upper center',bbox_to_anchor=(.5,-.22),ncol=2)
+        save(fig_a,f'spatial_site_crossings_strength{strength:g}')
+        save(fig_b,f'spatial_site_cable_integral_strength{strength:g}')
+    # Matched-total layout effects, each saved separately.
+    location_fig,location_ax=panel()
+    response_fig,response_ax=panel()
+    enhancement_fig,enhancement_ax=panel()
+    preference_fig,preference_ax=panel()
+    spread_fig,spread_ax=panel()
+    equivalence_fig,equivalence_ax=panel()
     lsum=read('layout_summary.tsv');ls={r['layout_id']:r for r in lsum};met={r['layout_id']:r for r in metrics}
     for family in ['random','uniform','proximal','distal']:
         rr=[r for r in layoutpair if r['retained_fraction']==.25 and r['focal_strength_multiplier']==1 and r['family']==family]
-        ax[0,0].scatter([ls[r['layout_id']]['weighted_mean_soma_path_um'] for r in rr],[r['reduced_calcium_1e_um'] for r in rr],
+        location_ax.scatter([ls[r['layout_id']]['weighted_mean_soma_path_um'] for r in rr],[r['reduced_calcium_1e_um'] for r in rr],
             c=FC[family],marker=MARK[family],s=20 if family=='random' else 45,label=family,edgecolors='white',lw=.3)
     ctrlcurve=np.array([r['mean_ca_auc_au_ms2'] for r in groups['control']]);grid=np.array(C)
     rand=np.array([[r['mean_ca_auc_au_ms2'] for r in groups[f'f25_random{i:02d}']] for i in range(20)])
-    ax[0,1].fill_between(grid,rand.min(0)/1e3,rand.max(0)/1e3,color='.8',alpha=.6,label='20 random layouts: range')
-    ax[0,2].fill_between(grid[1:],(rand/np.where(ctrlcurve==0,np.nan,ctrlcurve)).min(0)[1:],(rand/np.where(ctrlcurve==0,np.nan,ctrlcurve)).max(0)[1:],color='.8',alpha=.6)
+    response_ax.fill_between(grid,rand.min(0)/1e3,rand.max(0)/1e3,color='.8',alpha=.6,label='20 random layouts: range')
+    enhancement_ax.fill_between(grid[1:],(rand/np.where(ctrlcurve==0,np.nan,ctrlcurve)).min(0)[1:],(rand/np.where(ctrlcurve==0,np.nan,ctrlcurve)).max(0)[1:],color='.8',alpha=.6)
     for lid,family in [('control','control'),('f25_uniform','uniform'),('f25_proximal','proximal'),('f25_distal','distal')]:
         y=np.array([r['mean_ca_auc_au_ms2'] for r in groups[lid]])
-        ax[0,1].plot(grid,y/1e3,color=FC[family],lw=1.4,label=family)
-        if family!='control':ax[0,2].plot(grid[1:],y[1:]/ctrlcurve[1:],color=FC[family],lw=1.4,label=family)
-    ax[0,0].set(xlabel='Retained-weight mean soma distance (µm)',ylabel='Focal calcium 1/e distance (µm)',title='A  Same total inhibition; different locations')
-    ax[0,0].legend(frameon=False,fontsize=7)
-    ax[0,1].set(xlabel='OFF contrast (%)',ylabel='Calcium AUC (×10³ arbitrary units·ms²)',title='B  Absolute responses, 25% retained')
-    curve_handles,curve_labels=ax[0,1].get_legend_handles_labels()
+        response_ax.plot(grid,y/1e3,color=FC[family],lw=1.4,label=family)
+        if family!='control':enhancement_ax.plot(grid[1:],y[1:]/ctrlcurve[1:],color=FC[family],lw=1.4,label=family)
+    location_ax.set(xlabel='Retained-weight mean soma distance (µm)',ylabel='Focal calcium 1/e distance (µm)',title='Same total inhibition; different locations')
+    location_ax.legend(frameon=False,fontsize=7)
+    response_ax.set(xlabel='OFF contrast (%)',ylabel='Calcium AUC (×10³ arbitrary units·ms²)',title='Absolute responses, 25% retained')
+    curve_handles,curve_labels=response_ax.get_legend_handles_labels()
     reduced_legend=[(h,l) for h,l in zip(curve_handles,curve_labels) if l!='control']
-    ax[0,2].legend([h for h,l in reduced_legend],[l for h,l in reduced_legend],frameon=False,fontsize=7,loc='upper right')
-    ax[0,1].text(60,108,'Control',fontsize=7,color=FC['control'])
-    ax[0,2].set(xlabel='OFF contrast (%)',ylabel='Reduced/control calcium AUC',yscale='log',title='C  Fractional enhancement, 25% retained')
+    enhancement_ax.legend([h for h,l in reduced_legend],[l for h,l in reduced_legend],frameon=False,fontsize=7,loc='upper right')
+    response_ax.legend(frameon=False,fontsize=7)
+    enhancement_ax.set(xlabel='OFF contrast (%)',ylabel='Reduced/control calcium AUC',yscale='log',title='Fractional enhancement, 25% retained')
     for f in F:
         for family in ['random','uniform','proximal','distal']:
             mm=[r for r in metrics if r['retained_fraction']==f and r['family']==family]
             size=15 if family=='random' else 40
-            ax[1,0].scatter([r['preference15'] for r in mm],[r['preference30'] for r in mm],c=COL[f],marker=MARK[family],s=size,alpha=.8,edgecolors='white',lw=.3)
+            preference_ax.scatter([r['preference15'] for r in mm],[r['preference30'] for r in mm],c=COL[f],marker=MARK[family],s=size,alpha=.8,edgecolors='white',lw=.3)
             lp=[r for r in layoutpair if r['retained_fraction']==f and r['focal_strength_multiplier']==1 and r['family']==family]
-            ax[1,1].scatter([r['delta_calcium_1e_um'] for r in lp],[met[r['layout_id']]['preference15'] for r in lp],c=COL[f],marker=MARK[family],s=size,alpha=.8,edgecolors='white',lw=.3)
+            spread_ax.scatter([r['delta_calcium_1e_um'] for r in lp],[met[r['layout_id']]['preference15'] for r in lp],c=COL[f],marker=MARK[family],s=size,alpha=.8,edgecolors='white',lw=.3)
             offset={'random':0,'uniform':-.007,'proximal':.007,'distal':.014}[family]
-            ax[1,2].scatter([(f+offset)*100]*len(mm),[r['mean_calcium_horizontal_shift'] for r in mm],c=COL[f],marker=MARK[family],s=size,alpha=.8,edgecolors='white',lw=.3)
-    ax[1,0].axhline(1,color='.7',lw=.8);ax[1,0].axvline(1,color='.7',lw=.8)
-    ax[1,0].set(xlabel='R15/R70',ylabel='R30/R70',title='D  Preferential lower-contrast gain')
-    ax[1,1].set(xlabel='Change in focal calcium 1/e distance (µm)',ylabel='R15/R70',title='E  Layout-dependent spread and gain')
-    ax[1,2].set(xlabel='Retained inhibition (%)',ylabel='Mean calcium horizontal multiplier',xticks=[20,25,30],title='F  Overlap-limited contrast equivalence')
-    ax[1,0].legend(handles=[Line2D([],[],color=COL[f],marker='o',ls='',label=f'{f:.0%} retained') for f in F],loc='lower right',frameon=False,fontsize=8)
-    fig.suptitle('Residual-inhibition distribution controls at matched total conductance',fontsize=12)
-    fig.supxlabel('All layouts keep the same full-control input. Random range is deterministic layout sensitivity, not a confidence interval. Shift support is tabulated.',fontsize=7.6)
-    save(fig,'spatial_layouts')
+            equivalence_ax.scatter([(f+offset)*100]*len(mm),[r['mean_calcium_horizontal_shift'] for r in mm],c=COL[f],marker=MARK[family],s=size,alpha=.8,edgecolors='white',lw=.3)
+    preference_ax.axhline(1,color='.7',lw=.8);preference_ax.axvline(1,color='.7',lw=.8)
+    preference_ax.set(xlabel='R15/R70',ylabel='R30/R70',title='Preferential lower-contrast gain')
+    spread_ax.set(xlabel='Change in focal calcium 1/e distance (µm)',ylabel='R15/R70',title='Layout-dependent spread and gain')
+    equivalence_ax.set(xlabel='Retained inhibition (%)',ylabel='Mean calcium horizontal multiplier',xticks=[20,25,30],title='Overlap-limited contrast equivalence')
+    layout_keys=[Line2D([],[],color=COL[f],marker='o',ls='',label=f'{f:.0%} retained') for f in F]
+    layout_keys += [Line2D([],[],color='.4',marker=MARK[family],ls='',label=family) for family in ['random','uniform','proximal','distal']]
+    for axis in [preference_ax,spread_ax,equivalence_ax]:
+        axis.legend(handles=layout_keys,loc='upper center',bbox_to_anchor=(.5,-.22),ncol=3,frameon=False,fontsize=7)
+    for fig,name in [(location_fig,'spatial_layout_location'),(response_fig,'spatial_layout_responses'),
+                     (enhancement_fig,'spatial_layout_enhancement'),(preference_fig,'spatial_layout_preference'),
+                     (spread_fig,'spatial_layout_spread_preference'),(equivalence_fig,'spatial_layout_contrast_equivalence')]:
+        save(fig,name)
     # Focused summary text with denominator/censoring/support limitations.
     n25=next(r for r in site_summ if r['retained_fraction']==.25 and r['focal_strength_multiplier']==1)
     report=['# Spatial-control results — 21 September 2026', '',
@@ -220,7 +234,7 @@ def main():
         '- `spot_responses.tsv`, `spot_local_responses.tsv`, `spot_layout_metrics.tsv`, `spot_contrast_effects.tsv`, `horizontal_matches.tsv`: all model responses and comparisons.',
         '- `focal_cache/`, `spot_voltage_cache/`: reproducible transfer maps/input resistances and voltage prefixes.',
         '- `focal_validation.json`, `spot_validation.json`, `spot_tail_diagnostics.tsv`, `source_hashes_before.json`: validation and provenance.',
-        '- `spatial_sites.pdf/.svg/.png`, `spatial_layouts.pdf/.svg/.png`: editable and preview figures.', '',
+        '- `spatial_site_*.pdf/.svg/.png`, `spatial_layout_*.pdf/.svg/.png`: 12 individual analytical panels.', '',
         'Rerun with the repository `.venv/bin/python`, then `run_spatial.py --stage focal`, `run_spatial.py --stage spot`, and `build_outputs.py`. The spot stage imports the preserved `../electrical/passive_tail.py` helper and verifies its hash. Original sources, calibration, figures, and manuscript remain unchanged.', '',
         '## Interpretation', '',
         'The specified electrical and calcium settings support the spatial effect across all sampled input locations, and the qualitative contrast-gain redistribution survives the tested residual-contact distributions. The magnitudes depend on site, input strength, and inhibitory layout. Source-normalized 1/e distances are first-crossing descriptors, not fitted exponential length constants. Calcium diffusion and active membrane currents are not modeled. Spatial/gain covariance is not a causal mediation analysis. The 75 sites, 20 random seeds, and parameter conditions do not provide biological confidence intervals or evidence across independent reconstructions.', ''])

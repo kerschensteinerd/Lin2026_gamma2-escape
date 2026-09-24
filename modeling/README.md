@@ -6,10 +6,12 @@ VGluT3 amacrine cell, its morphology and synapse inputs, fitted parameters,
 the Figure 4 numerical pipeline, and accompanying parameter sweeps.
 
 The original modeling code is by Pratyush Ramakrishna and retains its
-[MIT license](LICENSE). The original repository README is preserved as
-[README_original.md](README_original.md); its example settings and figure
-references predate the current paper analysis. No Git history was present in
-the local source snapshot.
+[MIT license](LICENSE). No Git history was present in the local source
+snapshot.
+
+`src/` contains the shared model and calcium implementation, and `data/`
+contains the SWC morphology, synapse mapping, synapse classification lists,
+and fitted parameters.
 
 ## Install
 
@@ -61,6 +63,17 @@ the current paper analysis is Figure 4. Numerical reference results are in
 - `provenance.json`, `validation.json`, and the sensitivity tables: recorded
   settings, checks, and reference results.
 
+Plot the saved model results as individual panels:
+
+```bash
+python scripts/fig4/plot_model_panels.py --outdir outputs/model_panels
+```
+
+This produces separate morphology maps, spatial-attenuation curves, and
+contrast-response plots in SVG, PDF, and PNG. Morphology maps share the same
+calcium scale. The normalized calcium-AUC plot contains the model curves.
+Use `--results` to select a newly computed `nominal25/` directory.
+
 Saved provenance records retain historical filenames and workspace paths.
 Those records describe the original runs. `IMPORT_MANIFEST.json` records the
 files in this portable import and their source hashes.
@@ -69,29 +82,10 @@ files in this portable import and their source hashes.
 
 See [analysis/parameter_sweeps_20260921/README.md](analysis/parameter_sweeps_20260921/README.md)
 for calcium activation, electrical-parameter, focal-site, and inhibitory-layout
-analyses. The calcium analyses supply the numerical basis for Figures S6/S7.
+analyses and individual-panel plotting commands. The calcium analyses supply
+the numerical basis for Figures S6/S7.
 The package includes archived numerical results so they can be inspected
 without rerunning the full simulation grids.
-
-## Original examples and historical figure scripts
-
-The original example and inhibition-removal sweep remain available:
-
-```bash
-python scripts/example/run_example.py --stim spot --outdir outputs/example
-python scripts/sweep/run_inhibition_sweep.py --outdir outputs/sweep
-```
-
-These examples use their original protocols; use the Figure 4 command above
-for the current paper settings. `src/` contains the shared model and calcium
-implementation, and `data/` contains the SWC morphology, synapse mapping,
-synapse classification lists, and fitted parameters.
-
-Historical `scripts/fig3/` and `scripts/fig4/` figure assembly, experimental
-panel, and Illustrator helpers are retained as source history. They reference
-separate manuscript workbooks, figure files, or Adobe Illustrator and do not
-form a self-contained artwork pipeline here. The numerical Figure 4 runner
-and the documented sweep analyses use the bundled model inputs.
 
 Local virtual environments, caches, temporary logs, obsolete candidate runs,
 and manuscript artwork are excluded from this import. Model parameters and
@@ -108,5 +102,4 @@ Archived geometry and focal voltage/calcium maps were reproduced; sampled
 float32 traces within 1.90 × 10⁻⁶ mV.
 
 These checks reused the recorded dependency environment. A fresh dependency
-installation, the full NEURON sweep grids, and historical Illustrator assembly
-were not rerun for this import.
+installation and the full NEURON sweep grids were not rerun for this import.

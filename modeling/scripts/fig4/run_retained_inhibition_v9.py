@@ -119,7 +119,6 @@ def main():
                  ROOT / "scripts/fig3/run_fig3_pilot.py",
                  ROOT / "scripts/fig3/calibrate_spatial_v3.py",
                  ROOT / "scripts/fig3/finite_local_spread_v3.py",
-                 ROOT / "scripts/fig3/prepare_figure_v3.py",
                  *sorted(PRIOR.glob("*")),
                  PRIOR_SPATIAL / "finite_local_maps.npz",
                  PRIOR_SPATIAL / "finite_local_summary.json",

@@ -1,7 +1,6 @@
 """
-run_functions.py - build the cid3 cell from fitted parameters and run a spot or
-bar stimulus on it. Used by scripts/example/run_example.py and
-scripts/sweep/run_gain_sweep.py.
+Build the cid3 cell from fitted parameters and run spot or bar stimuli.
+Shared by the compartmental model and parameter-sweep analyses.
 """
 import os, sys, json
 import numpy as np

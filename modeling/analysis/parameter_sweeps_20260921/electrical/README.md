@@ -22,6 +22,8 @@ All nonzero-contrast reduced-inhibition AUCs exceed their paired controls. This 
 
 These exploratory fourfold ranges are not physiological confidence intervals. Strongly depolarized corners approach the 0-mV excitation reversal; they remain visible without claiming physiological plausibility. The sweep keeps morphology, reversal potentials, contact placement, calcium activation, and all within-pair excitation settings fixed. It does not test active calcium feedback, another morphology, or measured biological distributions. Absolute cable-calcium integrals are length-weighted proxy responses, not calcium content.
 
-Reproduce: run `run_electrical.py --workers 6`, then `validate_focal.py`, then `build_electrical_outputs.py`, with the model `.venv/bin/python`. Completed states are resumable only with identical hashed inputs. Raw exact transient prefixes are retained in `transient_traces/`; full-arbor normalized focal voltage maps are retained in `states/`.
+See [the reproduction guide](../../README.md) for the validation and simulation commands. Completed states are resumable only with identical hashed inputs. New runs write raw transient prefixes and focal voltage maps into their output directory; these intermediate caches are not bundled with the numerical reference results.
+
+`build_electrical_outputs.py` exports the derived metrics and plots each heatmap separately. Run it without arguments to use the archived results, or provide `--results` and `--outdir` for another run.
 
 Black contours mark zero effect in signed maps: P = 1 in preference panels and zero normalized-shape difference in the shape panel. No contour is drawn if the boundary is absent from the sampled range.
