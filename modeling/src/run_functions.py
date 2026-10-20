@@ -1,6 +1,6 @@
 """
-Build the cid3 cell from fitted parameters and run spot or bar stimuli.
-Shared by the compartmental model and parameter-sweep analyses.
+run_functions.py - build the cid3 cell from fitted parameters and run a spot or
+bar stimulus on it. Used by the model simulation and calibration scripts.
 """
 import os, sys, json
 import numpy as np
@@ -16,24 +16,6 @@ from vg3_base_functions import (
     find_true_soma_segment, run_polarity_spot_g, hill, define_layer_masks,
     contrast_gain,
 )
-
-# === Named voltage-scale config (fit to Kim et al. 2015 Fig 1C) ===
-CONFIGS = {
-    "sep_g22": (os.path.join(FITTED, "fitted_voltage_params_locked.json"),
-                "g_pas=1e-3, G_exc=400, G_inh=600, E_Cl=-60"),
-}
-
-
-def load_named_config(label):
-    """Return (cfg_dict, description) for a CONFIGS entry."""
-    if label not in CONFIGS:
-        raise SystemExit(f"Unknown config '{label}'. Choose from {list(CONFIGS)}.")
-    path, desc = CONFIGS[label]
-    with open(path) as f:
-        cfg = json.load(f)
-    cfg.setdefault("inh_rev", -60.0)
-    return cfg, desc
-
 
 OFF_JSON = os.path.join(FITTED, "fitted_off_epsc_params.json")
 ON_JSON = os.path.join(FITTED, "fitted_on_epsc_params.json")
@@ -58,11 +40,17 @@ def load_fits():
     return {"off": off, "on": on, "inh": inh}
 
 
-def build(g_pas=None, layer_radius=4.0):
-    """Build the cid3 cell once. g_pas overrides the locked passive leak."""
+def build(g_pas=None, layer_radius=4.0, overrides=None):
+    """Build the cid3 cell once. g_pas overrides the locked passive leak.
+    overrides: optional dict merged into the locked params before building
+    (e.g. {"active_kv": True, "gkbar": 0.0012}) -- for validation/tuning runs
+    that need something beyond g_pas changed without touching locked_params.json.
+    """
     p = load_locked_params(LOCKED)
     if g_pas is not None:
         p["g_pas"] = float(g_pas)
+    if overrides:
+        p.update(overrides)
     p["n_events"] = N_EVENTS
     cell, node_coords, segments = setup_cell(SWC, p)
     syn = load_and_classify_synapses(SYN, ONB, OFB, p["cell_id"], node_coords)
@@ -119,6 +107,17 @@ def subsample_inh(inh_nodes, keep_fraction, seed=0):
     return np.sort(rng.choice(inh_nodes, size=k, replace=False))
 
 
+def inh_contrast_gain(contrast, p):
+    """Contrast gain for PHASIC inhibition. Same as excitation unless p has
+    'inh_c50': then a saturating Naka-Rushton c^n/(c50^n + c^n), rescaled so
+    100% contrast still gives 1 (the 100%-contrast fits are unchanged)."""
+    if "inh_c50" not in p:
+        return contrast_gain(contrast, p)
+    c = max(float(contrast), 0.0)
+    c50 = float(p["inh_c50"]); n = float(p.get("inh_cn", 2.0))
+    return (c ** n / (c50 ** n + c ** n)) * (c50 ** n + 1.0)
+
+
 def run_spot(model, fits, D, polarity, center_xy=None, record_v=False,
              exc_scale=1.0, inh_scale=1.0, inh_keep_fraction=1.0, inh_seed=0,
              contrast=1.0):
@@ -136,7 +135,7 @@ def run_spot(model, fits, D, polarity, center_xy=None, record_v=False,
     center = model["soma_xy"] if center_xy is None else center_xy
     cg = contrast_gain(contrast, p)
     exc_eff = exc_eff_weight(fits, polarity, float(D)) * float(exc_scale) * cg
-    inh_eff = inh_eff_weight(fits, polarity, float(D)) * float(inh_scale) * cg
+    inh_eff = inh_eff_weight(fits, polarity, float(D)) * float(inh_scale) * inh_contrast_gain(contrast, p)
     inh_use = subsample_inh(model["inh_nodes"], inh_keep_fraction, inh_seed)
     return run_polarity_spot_g(
         model["cell"], model["segments"], model["node_coords"],

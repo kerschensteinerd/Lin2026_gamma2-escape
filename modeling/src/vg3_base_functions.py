@@ -2,7 +2,7 @@
 vg3_base_functions.py - morphology, synapse mapping, and spot-stimulus helpers
 for the cid3 VG3 amacrine cell model. Used by run_functions.py.
 """
-from neuron import h
+from neuron import h, load_mechanisms
 import numpy as np
 import json
 import os
@@ -17,7 +17,7 @@ h.load_file('import3d.hoc')
 
 
 # =============================================================================
-# SWC + segment loaders (unchanged from the older pipeline)
+# SWC + segment loaders
 # =============================================================================
 class Cell:
     def __init__(self, name='neuron'):
@@ -113,6 +113,22 @@ DEFAULT_LOCKED_PARAMS = {
     "cm": 1,
     "rest_v": -45,          # VGluT3 RMP per Hsiang/Friedrichsen (Kim 2015 reported ~-38 but model uses -45)
     "temp": 33,
+    # Frozen sustained Kv (single non-inactivating n^4 gate, mod/khh_vg3.mod).
+    # Identity and magnitude follow Grimes et al. 2011 Vis. Neurosci. 28:381-392
+    # Fig. 3E (the ~70% sustained, 4-AP-sensitive outward component). The
+    # voltage calibration is deliberately repositioned into VG3's own
+    # physiological range (-45 mV rest to ~-25 mV peak, Kim et al. 2015)
+    # instead of Grimes' raw clamp-step voltages (0 to +30 mV).
+    "active_kv": True,
+    "gkbar": 0.02971,       # S/cm^2. Leak-subtracted clamp at the TRUE soma (soma_idx), hold -90,
+                            # 200 ms step to 0 mV, g_pas 1e-3: ~993 pA target (Grimes Fig. 3E
+                            # sustained-only). See calibrate.py --solve.
+    "vhalf": -24.0,         # mV, Boltzmann half-activation -- FROZEN
+    "vslope": 3.0,          # mV, Boltzmann slope
+    "tau_n": 2.0,           # ms, gate time constant. Not fit to data (Grimes reports no
+                            # kinetics); 2 ms gave no peak kink and the strongest high-contrast
+                            # convergence of the 2/4/8/15/30 ms values tested.
+    "e_k": -85.0,           # mV, standard mammalian CNS K+ reversal (NEURON's own ion default is -77 mV)
     "exc_rev": 0,
     "inh_rev": -60,         # chloride reversal at RMP → no IPSC at V_hold=-60
     "exc_weight": 0.001,    # uS (will be tuned to Kim 2015 EPSC targets)
@@ -154,10 +170,17 @@ def save_locked_params(path, params):
 # Cell + synapse loaders
 # =============================================================================
 def setup_cell(swc_file, p):
-    """Build the VG3 cell. Passive only — graded, non-spiking (no Na channels).
-    Effective leak = g_pas + g_tonic_shunt (uniform background Cl- conductance)
-    with reversal at rest_v (-60). Stage 10's tonic-shunt lever uses this.
+    """Build the VG3 cell: passive leak (reversal = rest_v) plus, if active_kv,
+    the sustained Kv (mod/khh_vg3.mod). Graded, non-spiking (no Na channels).
     """
+    if p.get("active_kv", False) and not hasattr(h, "khh_vg3"):
+        model_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        if not load_mechanisms(model_root) or not hasattr(h, "khh_vg3"):
+            raise RuntimeError(
+                "The khh_vg3 mechanism is not compiled. From modeling/, run "
+                "'nrnivmodl mod' on macOS/Linux or use mknrndll on Windows; "
+                "see README.md."
+            )
     h('forall delete_section()')
     cell, _ = load_swc(swc_file)
     g_eff = float(p["g_pas"]) + float(p.get("g_tonic_shunt", 0.0))
@@ -181,12 +204,22 @@ def setup_cell(swc_file, p):
             for i in range(int(h.n3d(sec=sec))):
                 h.pt3dchange(i, sd, sec=sec)
 
+    active_kv = p.get("active_kv", False)
     for sec in cell.all:
         sec.insert('pas')
         sec.g_pas = g_eff
         sec.e_pas = p["rest_v"]
         sec.Ra = p["ra"]
         sec.cm = p["cm"]
+        if active_kv:
+            # Grimes 2011 Fig. 3E sustained Kv, repositioned to VG3's own
+            # physiological voltage range (see mod/khh_vg3.mod); pas remains the leak.
+            sec.insert('khh_vg3')
+            sec.gkbar_khh_vg3 = float(p["gkbar"])
+            sec.vhalf_khh_vg3 = float(p["vhalf"])
+            sec.vslope_khh_vg3 = float(p["vslope"])
+            sec.tau_n_khh_vg3 = float(p["tau_n"])
+            sec.ek = float(p["e_k"])
     h.celsius = p["temp"]
     node_coords, segments = extract_node_coords(cell)
     return cell, node_coords, segments
@@ -410,7 +443,8 @@ def contrast_gain(contrast, p=None):
     if p is not None and "contrast_c50" in p and "contrast_n" in p:
         c50 = max(float(p["contrast_c50"]), 1e-9)
         q = float(p["contrast_n"])
-        return c ** q / (c50 ** q + c ** q)
+        # rescaled so 100% contrast -> 1 (keeps the Kim 100%-contrast calibration)
+        return c ** q / (c50 ** q + c ** q) * (c50 ** q + 1.0)
     return c
 
 
@@ -442,8 +476,13 @@ def run_vclamp_spot(cell, segments, node_coords,
                     inh_tau1=None, inh_tau2=None,
                     n_events=None, interval=None,
                     start_time=None, t_stop=None, dt=None,
-                    rs=0.001, record_all_traces=False):
+                    rs=0.001, record_all_traces=False, clamp_seg=None):
     """Voltage-clamp the soma, present a Gaussian-blurred spot stimulus.
+
+    clamp_seg: segment to clamp. Pass the TRUE soma (segments[soma_idx]); the
+    cid3 SWC type-1 'soma' label (cell.soma[0]) is a thin terminal at the
+    lowest z of the arbor, not the soma (the soma is the high-z, max-diameter
+    cluster at the INL border).
 
     Each synapse fires once per event (n_events total), with NetCon weight =
     base_weight * gaussian_spot_intensity_at_synapse_XY.
@@ -513,17 +552,21 @@ def run_vclamp_spot(cell, segments, node_coords,
         nc.delay = 0
         netcons.append(nc)
 
-    soma_sec = cell.soma[0] if len(cell.soma) > 0 else cell.dend[0]
+    if clamp_seg is not None:
+        soma_sec, soma_x = clamp_seg.sec, clamp_seg.x
+    else:
+        soma_sec = cell.soma[0] if len(cell.soma) > 0 else cell.dend[0]
+        soma_x = 0.5
     seclamp = None; i_vec = None
     if v_hold is not None:
-        seclamp = h.SEClamp(0.5, sec=soma_sec)
+        seclamp = h.SEClamp(soma_x, sec=soma_sec)
         seclamp.dur1 = t_stop
         seclamp.amp1 = float(v_hold)
         seclamp.rs   = float(rs)
         i_vec = h.Vector().record(seclamp._ref_i)        # nA
 
     t_vec = h.Vector().record(h._ref_t)
-    v_vec = h.Vector().record(soma_sec(0.5)._ref_v)      # mV
+    v_vec = h.Vector().record(soma_sec(soma_x)._ref_v)   # mV
 
     seg_vecs = []
     if record_all_traces:
@@ -939,8 +982,10 @@ def run_polarity_spot_g(cell, segments, node_coords,
     stim = h.NetStim(); stim.number = n_events; stim.start = start_time
     stim.interval = interval; stim.noise = 0
     netcons = []
-    for syn, w, _ in instantiated:
-        nc = h.NetCon(stim, syn); nc.weight[0] = w; nc.delay = 0
+    inh_delay = float(p.get("inh_delay_ms", 0.0))   # disynaptic lag of phasic inhibition
+    for syn, w, kind in instantiated:
+        nc = h.NetCon(stim, syn); nc.weight[0] = w
+        nc.delay = inh_delay if kind == "inh" else 0
         netcons.append(nc)
 
     t_vec = h.Vector().record(h._ref_t)

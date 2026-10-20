@@ -1,0 +1,15 @@
+{
+  "_README": "Fixed focal-input coordinates, initial conductance estimate, target source depolarization, and OFF imaging targets. 01_run_fig4_simulations.py selects the segment nearest source_xyz_um and solves the conductance for source_dv_target_mV; source_segment is a reference index.",
+  "source_segment": 4705,
+  "source_xyz_um": [
+    160.1000061,
+    146.44999695,
+    22.75
+  ],
+  "finite_sourceweight_uS": 0.012785038085113628,
+  "source_dv_target_mV": 15.0,
+  "imaging_OFF_normalized30_targets": [
+    0.0345740518597063,
+    0.703657829532908
+  ]
+}

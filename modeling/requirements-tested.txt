@@ -1,5 +1,5 @@
-# Versions in the original modeling environment (Python 3.11.15).
-neuron==9.0.2
+# Validated with Python 3.11.15 on macOS arm64.
 numpy==2.4.6
 scipy==1.17.1
 matplotlib==3.11.1
+neuron==9.0.2

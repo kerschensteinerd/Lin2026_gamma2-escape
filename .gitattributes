@@ -1,2 +1,2 @@
-# Input/output hashes refer to the exact archived bytes, including line endings.
-modeling/** -text
+# Preserve supplied modeling source/input bytes and recognize CRLF line endings.
+modeling/** -text whitespace=cr-at-eol

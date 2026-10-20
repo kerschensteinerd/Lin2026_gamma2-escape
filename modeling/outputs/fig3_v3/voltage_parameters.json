@@ -1,8 +1,0 @@
-{
-  "g_pas_S_cm2": 0.0001,
-  "inhibition_scale": 3.0,
-  "glycine_fraction": 0.3,
-  "inhibition_protocol": "tonic_pure_shunt",
-  "excitation_protocol": "sustained_3s",
-  "excitation_scale": 1.0
-}
